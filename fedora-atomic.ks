@@ -18,7 +18,7 @@ user --name=none
 
 firewall --disabled
 
-bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8"
+bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8 net.ifnames=0"
 
 network --bootproto=dhcp --device=link --activate --onboot=on
 services --enabled=sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
@@ -124,12 +124,15 @@ dd bs=1M if=/dev/zero of=/var/tmp/zeros || :
 rm -f /var/tmp/zeros
 echo "(Don't worry -- that out-of-space error was expected.)"
 
+# For trac ticket https://fedorahosted.org/cloud/ticket/128
+rm -f /etc/sysconfig/network-scripts/ifcfg-ens3
+
 echo "Adding Developer Mode GRUB2 menu item."
 /usr/libexec/atomic-devmode/bootentry add
 
-# Disable network service here, as doing it in the services line
+# enable network service here, as doing it in the services line
 # fails due to RHBZ #1369794
-/sbin/chkconfig network off
+/sbin/chkconfig network on
 
 # Anaconda is writing an /etc/resolv.conf from the install environment.
 # The system should start out with an empty file, otherwise cloud-init
