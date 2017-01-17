@@ -90,6 +90,7 @@ python3-photutils
 python3-pyvo
 python3-reproject
 python3-sep
+python3-wcsaxes
 
 # matplotlib backends
 python3-matplotlib-qt4
