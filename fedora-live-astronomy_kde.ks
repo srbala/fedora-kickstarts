@@ -35,6 +35,7 @@ sextractor
 siril
 skyviewer
 swarp
+wcstools
 
 # Observatory: KStars + INDI drivers + Skychart
 indi-aagcloudwatcher
@@ -63,7 +64,8 @@ python3-numpy
 python3-ipython
 python3-ipython-console
 python3-ipython-notebook
-python3-sympy
+# Exclude sympy until FTBFS is fixed
+#python3-sympy
 python3-networkx
 python3-pandas
 python3-pillow
