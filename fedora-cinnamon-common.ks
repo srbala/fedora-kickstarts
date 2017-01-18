@@ -1,4 +1,4 @@
-# fedora-cinnamon-packages.ks
+# fedora-cinnamon-common.ks
 #
 # Description:
 # - Fedora package set for the Cinnamon Desktop Environment

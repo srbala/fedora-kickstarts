@@ -3,7 +3,7 @@
 # mailto:desktop@lists.fedoraproject.org
 
 %include fedora-live-base.ks
-%include fedora-workstation-packages.ks
+%include fedora-workstation-common.ks
 %include snippets/packagekit-cached-metadata.ks
 
 part / --size 6656

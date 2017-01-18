@@ -8,7 +8,7 @@
 
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
-%include fedora-lxde-packages.ks
+%include fedora-lxde-common.ks
 
 %post
 # LXDE and LXDM configuration

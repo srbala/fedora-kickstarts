@@ -11,7 +11,7 @@
 
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
-%include fedora-xfce-packages.ks
+%include fedora-xfce-common.ks
 
 %post
 # xfce configuration

@@ -10,7 +10,7 @@
 
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
-%include fedora-soas-packages.ks
+%include fedora-soas-common.ks
 
 firewall --enabled --service=mdns,presence
 

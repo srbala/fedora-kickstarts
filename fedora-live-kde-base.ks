@@ -3,7 +3,7 @@
 # mailto:kde@lists.fedoraproject.org
 
 %include fedora-live-base.ks
-%include fedora-kde-packages.ks
+%include fedora-kde-common.ks
 
 %post
 

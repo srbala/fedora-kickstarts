@@ -1,6 +1,6 @@
 %include fedora-arm-base.ks
 %include fedora-arm-xbase.ks
-%include fedora-workstation-packages.ks
+%include fedora-workstation-common.ks
 
 part / --size=5500 --fstype ext4
 

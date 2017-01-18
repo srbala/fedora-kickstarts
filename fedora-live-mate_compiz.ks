@@ -4,7 +4,7 @@
 # mailto:desktop@lists.fedoraproject.org
 
 %include fedora-live-base.ks
-%include fedora-mate-packages.ks
+%include fedora-mate-common.ks
 %include fedora-live-minimization.ks
 
 part / --size 6144

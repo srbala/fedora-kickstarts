@@ -1,6 +1,6 @@
 %include fedora-arm-base.ks
 %include fedora-arm-xbase.ks
-%include fedora-soas-packages.ks
+%include fedora-soas-common.ks
 
 %post
 echo -n "Enabling initial-setup gui mode on startup"
