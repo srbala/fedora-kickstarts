@@ -15,7 +15,7 @@
 #   imagefactory --debug target_image --template /path/to/fedora-atomic-rawhide.tdl --parameter offline_icicle true --file-parameter install_script $(pwd)/fedora-docker-base.ks docker
 #
 
-cmdline
+text # don't use cmdline -- https://github.com/rhinstaller/anaconda/issues/931
 bootloader --disabled
 timezone --isUtc --nontp Etc/UTC
 rootpw --lock --iscrypted locked

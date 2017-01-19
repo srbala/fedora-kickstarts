@@ -24,7 +24,7 @@
 #   imagefactory --debug base_image --file-parameter install_script ${tempfile} fedora-atomic-rawhide.tdl
 #
 
-cmdline
+text # don't use cmdline -- https://github.com/rhinstaller/anaconda/issues/931
 lang en_US.UTF-8
 keyboard us
 timezone --utc Etc/UTC
