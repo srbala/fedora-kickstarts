@@ -42,7 +42,7 @@ sssd-client
 
 %end
 
-%post --log=/tmp/anaconda-post.log
+%post --log=/root/anaconda-post.log
 
 set -e
 
