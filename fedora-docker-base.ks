@@ -19,7 +19,6 @@ cmdline
 bootloader --disabled
 timezone --isUtc --nontp Etc/UTC
 rootpw --lock --iscrypted locked
-user --name=none
 
 keyboard us
 zerombr
@@ -50,8 +49,6 @@ set -e
 # Set the language rpm nodocs transaction flag persistently in the
 # image yum.conf and rpm macros
 
-# remove the user anaconda forces us to make
-userdel -r none
 
 LANG="en_US"
 echo "%_install_langs $LANG" > /etc/rpm/macros.image-language-conf
