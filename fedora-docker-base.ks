@@ -58,7 +58,6 @@ basearch=$(uname -i)
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
 echo "# fstab intentionally empty for containers" > /etc/fstab
-rm -f /usr/lib/locale/locale-archive
 
 #Setup locale properly
 localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
