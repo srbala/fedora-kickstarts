@@ -50,6 +50,7 @@ set -eux
 LANG="en_US"
 echo "%_install_langs $LANG" > /etc/rpm/macros.image-language-conf
 
+# https://bugzilla.redhat.com/show_bug.cgi?id=1400682
 echo "Import RPM GPG key"
 releasever=$(rpm -q --qf '%{version}\n' fedora-release)
 basearch=$(uname -i)
@@ -64,7 +65,10 @@ rm -rf /tmp/*
 #Mask mount units and getty service so that we don't get login prompt
 systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connections.mount systemd-logind.service getty.target console-getty.service
 
+# https://bugzilla.redhat.com/show_bug.cgi?id=1343138
 # Fix /run/lock breakage since it's not tmpfs in docker
+# This unmounts /run (tmpfs) and then recreates the files
+# in the /run directory on the root filesystem of the container
 umount /run
 systemd-tmpfiles --create --boot
 
