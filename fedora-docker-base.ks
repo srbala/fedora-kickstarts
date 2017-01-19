@@ -59,9 +59,6 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
 echo "# fstab intentionally empty for containers" > /etc/fstab
 
-#Setup locale properly
-localedef -v -c -i en_US -f UTF-8 en_US.UTF-8
-
 rm -rf /var/cache/yum/*
 rm -f /tmp/ks-script*
 
