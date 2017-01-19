@@ -43,8 +43,7 @@ sssd-client
 %end
 
 %post --erroronfail --log=/root/anaconda-post.log
-
-set -e
+set -eux
 
 # Set the language rpm nodocs transaction flag persistently in the
 # image yum.conf and rpm macros
