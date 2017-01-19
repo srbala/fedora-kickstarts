@@ -59,8 +59,9 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
 echo "# fstab intentionally empty for containers" > /etc/fstab
 
-rm -rf /var/cache/yum/*
-rm -f /tmp/ks-script*
+# remove some extraneous files
+rm -rf /var/cache/dnf/*
+rm -rf /tmp/*
 
 #Mask mount units and getty service so that we don't get login prompt
 systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connections.mount systemd-logind.service getty.target console-getty.service
