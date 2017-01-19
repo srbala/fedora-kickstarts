@@ -45,10 +45,8 @@ sssd-client
 %post --erroronfail --log=/root/anaconda-post.log
 set -eux
 
-# Set the language rpm nodocs transaction flag persistently in the
-# image yum.conf and rpm macros
-
-
+# Set install langs macro so that new rpms that get installed will
+# only install langs that we limit it to.
 LANG="en_US"
 echo "%_install_langs $LANG" > /etc/rpm/macros.image-language-conf
 
