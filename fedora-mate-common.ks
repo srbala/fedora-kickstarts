@@ -53,4 +53,28 @@ p7zip-plugins
 # desktop image at some point.  We won't touch this one for now.
 nss-mdns
 
+# Drop things for size
+-@3d-printing
+-brasero
+-colord
+-fedora-icon-theme
+-GConf2
+-gnome-bluetooth-libs
+-gnome-icon-theme
+-gnome-icon-theme-symbolic
+-gnome-software
+-gnome-themes
+-gnome-themes-standard
+-gnome-user-docs
+
+-@mate-applications
+-mate-icon-theme-faenza
+
+# Help and art can be big, too
+-gnome-user-docs
+-evolution-help
+
+# Legacy cmdline things we don't want
+-telnet
+
 %end
