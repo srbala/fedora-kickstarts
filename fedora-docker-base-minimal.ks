@@ -52,10 +52,6 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
 echo "# fstab intentionally empty for containers" > /etc/fstab
 
-# remove some extraneous files
-rm -rf /var/cache/dnf/*
-rm -rf /tmp/*
-
 # https://bugzilla.redhat.com/show_bug.cgi?id=1343138
 # Fix /run/lock breakage since it's not tmpfs in docker
 # This unmounts /run (tmpfs) and then recreates the files
@@ -88,6 +84,6 @@ rm usr/sbin/{glibc_post_upgrade.x86_64,sln}
 ln usr/bin/ln usr/sbin/sln
 
 # Final pruning
-rm -rf etc/machine-id var/cache/* var/log/* run/* tmp/*
+rm -rf var/cache/* var/log/* tmp/*
 
 %end
