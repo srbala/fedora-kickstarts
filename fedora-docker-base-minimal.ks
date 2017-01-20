@@ -53,23 +53,22 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 echo "# fstab intentionally empty for containers" > /etc/fstab
 
 # Remove machine-id on pre generated images
-rm -f /etc/machine-id
+rm -fv /etc/machine-id
 touch /etc/machine-id
 
 # remove some random help txt files
-rm usr/share/gnupg/help*.txt -f
-
+rm -fv usr/share/gnupg/help*.txt
 
 # Pruning random things
 rm usr/lib/rpm/rpm.daily
-rm usr/lib64/nss/unsupported-tools/ -rf  # unsupported
+rm -rfv usr/lib64/nss/unsupported-tools/  # unsupported
 
 # Statically linked crap
-rm usr/sbin/{glibc_post_upgrade.x86_64,sln}
+rm -fv usr/sbin/{glibc_post_upgrade.x86_64,sln}
 ln usr/bin/ln usr/sbin/sln
 
 # Final pruning
-rm -rf var/cache/* var/log/* tmp/*
+rm -rfv var/cache/* var/log/* tmp/*
 
 %end
 
@@ -94,7 +93,7 @@ chroot /mnt/sysimage install -d /run/lock -m 0755 -o root -g root
 # NOTE: run this in nochroot because "find" does not exist in chroot
 KEEPLANG=en_US
 for dir in locale i18n; do
-    find /mnt/sysimage/usr/share/${dir} -mindepth  1 -maxdepth 1 -type d -not \( -name "${KEEPLANG}" -o -name POSIX \) -exec rm -rf {} +
+    find /mnt/sysimage/usr/share/${dir} -mindepth  1 -maxdepth 1 -type d -not \( -name "${KEEPLANG}" -o -name POSIX \) -exec rm -rfv {} +
 done
 
 %end
