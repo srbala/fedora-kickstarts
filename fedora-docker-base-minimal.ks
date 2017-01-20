@@ -61,7 +61,11 @@ rm -rf /tmp/*
 # This unmounts /run (tmpfs) and then recreates the files
 # in the /run directory on the root filesystem of the container
 umount /run
-systemd-tmpfiles --create --boot
+# The file that specifies the /run/lock tmpfile is
+# /usr/lib/tmpfiles.d/legacy.conf, which is part of the systemd
+# rpm that isn't included in this image. We'll create the /run/lock
+# file here manually with the settings from legacy.conf
+install -d /run/lock -m 0755 -o root -g root
 
 # Remove machine-id on pre generated images
 rm -f /etc/machine-id
