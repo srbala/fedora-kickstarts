@@ -56,9 +56,6 @@ echo "# fstab intentionally empty for containers" > /etc/fstab
 rm -rf /var/cache/dnf/*
 rm -rf /tmp/*
 
-#Mask mount units and getty service so that we don't get login prompt
-systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connections.mount systemd-logind.service getty.target console-getty.service
-
 # https://bugzilla.redhat.com/show_bug.cgi?id=1343138
 # Fix /run/lock breakage since it's not tmpfs in docker
 # This unmounts /run (tmpfs) and then recreates the files
