@@ -67,6 +67,23 @@ rm -rfv usr/lib64/nss/unsupported-tools/  # unsupported
 rm -fv usr/sbin/{glibc_post_upgrade.x86_64,sln}
 ln usr/bin/ln usr/sbin/sln
 
+# Remove some dnf info
+rm -rfv /var/lib/dnf
+
+# don't need icons
+rm -rfv /usr/share/icons/*
+
+#some random not-that-useful binaries
+rm -fv /usr/bin/pinky
+
+# we lose presets by removing /usr/lib/systemd but we do not care
+rm -rfv /usr/lib/systemd
+
+# if you want to change the timezone, bind-mount it from the host or reinstall tzdata
+rm -fv /etc/localtime
+mv /usr/share/zoneinfo/UTC /etc/localtime
+rm -rfv  /usr/share/zoneinfo
+
 # Final pruning
 rm -rfv var/cache/* var/log/* tmp/*
 
