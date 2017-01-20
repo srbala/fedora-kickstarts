@@ -83,9 +83,6 @@ done
 rm usr/lib/rpm/rpm.daily   # seriously?
 rm usr/lib64/nss/unsupported-tools/ -rf  # unsupported
 
-# gcc should really split this off
-rm usr/share/gcc*/python -rf
-
 # Statically linked crap
 rm usr/sbin/{glibc_post_upgrade.x86_64,sln}
 ln usr/bin/ln usr/sbin/sln
