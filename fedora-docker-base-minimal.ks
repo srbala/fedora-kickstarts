@@ -67,6 +67,7 @@ install -d /run/lock -m 0755 -o root -g root
 rm -f /etc/machine-id
 touch /etc/machine-id
 
+# remove some random help txt files
 rm usr/share/gnupg/help*.txt -f
 
 # See: https://bugzilla.redhat.com/show_bug.cgi?id=1051816
@@ -76,7 +77,7 @@ for dir in locale i18n; do
 done
 
 # Pruning random things
-rm usr/lib/rpm/rpm.daily   # seriously?
+rm usr/lib/rpm/rpm.daily
 rm usr/lib64/nss/unsupported-tools/ -rf  # unsupported
 
 # Statically linked crap
