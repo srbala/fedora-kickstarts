@@ -32,6 +32,9 @@ bash
 fedora-release
 microdnf
 -kernel
+-e2fsprogs
+-libss # used by e2fsprogs
+-fuse-libs
 
 
 %end
