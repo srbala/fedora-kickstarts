@@ -70,18 +70,6 @@ systemd-tmpfiles --create --boot
 rm -f /etc/machine-id
 touch /etc/machine-id
 
-# Strip documentation 
-find usr/share/doc/ -type f |
-  (while read line; do
-    bn=$(basename ${line});
-    if echo ${bn} | grep -Eiq '^(COPYING|LICENSE)'; then
-      continue
-    else
-       rm $line
-    fi;
-   done)
-
-rm usr/share/doc/{info,man} -rf
 rm usr/share/gnupg/help*.txt -f
 
 # See: https://bugzilla.redhat.com/show_bug.cgi?id=1051816
