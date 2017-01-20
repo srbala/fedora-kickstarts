@@ -70,11 +70,6 @@ touch /etc/machine-id
 # remove some random help txt files
 rm usr/share/gnupg/help*.txt -f
 
-# See: https://bugzilla.redhat.com/show_bug.cgi?id=1051816
-KEEPLANG=en_US
-for dir in locale i18n; do 
-    find usr/share/${dir} -mindepth  1 -maxdepth 1 -type d -not \( -name "${KEEPLANG}" -o -name POSIX \) -exec rm -rf {} +
-done
 
 # Pruning random things
 rm usr/lib/rpm/rpm.daily
@@ -86,5 +81,17 @@ ln usr/bin/ln usr/sbin/sln
 
 # Final pruning
 rm -rf var/cache/* var/log/* tmp/*
+
+%end
+
+%post --nochroot --erroronfail --log=/mnt/sysimage/root/anaconda-post-nochroot.log
+set -eux
+
+# See: https://bugzilla.redhat.com/show_bug.cgi?id=1051816
+# NOTE: run this in nochroot because "find" does not exist in chroot
+KEEPLANG=en_US
+for dir in locale i18n; do
+    find /mnt/sysimage/usr/share/${dir} -mindepth  1 -maxdepth 1 -type d -not \( -name "${KEEPLANG}" -o -name POSIX \) -exec rm -rf {} +
+done
 
 %end
