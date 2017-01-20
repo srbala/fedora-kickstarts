@@ -27,16 +27,10 @@ part / --fstype ext4 --grow
 network --bootproto=dhcp --device=link --activate --onboot=on
 reboot
 
-%packages --excludedocs --instLangs=en --nocore
+%packages --excludedocs --instLangs=en --nocore --excludeWeakdeps
 bash
-tar # https://bugzilla.redhat.com/show_bug.cgi?id=1409920
 fedora-release
-rootfiles
-vim-minimal
-dnf
-dnf-yum  # https://fedorahosted.org/fesco/ticket/1312#comment:29
-sssd-client
-#fakesystemd #TODO: waiting for review https://bugzilla.redhat.com/show_bug.cgi?id=1118740
+microdnf
 -kernel
 
 
