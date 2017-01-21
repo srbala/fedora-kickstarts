@@ -82,6 +82,8 @@ rp-pppoe
 -plymouth-theme-charge
 sugar-logos
 
+%end
+
 %post
 
 # Rebuild initrd for Sugar boot screen
