@@ -1,7 +1,7 @@
 # This is a minimal Fedora install designed to serve as a Docker base image.
 #
 # To keep this image minimal it only installs English language. You need to change
-# yum configuration in order to enable other languages.
+# dnf configuration in order to enable other languages.
 #
 ###  Hacking on this image ###
 # This kickstart is processed using Anaconda-in-ImageFactory (via Koji typically),
