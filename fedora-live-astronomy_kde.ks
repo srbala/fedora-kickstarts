@@ -64,8 +64,7 @@ python3-numpy
 python3-ipython
 python3-ipython-console
 python3-ipython-notebook
-# Exclude sympy until FTBFS is fixed
-#python3-sympy
+python3-sympy
 python3-networkx
 python3-pandas
 python3-pillow
