@@ -26,7 +26,6 @@ desktop-backgrounds-basic
 f25-backgrounds-extras-gnome
 
 # save some space
--fedora-icon-theme
 -PackageKit*                # we switched to gnome-software, so we don't need this
 
 %end
