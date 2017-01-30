@@ -19,7 +19,7 @@ transmission
 parole
 
 # make sure we have a graphical installer
-yumex-dnf
+gnome-software              # for update-notification
 
 # extra backgrounds
 desktop-backgrounds-basic
@@ -27,6 +27,6 @@ f25-backgrounds-extras-gnome
 
 # save some space
 -fedora-icon-theme
--PackageKit*                # we switched to yumex, so we don't need this
+-PackageKit*                # we switched to gnome-software, so we don't need this
 
 %end
