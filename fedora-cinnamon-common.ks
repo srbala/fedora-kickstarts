@@ -20,6 +20,8 @@ parole
 
 # make sure we have a graphical installer
 gnome-software              # for update-notification
+dnfdragora                  # for graphical (GTK and ncurses) package-management
+libyui-mga-gtk              # GTK3-frontend for dnfdragora
 
 # extra backgrounds
 desktop-backgrounds-basic
