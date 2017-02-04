@@ -24,6 +24,9 @@ dnfdragora                  # for graphical (GTK and ncurses) package-management
 libyui-mga-gtk              # GTK3-frontend for dnfdragora (graphical use)
 libyui-mga-ncurses          # Ncurses-frontend for dnfdragora (text-mode use)
 
+# nifty for installing not-found cli-commands
+PackageKit-command-not-found
+
 # extra backgrounds
 desktop-backgrounds-basic
 f25-backgrounds-extras-gnome
