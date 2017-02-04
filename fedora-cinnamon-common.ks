@@ -28,7 +28,4 @@ libyui-mga-ncurses          # Ncurses-frontend for dnfdragora (text-mode use)
 desktop-backgrounds-basic
 f25-backgrounds-extras-gnome
 
-# save some space
--PackageKit*                # we switched to gnome-software, so we don't need this
-
 %end
