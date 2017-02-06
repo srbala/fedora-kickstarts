@@ -18,6 +18,9 @@ hexchat
 transmission
 parole
 
+# mp3 support
+gstreamer1-plugin-mpg123
+
 # make sure we have a graphical installer
 gnome-software              # for update-notification
 dnfdragora                  # for graphical (GTK and ncurses) package-management
