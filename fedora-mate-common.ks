@@ -16,7 +16,7 @@ emerald-themes
 emerald
 fusion-icon
 @networkmanager-submodules
-blueman
+blueberry
 
 # some apps from mate-applications
 caja-actions
