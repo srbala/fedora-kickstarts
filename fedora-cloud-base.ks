@@ -222,7 +222,7 @@ echo "RUN_FIRSTBOOT=NO" > /etc/sysconfig/firstboot
 #EOF
 
 echo "Removing random-seed so it's not the same in every image."
-rm -f /var/lib/random-seed
+rm -f /var/lib/systemd/random-seed
 
 echo "Cleaning old dnf repodata."
 # FIXME: clear history?
