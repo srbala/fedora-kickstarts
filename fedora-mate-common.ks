@@ -1,5 +1,6 @@
 %packages
 -PackageKit*                # we switched to yumex, so we don't need this
+PackageKit-command-not-found  # nifty for installing not-found cli-commands
 firefox
 @mate
 compiz
@@ -16,7 +17,7 @@ emerald-themes
 emerald
 fusion-icon
 @networkmanager-submodules
-blueman
+blueberry
 
 # some apps from mate-applications
 caja-actions
@@ -35,6 +36,7 @@ lightdm-gtk-greeter-settings
 # audio video
 parole
 exaile
+gstreamer1-plugin-mpg123  # mp3 support
 
 # blacklist applications which breaks mate-desktop
 -audacious
