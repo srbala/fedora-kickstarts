@@ -35,10 +35,10 @@ lximage-qt
 lxqt-sudo
 pavucontrol-qt
 psi-plus
-qbittorrent
 qlipper
 quassel
 qpdfview-qt5
+transmission-qt
 trojita
 yarock
 
