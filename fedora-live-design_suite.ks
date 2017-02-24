@@ -16,33 +16,6 @@ part / --size 14336
 # Switch to groups for design suite
 @design-suite
 
-# Added addons to address rhbz#1336879 from dnf
-gimp-data-extras
-gimp-dbp
-gimp-dds-plugin
-gimp-elsamuko
-gimp-fourier-plugin
-gimp-gap
-gimp-help
-gimp-high-pass-filter
-gimp-layer-via-copy-cut
-gimp-lensfun
-gimp-lqr-plugin
-gimp-normalmap
-gimp-paint-studio
-gimp-resynthesizer
-gimp-save-for-web
-gimp-separate+
-gimp-wavelet-denoise-plugin
-gimpfx-foundry
-gmic-gimp
-inkscape-psd
-inkscape-sozi
-inkscape-table
-sane-backends-drivers-scanners
-xsane-gimp
-#YafaRay-blender
-
 # Add extra gnome applications
 gnome-books
 gnome-calendar
@@ -51,7 +24,6 @@ gnome-photos
 # Extra wallpapers
 f25-backgrounds-extras-base
 f25-backgrounds-extras-gnome
-
 
 # removal of unneeded applications
 -gnome-boxes
