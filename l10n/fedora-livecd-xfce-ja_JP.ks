@@ -14,11 +14,13 @@ timezone Asia/Tokyo
 
 %packages
 @japanese-support
-# exclude input methods:
+# exclude input methods except ibus:
 -m17n*
 -scim*
--ibus*
 -iok
+
+# ibus-kkc 
+ibus-kkc
 %end
 
 %post
