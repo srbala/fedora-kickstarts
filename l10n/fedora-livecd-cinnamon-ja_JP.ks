@@ -1,12 +1,12 @@
-# fedora-livecd-xfce-ja_JP.ks
+# fedora-livecd-cinnamon-ja_JP.ks
 #
 # Description:
-# - Japanese Fedora Live Spin with the Xfce Desktop Environment
+# - Japanese Fedora Live Spin with the Cinnamon Desktop Environment
 #
 # Maintainer(s):
 # - Shintaro Fujiwara <shintaro.fujiwara@miraclelinux.com>
 
-%include ../fedora-live-xfce.ks
+%include ../fedora-live-cinnamon.ks
 
 lang ja_JP.UTF-8
 keyboard jp
@@ -18,9 +18,6 @@ timezone Asia/Tokyo
 -m17n*
 -scim*
 -iok
-
-# ibus-kkc 
-ibus-kkc
 %end
 
 %post
