@@ -1,10 +1,10 @@
-# This is a basic Fedora 21 spin designed to work in OpenStack and other
+# This is a basic Fedora cloud spin designed to work in OpenStack and other
 # private cloud environments. It's configured with cloud-init so it will
 # take advantage of ec2-compatible metadata services for provisioning ssh
 # keys. Cloud-init creates a user account named "fedora" with passwordless
 # sudo access. The root password is empty and locked by default.
 #
-# Note that unlike the standard F20 install, this image has /tmp on disk
+# Note that unlike the standard Fedora install, this image has /tmp on disk
 # rather than in tmpfs, since memory is usually at a premium.
 #
 # This kickstart file is designed to be used with ImageFactory (in Koji).
