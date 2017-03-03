@@ -6,6 +6,10 @@
 
 %packages
 @python-classroom
+nano
+openssh-clients
+vim-enhanced
+wget
 
 # Remove Pythons possibly recommended by tox
 -python26
