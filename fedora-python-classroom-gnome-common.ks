@@ -7,6 +7,9 @@
 %include fedora-python-classroom-common.ks
 
 %packages
+ninja-ide
+emacs
+
 # Remove extra gnome-y things
 -@graphical-internet
 -@games
