@@ -19,13 +19,14 @@ text # don't use cmdline -- https://github.com/rhinstaller/anaconda/issues/931
 bootloader --disabled
 timezone --isUtc --nontp Etc/UTC
 rootpw --lock --iscrypted locked
-
 keyboard us
-zerombr
-clearpart --all
-part / --fstype ext4 --grow
 network --bootproto=dhcp --device=link --activate --onboot=on
 reboot
+
+zerombr
+clearpart --all
+part /boot/efi --fstype="vfat" --size=100
+part / --fstype ext4 --grow
 
 %packages --excludedocs --instLangs=en --nocore
 bash
