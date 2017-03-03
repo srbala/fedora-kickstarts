@@ -43,6 +43,7 @@ services --enabled=sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
 
 zerombr
 clearpart --all
+part /boot/efi --fstype="vfat" --size=50
 part / --fstype ext4 --grow
 
 %include fedora-repo.ks
@@ -82,7 +83,6 @@ which
 #-kbd
 -uboot-tools
 -kernel
-grub2
 
 %end
 
