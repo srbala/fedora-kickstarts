@@ -72,5 +72,9 @@ wqy-microhei-fonts          # a compact CJK font, to replace:
 -ibus*
 -iok
 
+# Fix https://bugzilla.redhat.com/show_bug.cgi?id=1429132
+# Why is this not pulled in by anaconda???
+storaged
+
 %end
 
