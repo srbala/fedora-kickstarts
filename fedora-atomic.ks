@@ -52,7 +52,7 @@ cp /etc/skel/.bash* /var/roothome
 
 # Configure docker-storage-setup to resize the partition table on boot
 # https://github.com/projectatomic/docker-storage-setup/pull/25
-echo 'GROWPART=true' > /etc/sysconfig/docker-storage-setup
+echo 'GROWPART=true' >> /etc/sysconfig/docker-storage-setup
 
 echo -n "Getty fixes"
 # although we want console output going to the serial console, we don't
