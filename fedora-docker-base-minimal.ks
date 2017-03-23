@@ -1,65 +1,18 @@
-# This is a minimal Fedora install designed to serve as a Docker base image.
-#
-# To keep this image minimal it only installs English language. You need to change
-# dnf configuration in order to enable other languages.
-#
-###  Hacking on this image ###
-# This kickstart is processed using Anaconda-in-ImageFactory (via Koji typically),
-# but you can run imagefactory locally too.
-#
-# To do so, testing local changes, first you'll need a TDL file.  I store one here:
-# https://git.fedorahosted.org/cgit/fedora-atomic.git/tree/fedora-atomic-rawhide.tdl
-#
-# Then, once you have imagefactory and imagefactory-plugins installed, run:
-#
-#   imagefactory --debug target_image --template /path/to/fedora-atomic-rawhide.tdl --parameter offline_icicle true --file-parameter install_script $(pwd)/fedora-docker-base.ks docker
-#
+# See docker-base-common.ks for details on how to hack on docker image kickstarts
+# This base is a stripped back Fedora image without python3/dnf.
+# If you need that use the standard base image.
 
-text # don't use cmdline -- https://github.com/rhinstaller/anaconda/issues/931
-bootloader --disabled
-timezone --isUtc --nontp Etc/UTC
-rootpw --lock --iscrypted locked
-
-keyboard us
-network --bootproto=dhcp --device=link --activate --onboot=on
-reboot
-
-zerombr
-clearpart --all
-part /boot/efi --fstype="vfat" --size=100
-part / --fstype ext4 --grow
+%include fedora-docker-common.ks
 
 %packages --excludedocs --instLangs=en --nocore --excludeWeakdeps
-bash
-fedora-release
 microdnf
--kernel
 -e2fsprogs
 -libss # used by e2fsprogs
 -fuse-libs
 
-
 %end
 
 %post --erroronfail --log=/root/anaconda-post.log
-set -eux
-
-# Set install langs macro so that new rpms that get installed will
-# only install langs that we limit it to.
-LANG="en_US"
-echo "%_install_langs $LANG" > /etc/rpm/macros.image-language-conf
-
-# https://bugzilla.redhat.com/show_bug.cgi?id=1400682
-echo "Import RPM GPG key"
-releasever=$(rpm -q --qf '%{version}\n' fedora-release)
-rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-primary
-
-echo "# fstab intentionally empty for containers" > /etc/fstab
-
-# Remove machine-id on pre generated images
-rm -fv /etc/machine-id
-touch /etc/machine-id
-
 # remove some random help txt files
 rm -fv usr/share/gnupg/help*.txt
 
@@ -89,7 +42,7 @@ mv /usr/share/zoneinfo/UTC /etc/localtime
 rm -rfv  /usr/share/zoneinfo
 
 # Final pruning
-rm -rfv var/cache/* var/log/* tmp/*
+rm -rfv /var/cache/* /var/log/* /tmp/*
 
 %end
 
