@@ -35,6 +35,16 @@ part / --fstype ext4 --grow
 fedora-release
 bash
 -kernel
+-dosfstools
+-e2fsprogs
+-fuse-libs
+-gnupg2-smime
+-libss # used by e2fsprogs
+-libusbx
+-pinentry
+-shared-mime-info
+-trousers
+-xkeyboard-config
 
 %end
 
