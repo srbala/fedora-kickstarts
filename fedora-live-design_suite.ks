@@ -49,8 +49,8 @@ gnome-calendar
 gnome-photos
 
 # Extra wallpapers
-f25-backgrounds-extras-base
-f25-backgrounds-extras-gnome
+f26-backgrounds-extras-base
+f26-backgrounds-extras-gnome
 
 
 # removal of unneeded applications

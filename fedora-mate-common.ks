@@ -24,9 +24,9 @@ caja-actions
 mate-disk-usage-analyzer
 
 # more backgrounds
-f25-backgrounds-base
-f25-backgrounds-mate
-f25-backgrounds-extras-base
+f26-backgrounds-base
+f26-backgrounds-mate
+f26-backgrounds-extras-base
 
 # system tools
 system-config-printer

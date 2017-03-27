@@ -30,6 +30,6 @@ dnfdragora-gui              # for graphical (GTK and ncurses) package-management
 
 # extra backgrounds
 desktop-backgrounds-basic
-f25-backgrounds-extras-gnome
+f26-backgrounds-extras-gnome
 
 %end
