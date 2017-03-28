@@ -119,10 +119,6 @@ passwd -l root
 # remove the user anaconda forces us to make
 userdel -r none
 
-# Kickstart specifies timeout in seconds; syslinux uses 10ths.
-# 0 means wait forever, so instead we'll go with 1.
-sed -i 's/^timeout 10/timeout 1/' /boot/extlinux/extlinux.conf
-
 # setup systemd to boot to the right runlevel
 echo -n "Setting default runlevel to multiuser text mode"
 rm -f /etc/systemd/system/default.target
@@ -240,9 +236,7 @@ rm -f /var/lib/rpm/__db*
 echo "Fixing SELinux contexts."
 touch /var/log/cron
 touch /var/log/boot.log
-chattr -i /boot/extlinux/ldlinux.sys
 /usr/sbin/fixfiles -R -a restore
-chattr +i /boot/extlinux/ldlinux.sys
 
 echo "Zeroing out empty space."
 # This forces the filesystem to reclaim space from deleted files

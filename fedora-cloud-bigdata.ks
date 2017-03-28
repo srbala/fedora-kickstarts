@@ -23,7 +23,7 @@ user --name=none
 
 firewall --disabled
 
-bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8" --extlinux
+bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8"
 
 network --bootproto=dhcp --device=eth0 --activate --onboot=on
 services --enabled=sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
@@ -96,10 +96,6 @@ ln -sf /boot/grub/grub.conf /etc/grub.conf
 passwd -l root
 # remove the user anaconda forces us to make
 userdel -r none
-
-# Kickstart specifies timeout in seconds; syslinux uses 10ths.
-# 0 means wait forever, so instead we'll go with 1.
-sed -i 's/^timeout 10/timeout 1/' /boot/extlinux/extlinux.conf
 
 # setup systemd to boot to the right runlevel
 echo -n "Setting default runlevel to multiuser text mode"
@@ -209,9 +205,7 @@ echo "Fixing SELinux contexts."
 touch /var/log/cron
 touch /var/log/boot.log
 mkdir -p /var/cache/yum
-chattr -i /boot/extlinux/ldlinux.sys
 /usr/sbin/fixfiles -R -a restore
-chattr +i /boot/extlinux/ldlinux.sys
 
 echo "Zeroing out empty space."
 # This forces the filesystem to reclaim space from deleted files
