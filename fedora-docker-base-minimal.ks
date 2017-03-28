@@ -6,9 +6,6 @@
 
 %packages --excludedocs --instLangs=en --nocore --excludeWeakdeps
 microdnf
--e2fsprogs
--libss # used by e2fsprogs
--fuse-libs
 
 %end
 
