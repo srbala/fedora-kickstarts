@@ -131,4 +131,10 @@ echo "Adding Developer Mode GRUB2 menu item."
 # fails due to RHBZ #1369794
 /sbin/chkconfig network off
 
+# Anaconda is writing an /etc/resolv.conf from the install environment.
+# The system should start out with an empty file, otherwise cloud-init
+# will try to use this information and may error:
+# https://bugs.launchpad.net/cloud-init/+bug/1670052
+truncate -s 0 /etc/resolv.conf
+
 %end
