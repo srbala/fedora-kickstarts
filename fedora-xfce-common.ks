@@ -38,7 +38,7 @@ system-config-printer
 -acpid
 -gimp-help
 -desktop-backgrounds-basic
--PackageKit*                # we switched to yumex, so we don't need this
+-PackageKit*                # we switched to dnfdragora, so we don't need this
 -aspell-*                   # dictionaries are big
 -xfce4-sensors-plugin
 

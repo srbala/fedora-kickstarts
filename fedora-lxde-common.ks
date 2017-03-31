@@ -43,7 +43,7 @@ metacity
 -acpid
 -gimp-help
 -desktop-backgrounds-basic
--PackageKit*                # we switched to yumex, so we don't need this
+-PackageKit*                # we switched to dnfdragora, so we don't need this
 -foomatic-db-ppds
 -foomatic
 -stix-fonts
