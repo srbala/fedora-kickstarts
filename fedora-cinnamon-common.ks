@@ -26,7 +26,6 @@ cinnamon-applet-blueberry
 
 # make sure we have a graphical installer
 gnome-software              # for update-notification
-dnfdragora-gui              # for graphical (GTK and ncurses) package-management
 
 # extra backgrounds
 desktop-backgrounds-basic
