@@ -26,7 +26,7 @@ plasma-breeze
 -qupzilla-kwallet
 
 # Pull in some useful applications, use KDE ones if necessary
-dnfdragora
+dnfdragora-gui
 dragon
 kcalc
 kwrite
@@ -50,9 +50,6 @@ pavucontrol-qt-l10n
 
 # MP3
 gstreamer1-plugin-mpg123
-
-# We want Qt GUI for libyui used by dnfdragora
-libyui-mga-qt
 
 # remove unneeded stuff to get a lightweight system
 # fonts (we make no bones about admitting we're english-only)
