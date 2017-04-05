@@ -10,7 +10,7 @@ bootloader extlinux
 part /boot/fw --size=30 --fstype vfat --asprimary
 part /boot --size=512 --fstype ext4 --asprimary
 part swap --size=512 --fstype swap --asprimary
-part / --size=3584 --fstype ext4 --asprimary
+part / --size=2800 --fstype ext4 --asprimary
 
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
