@@ -4,7 +4,6 @@
 part / --size=2500 --fstype xfs
 
 %packages
--@dial-up
 # install the default groups for the server evironment since installing the environment is not working
 @server-product
 @standard

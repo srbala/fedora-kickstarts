@@ -23,10 +23,11 @@ services --enabled=sshd,NetworkManager,avahi-daemon,rsyslog,chronyd,initial-setu
 @core
 @standard
 @hardware-support
-@dial-up
 
 kernel
+# remove this in %post
 dracut-config-generic
+
 # install tools needed to manage and boot arm systems
 @arm-tools
 rng-tools
@@ -35,11 +36,11 @@ extlinux-bootloader
 bcm283x-firmware
 initial-setup
 initial-setup-gui
+-iwl*
+-ipw*
+-trousers-lib
 #lets resize / on first boot
 # dracut-modules-growroot
-
-# remove this in %post
-dracut-config-generic
 
 # make sure all the locales are available for inital0-setup and anaconda to work
 glibc-all-langpacks
