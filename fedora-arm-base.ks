@@ -27,7 +27,7 @@ services --enabled=sshd,NetworkManager,avahi-daemon,rsyslog,chronyd,initial-setu
 kernel
 # remove this in %post
 dracut-config-generic
-
+-dracut-config-rescue
 # install tools needed to manage and boot arm systems
 @arm-tools
 rng-tools
