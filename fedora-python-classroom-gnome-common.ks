@@ -9,6 +9,8 @@
 %packages
 ninja-ide
 emacs
+python3-matplotlib-tk
+python3-pillow-tk
 
 # Remove extra gnome-y things
 -@graphical-internet

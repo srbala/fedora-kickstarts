@@ -6,6 +6,7 @@
 
 %packages
 @python-classroom
+@python-science
 nano
 openssh-clients
 vim-enhanced
