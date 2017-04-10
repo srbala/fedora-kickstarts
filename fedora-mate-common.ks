@@ -23,11 +23,6 @@ blueberry
 caja-actions
 mate-disk-usage-analyzer
 
-# more backgrounds
-f26-backgrounds-base
-f26-backgrounds-mate
-f26-backgrounds-extras-base
-
 # system tools
 system-config-printer
 system-config-printer-applet
