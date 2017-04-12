@@ -14,7 +14,7 @@ timezone US/Eastern
 auth --useshadow --passalgo=sha512
 selinux --enforcing
 firewall --enabled --service=mdns
-services --enabled=NetworkManager,ModemManager --disabled=sshd
+services --enabled=sshd,NetworkManager,chronyd,initial-setup
 network --bootproto=dhcp --device=link --activate
 rootpw --lock --iscrypted locked
 shutdown
@@ -26,8 +26,6 @@ clearpart --all --initlabel --disklabel=msdos
 
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
-
-services --enabled=sshd,NetworkManager,chronyd,initial-setup
 
 %include fedora-repo.ks
 
