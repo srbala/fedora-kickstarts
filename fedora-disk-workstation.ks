@@ -4,6 +4,8 @@
 
 bootloader --append="cma=256MB"
 
+autopart --type=plain
+
 %packages
 -initial-setup
 -initial-setup-gui

@@ -23,7 +23,6 @@ bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,11520
 
 zerombr
 clearpart --all --initlabel --disklabel=msdos
-autopart --type=plain
 
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
