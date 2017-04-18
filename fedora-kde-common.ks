@@ -42,10 +42,6 @@ k3b				# ~15 megs
 fuse
 mediawriter
 
-# only include kdegames-minimal
--kdegames
-kdegames-minimal
-
 ### space issues
 
 # fonts (we make no bones about admitting we're english-only)
