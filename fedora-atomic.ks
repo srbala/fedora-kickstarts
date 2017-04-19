@@ -124,15 +124,15 @@ dd bs=1M if=/dev/zero of=/var/tmp/zeros || :
 rm -f /var/tmp/zeros
 echo "(Don't worry -- that out-of-space error was expected.)"
 
-# For trac ticket https://fedorahosted.org/cloud/ticket/128
+# For trac ticket https://pagure.io/atomic-wg/issue/128
 rm -f /etc/sysconfig/network-scripts/ifcfg-ens3
 
 echo "Adding Developer Mode GRUB2 menu item."
 /usr/libexec/atomic-devmode/bootentry add
 
-# enable network service here, as doing it in the services line
+# Disable network service here, as doing it in the services line
 # fails due to RHBZ #1369794
-/sbin/chkconfig network on
+/sbin/chkconfig network off
 
 # Anaconda is writing an /etc/resolv.conf from the install environment.
 # The system should start out with an empty file, otherwise cloud-init
