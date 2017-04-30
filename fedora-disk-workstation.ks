@@ -4,6 +4,8 @@
 
 bootloader --append="cma=256MB"
 
+services --enabled=sshd,NetworkManager,chronyd
+
 autopart --type=plain
 
 %packages

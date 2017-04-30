@@ -1,5 +1,7 @@
 %include fedora-disk-base.ks
 
+services --enabled=sshd,NetworkManager,chronyd,initial-setup
+
 autopart
 
 %packages

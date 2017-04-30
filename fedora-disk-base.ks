@@ -14,7 +14,7 @@ timezone US/Eastern
 auth --useshadow --passalgo=sha512
 selinux --enforcing
 firewall --enabled --service=mdns
-services --enabled=sshd,NetworkManager,chronyd,initial-setup
+services --enabled=sshd,NetworkManager,chronyd
 network --bootproto=dhcp --device=link --activate
 rootpw --lock --iscrypted locked
 shutdown
