@@ -67,6 +67,7 @@ libcrypt-nss
 
 # Setup Raspberry Pi firmware
 cp -Pr /usr/share/bcm283x-firmware/* /boot/efi/
+mv -f /boot/efi/config-64.txt /boot/efi/config.txt
 cp -P /usr/share/uboot/rpi_3/u-boot.bin /boot/efi/rpi3-u-boot.bin
 
 releasever=$(rpm -q --qf '%{version}\n' fedora-release)
