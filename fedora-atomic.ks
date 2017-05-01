@@ -137,4 +137,7 @@ echo "Adding Developer Mode GRUB2 menu item."
 # https://bugs.launchpad.net/cloud-init/+bug/1670052
 truncate -s 0 /etc/resolv.conf
 
+# Disable rhgb/quiet: https://bugzilla.redhat.com/show_bug.cgi?id=510523
+sed -i 's/rhgb quiet//' /boot/grub2/grub.cfg
+
 %end
