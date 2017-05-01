@@ -14,7 +14,6 @@ timezone --utc Etc/UTC
 auth --useshadow --passalgo=sha512
 selinux --enforcing
 rootpw --lock --iscrypted locked
-user --name=none
 
 firewall --disabled
 
@@ -44,8 +43,6 @@ ostree remote add --set=gpg-verify=false fedora-atomic 'https://dl.fedoraproject
 # older versions of livecd-tools do not follow "rootpw --lock" line above
 # https://bugzilla.redhat.com/show_bug.cgi?id=964299
 passwd -l root
-# remove the user anaconda forces us to make
-userdel -r none
 
 # Work around https://bugzilla.redhat.com/show_bug.cgi?id=1193590
 cp /etc/skel/.bash* /var/roothome

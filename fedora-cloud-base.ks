@@ -32,7 +32,6 @@ timezone --utc Etc/UTC
 auth --useshadow --passalgo=sha512
 selinux --enforcing
 rootpw --lock --iscrypted locked
-user --name=none
 
 firewall --disabled
 
@@ -116,8 +115,6 @@ ln -sf /boot/grub/grub.conf /etc/grub.conf
 # older versions of livecd-tools do not follow "rootpw --lock" line above
 # https://bugzilla.redhat.com/show_bug.cgi?id=964299
 passwd -l root
-# remove the user anaconda forces us to make
-userdel -r none
 
 # setup systemd to boot to the right runlevel
 echo -n "Setting default runlevel to multiuser text mode"
