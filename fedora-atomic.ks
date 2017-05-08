@@ -6,7 +6,7 @@
 # dedicated for Docker containers, and uses docker-storage-setup to
 # dynamically resize storage on boot.
 
-text
+text # don't use cmdline -- https://github.com/rhinstaller/anaconda/issues/931
 lang en_US.UTF-8
 keyboard us
 timezone --utc Etc/UTC
