@@ -38,6 +38,9 @@ cat > /etc/xdg/libfm/pref-apps.conf << FOE
 WebBrowser=qupzilla.desktop
 FOE
 
+# no updater applet in live environment
+rm -f /etc/xdg/autostart/org.mageia.dnfdragora-updater.desktop
+
 # make sure to set the right permissions and selinux contexts
 chown -R liveuser:liveuser /home/liveuser/
 restorecon -R /home/liveuser/
