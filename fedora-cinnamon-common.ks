@@ -18,7 +18,7 @@ hexchat
 transmission
 
 # mp3 support
-gstreamer1-plugin-mpg123
+gstreamer1-plugins-ugly-free
 
 # extra backgrounds
 desktop-backgrounds-basic
