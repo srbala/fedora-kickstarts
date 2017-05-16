@@ -42,8 +42,7 @@ services --enabled=sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
 
 zerombr
 clearpart --all
-part /boot/efi --fstype="vfat" --size=50
-part / --fstype ext4 --grow
+autopart --noboot --nohome --noswap --nolvm
 
 %include fedora-repo.ks
 
