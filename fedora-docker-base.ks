@@ -25,7 +25,14 @@ systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connec
 # Fix /run/lock breakage since it's not tmpfs in docker
 # This unmounts /run (tmpfs) and then recreates the files
 # in the /run directory on the root filesystem of the container
+#
+# We ignore the return code of the systemd-tmpfiles command because
+# at this point we have already removed the /etc/machine-id and all
+# tmpfiles lines with %m in them will fail and cause a bad return
+# code. Example failure:
+#   [/usr/lib/tmpfiles.d/systemd.conf:26] Failed to replace specifiers: /run/log/journal/%m
+#
 umount /run
-systemd-tmpfiles --prefix=/run/ --prefix=/var/run/ --create --boot
+systemd-tmpfiles --prefix=/run/ --prefix=/var/run/ --create --boot || true
 
 %end
