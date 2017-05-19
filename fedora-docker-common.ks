@@ -24,6 +24,7 @@ keyboard us
 network --bootproto=dhcp --device=link --activate --onboot=on
 reboot
 
+# boot partitions are irrelevant as the final docker image is a tarball
 zerombr
 clearpart --all
 autopart --noboot --nohome --noswap --nolvm
