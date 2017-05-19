@@ -26,6 +26,6 @@ systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connec
 # This unmounts /run (tmpfs) and then recreates the files
 # in the /run directory on the root filesystem of the container
 umount /run
-systemd-tmpfiles --create --boot
+systemd-tmpfiles --prefix=/run/ --prefix=/var/run/ --create --boot
 
 %end
