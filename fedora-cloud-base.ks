@@ -81,6 +81,9 @@ which
 #-kbd
 -uboot-tools
 -kernel
+# No need for plymouth. Also means anaconda won't put rhgb/quiet
+# on kernel command line
+-plymouth
 
 %end
 
@@ -258,9 +261,6 @@ touch /etc/machine-id
 # will try to use this information and may error:
 # https://bugs.launchpad.net/cloud-init/+bug/1670052
 truncate -s 0 /etc/resolv.conf
-
-# Disable rhgb/quiet: https://bugzilla.redhat.com/show_bug.cgi?id=510523
-sed -i 's/rhgb quiet//' /boot/grub2/grub.cfg
 
 %end
 
