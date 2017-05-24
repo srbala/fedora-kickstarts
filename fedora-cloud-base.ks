@@ -232,7 +232,9 @@ rm -f /var/lib/rpm/__db*
 echo "Fixing SELinux contexts."
 touch /var/log/cron
 touch /var/log/boot.log
-/usr/sbin/fixfiles -R -a restore
+# ignore return code because UEFI systems with vfat filesystems
+# that don't support selinux will give us errors
+/usr/sbin/fixfiles -R -a restore || true
 
 echo "Zeroing out empty space."
 # This forces the filesystem to reclaim space from deleted files
