@@ -31,12 +31,16 @@ volgroup atomicos pv.01
 logvol / --size=3000 --fstype="xfs" --name=root --vgname=atomicos
 
 # Equivalent of %include fedora-repo.ks
+# Pull from the ostree repo that was created during the compose
 ostreesetup --nogpg --osname=fedora-atomic --remote=fedora-atomic --url=https://kojipkgs.fedoraproject.org/compose/atomic/rawhide/ --ref=fedora/rawhide/x86_64/atomic-host
 
 reboot
 
 %post --erroronfail
 # See https://github.com/projectatomic/rpm-ostree/issues/42
+# Set the ostree repo to the location we want users to upgrade from
+# This location is where the compose gets synced to after the compose
+# is done.
 ostree remote delete fedora-atomic
 ostree remote add --set=gpg-verify=false fedora-atomic 'https://kojipkgs.fedoraproject.org/atomic/rawhide/'
 
