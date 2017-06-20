@@ -174,7 +174,7 @@ if [ -n "\$configdone" ]; then
   exit 0
 fi
 
-# add fedora user with no passwd
+# add liveuser user with no passwd
 action "Adding live user" useradd \$USERADDARGS -c "Live System User" liveuser
 passwd -d liveuser > /dev/null
 usermod -aG wheel liveuser > /dev/null
