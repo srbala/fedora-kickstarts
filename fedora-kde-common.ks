@@ -61,9 +61,6 @@ wqy-microhei-fonts			# a compact CJK font, to replace:
 -ibus*
 -iok
 
-# save some space (from @standard)
--make
-
 # admin-tools
 -gnome-disk-utility
 # kcm_clock still lacks some features, so keep system-config-date around
