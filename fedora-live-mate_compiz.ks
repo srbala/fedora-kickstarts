@@ -21,6 +21,9 @@ fi
 mkdir /home/liveuser/Desktop
 cp /usr/share/applications/liveinst.desktop /home/liveuser/Desktop
 
+# and mark it as executable
+chmod +x /home/liveuser/Desktop/liveinst.desktop
+
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
 
