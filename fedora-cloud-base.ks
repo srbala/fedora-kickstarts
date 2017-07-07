@@ -13,12 +13,12 @@
 # http://worknotes.readthedocs.org/en/latest/cloudimages.html for some notes.
 #
 # For a TDL file, I store one here:
-# https://git.fedorahosted.org/cgit/fedora-atomic.git/tree/fedora-atomic-rawhide.tdl
+# https://pagure.io/fedora-atomic/raw/master/f/fedora-atomic-rawhide.tdl
 # (Koji generates one internally...what we really want is Koji to publish it statically)
 # 
 # Once you have imagefactory and imagefactory-plugins installed, run:
 # 
-#   curl -O https://git.fedorahosted.org/cgit/fedora-atomic.git/plain/fedora-atomic-rawhide.tdl 
+#   curl -O https://pagure.io/fedora-atomic/raw/master/f/fedora-atomic-rawhide.tdl
 #   tempfile=$(mktemp --suffix=.ks)
 #   ksflatten -v F22 -c fedora-cloud-base.ks > ${tempfile}
 #   imagefactory --debug base_image --file-parameter install_script ${tempfile} fedora-atomic-rawhide.tdl
