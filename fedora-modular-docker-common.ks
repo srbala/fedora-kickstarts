@@ -27,7 +27,7 @@ reboot
 # boot partitions are irrelevant as the final docker image is a tarball
 zerombr
 clearpart --all
-#autopart --noboot --nohome --noswap --nolvm
+autopart --noboot --nohome --noswap --nolvm
 
 %packages --excludedocs --instLangs=en --nocore
 fedora-modular-release
