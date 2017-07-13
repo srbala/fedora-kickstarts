@@ -11,18 +11,18 @@ and modify the kickstart files for their local needs.
 
 ## To make a release ##
 
- * git clone ssh://git@pagure.io/fedora-kickstarts.git fedora-kickstarts
- * cd fedora-kickstarts
- * # If you need a specific branch other than master:
- * git checkout BRANCHNAME
- * # No tag has been added yet tag HEAD with
- * git tag VERSION
- * git push --tags
- * make
- * # Publish the released tar ball
- * make publish
- * # Clean up the generated files:
- * make clean
+    git clone ssh://git@pagure.io/fedora-kickstarts.git fedora-kickstarts
+    cd fedora-kickstarts
+    # If you need a specific branch other than master:
+    git checkout BRANCHNAME
+    # No tag has been added yet tag HEAD with
+    git tag VERSION
+    git push --tags
+    make
+    # Publish the released tar ball
+    make publish
+    # Clean up the generated files:
+    make clean
 
 # bug reports #
 
