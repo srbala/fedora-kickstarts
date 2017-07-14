@@ -36,6 +36,14 @@ ostreesetup --nogpg --osname=fedora-atomic --remote=fedora-atomic --url=https://
 
 reboot
 
+# temporarily workaround https://pagure.io/atomic-wg/issue/301
+%pre
+if ! test -d /ostree/repo; then
+    mkdir -p /ostree/repo
+    ostree --repo=/ostree/repo init --mode=bare
+fi
+%end
+
 %post --erroronfail
 # See https://github.com/projectatomic/rpm-ostree/issues/42
 # Set the ostree repo to the location we want users to upgrade from
