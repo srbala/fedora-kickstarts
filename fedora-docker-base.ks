@@ -18,6 +18,9 @@ sssd-client
 rm -rf /var/cache/dnf/*
 rm -rf /tmp/*
 
+# https://pagure.io/atomic-wg/issue/308
+printf "tsflags=nodocs\n" >>/etc/dnf/dnf.conf
+
 #Mask mount units and getty service so that we don't get login prompt
 systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connections.mount systemd-logind.service getty.target console-getty.service
 
