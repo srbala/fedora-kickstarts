@@ -37,5 +37,6 @@ systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connec
 #
 umount /run
 systemd-tmpfiles --prefix=/run/ --prefix=/var/run/ --create --boot || true
+rm /run/nologin # https://pagure.io/atomic-wg/issue/316
 
 %end
