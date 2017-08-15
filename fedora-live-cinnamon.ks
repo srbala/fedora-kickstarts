@@ -32,6 +32,9 @@ sed -i 's/^#autologin-user-timeout=.*/autologin-user-timeout=0/' /etc/lightdm/li
 # set Cinnamon as default session, otherwise login will fail
 sed -i 's/^#user-session=.*/user-session=cinnamon/' /etc/lightdm/lightdm.conf
 
+# no updater applet in live environment
+rm -f /etc/xdg/autostart/org.mageia.dnfdragora-updater.desktop
+
 # Show harddisk install on the desktop
 sed -i -e 's/NoDisplay=true/NoDisplay=false/' /usr/share/applications/liveinst.desktop
 mkdir /home/liveuser/Desktop
