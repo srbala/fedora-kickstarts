@@ -8,7 +8,7 @@
 # but you can run imagefactory locally too.
 #
 # To do so, testing local changes, first you'll need a TDL file.  I store one here:
-# https://git.fedorahosted.org/cgit/fedora-atomic.git/tree/fedora-atomic-rawhide.tdl
+# https://pagure.io/fedora-atomic/raw/master/f/fedora-atomic-rawhide.tdl
 #
 # Then, once you have imagefactory and imagefactory-plugins installed, run:
 #
