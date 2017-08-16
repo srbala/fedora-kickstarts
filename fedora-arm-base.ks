@@ -30,6 +30,7 @@ dracut-config-generic
 -dracut-config-rescue
 # install tools needed to manage and boot arm systems
 @arm-tools
+-uboot-images-armv8
 rng-tools
 chrony
 extlinux-bootloader
@@ -39,6 +40,8 @@ initial-setup-gui
 -iwl*
 -ipw*
 -trousers-lib
+-usb_modeswitch
+-iproute-tc
 #lets resize / on first boot
 # dracut-modules-growroot
 

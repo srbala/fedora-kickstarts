@@ -4,3 +4,7 @@
 part /boot --size=512 --fstype ext4
 part swap --size=256 --fstype swap
 part / --size=1256 --fstype ext4
+
+%packages
+-xkeyboard-config
+%end
