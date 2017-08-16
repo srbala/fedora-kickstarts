@@ -1,6 +1,5 @@
 %packages
 -PackageKit*                # we switched to dnfdragora, so we don't need this
-PackageKit-command-not-found  # nifty for installing not-found cli-commands
 firefox
 @mate
 compiz
