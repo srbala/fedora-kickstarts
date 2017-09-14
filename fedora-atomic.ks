@@ -31,10 +31,9 @@ clearpart --all
 # Vagrant boxes come big and rely on thin provisioning).
 # In both cases, it's simplest to just fill all the disk space.
 #
-# For /boot, we currently diverge from the Fedora default of 1GB here since it really feels like a huge
-# waste of space with the 6GB layout.  At some point we could investigate dropping the /boot partition, see
-# https://github.com/ostreedev/ostree/pull/215 and https://github.com/ostreedev/ostree/pull/268
-part /boot --size=300 --fstype="ext4"
+# Use reqpart to create hardware platform specific partitions
+# https://pagure.io/atomic-wg/issue/299
+reqpart --add-boot
 part pv.01 --grow
 volgroup atomicos pv.01
 # Start from 3GB as we did before, since we just need a size.  But we do --grow to fill all space.
