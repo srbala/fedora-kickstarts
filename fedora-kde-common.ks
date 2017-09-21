@@ -18,7 +18,7 @@ qupzilla
 -system-config-printer
 # make sure mariadb lands instead of MySQL (hopefully a temporary hack)
 mariadb-embedded
-mariadb-libs
+mariadb-connector-c
 mariadb-server
 
 # minimal localization support - allows installing the kde-l10n-* packages
