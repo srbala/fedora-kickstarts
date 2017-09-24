@@ -19,7 +19,7 @@ network --bootproto=dhcp --device=link --activate
 rootpw --lock --iscrypted locked
 shutdown
 
-bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8"
+bootloader --timeout=1
 
 zerombr
 clearpart --all --initlabel --disklabel=msdos
