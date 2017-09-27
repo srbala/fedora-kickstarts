@@ -1,4 +1,4 @@
-# See docker-base-common.ks for details on how to hack on docker image kickstarts
+# See fedora-modular-container-common.ks for details on how to hack on container image kickstarts
 # This base is a standard Fedora image with python3 and dnf
 
 %include fedora-modular-container-common.ks
@@ -22,7 +22,7 @@ rm -rf /tmp/*
 systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connections.mount systemd-logind.service getty.target console-getty.service
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=1343138
-# Fix /run/lock breakage since it's not tmpfs in docker
+# Fix /run/lock breakage since it's not tmpfs in container
 # This unmounts /run (tmpfs) and then recreates the files
 # in the /run directory on the root filesystem of the container
 #

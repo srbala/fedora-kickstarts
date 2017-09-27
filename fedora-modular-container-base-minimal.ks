@@ -1,4 +1,4 @@
-# See docker-base-common.ks for details on how to hack on docker image kickstarts
+# See fedora-modular-container-common.ks for details on how to hack on container image kickstarts
 # This base is a stripped back Fedora image without python3/dnf.
 # If you need that use the standard base image.
 
@@ -47,7 +47,7 @@ rm -rfv /var/cache/* /var/log/* /tmp/*
 set -eux
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=1343138
-# Fix /run/lock breakage since it's not tmpfs in docker
+# Fix /run/lock breakage since it's not tmpfs in container
 # This unmounts /run (tmpfs) and then recreates the files
 # in the /run directory on the root filesystem of the container
 # NOTE: run this in nochroot because "umount" does not exist in chroot
