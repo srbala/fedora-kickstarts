@@ -27,8 +27,6 @@ gnome-keyring-pam
 # Note that blank is still default.
 xscreensaver-extras
 wget
-# Handy for debugging
-rfkill
 # Better more popular browser
 firefox
 system-config-printer
