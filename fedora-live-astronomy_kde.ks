@@ -24,7 +24,13 @@ part / --size 14500
 # Installing the default/mandatory packages from engineering & scientific
 @engineering-and-scientific
 
+# Basic development
+@development-tools
+@c-development
+
 # astronomical data analysis
+astrometry
+astrometry-tycho2
 cdsclient
 fpack
 gcx
@@ -37,7 +43,7 @@ skyviewer
 swarp
 wcstools
 
-# Observatory: KStars + INDI drivers + Skychart
+# Observatory: KStars + INDI drivers
 indi-aagcloudwatcher
 indi-apogee
 indi-eqmod
@@ -45,10 +51,10 @@ indi-gphoto
 indi-sx
 indistarter
 kstars
-stellarium
 
 # misc. astronomy
 celestia
+stellarium
 virtualplanet
 
 # Some astro environment stuff
@@ -85,6 +91,7 @@ python3-ATpy
 python3-ccdproc
 python3-fitsio
 python3-gatspy
+python3-healpy
 python3-photutils
 python3-pyvo
 python3-reproject
