@@ -17,7 +17,11 @@ rootpw --lock --iscrypted locked
 
 firewall --disabled
 
-bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8 net.ifnames=0"
+# console=ttyAMA0 and console=hvc0 as kernel boot parameter to see
+# kernel boot messages on serial console as well on aarch64 and
+# ppc64le respectively.
+# https://pagure.io/atomic-wg/issue/347
+bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8 console=ttyAMA0 console=hvc0 net.ifnames=0"
 
 network --bootproto=dhcp --device=link --activate --onboot=on
 services --enabled=sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
