@@ -98,15 +98,6 @@ TYPE="Ethernet"
 PERSISTENT_DHCLIENT="yes"
 EOF
 
-# generic localhost names
-cat > /etc/hosts << EOF
-127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-
-EOF
-echo .
-
-
 # Because memory is scarce resource in most cloud/virt environments,
 # and because this impedes forensics, we are differing from the Fedora
 # default of having /tmp on tmpfs.
