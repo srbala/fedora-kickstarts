@@ -1,10 +1,20 @@
-# Fedora Atomic is a cloud-focused spin implementing the Project
-# Atomic patterns.  Note that this replicates the same tree which can
-# now be installed on bare metal.
+# Fedora Atomic Host is the Fedora version of the "Atomic Host" pattern
+# from [Project Atomic](http://www.projectatomic.io/).
 
-# This image allocates most space to an LVM-managed thin pool
-# dedicated for Docker containers, and uses docker-storage-setup to
-# dynamically resize storage on boot.
+# This kickstart is used for cloud/virt images, and uses cloud-init
+# to bootstrap authentication, just like Fedora Cloud Base.  (Also note the
+# fedora-atomic-vagrant.ks kickstart inherits from this).
+
+# One very important thing to understand is that this image contains the same
+# OSTree commit as will be used on bare metal installations - Fedora Atomic Host
+# also has an ISO. One difference though is that cloud-init isn't enabled for
+# bare metal. When processing this kickstart then, Anaconda isn't actually
+# installing packages - it's just replicating a "pre-assembled" tree from
+# rpm-ostree.
+
+# Basically, the `ostreesetup` verb replaces the traditional `%packages`
+# section. For example, `rpm-ostree status` can show you the same checksum and
+# version from an ISO install and this cloud image - it's the same bits.
 
 text # don't use cmdline -- https://github.com/rhinstaller/anaconda/issues/931
 lang en_US.UTF-8
