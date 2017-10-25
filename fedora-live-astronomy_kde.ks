@@ -91,7 +91,6 @@ python3-ATpy
 python3-ccdproc
 python3-fitsio
 python3-gatspy
-python3-healpy
 python3-photutils
 python3-pyvo
 python3-reproject
