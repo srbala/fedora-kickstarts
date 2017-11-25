@@ -21,7 +21,6 @@ transmission
 gstreamer1-plugins-ugly-free
 
 # extra backgrounds
-desktop-backgrounds-basic
 f26-backgrounds-extras-gnome
 
 %end
