@@ -12,14 +12,6 @@
 @cinnamon-desktop
 @libreoffice
 
-# internet and multimedia
-pidgin
-hexchat
-transmission
-
-# mp3 support
-gstreamer1-plugins-ugly-free
-
 # extra backgrounds
 f26-backgrounds-extras-gnome
 
