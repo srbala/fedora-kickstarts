@@ -13,6 +13,6 @@
 @libreoffice
 
 # extra backgrounds
-f26-backgrounds-extras-gnome
+f27-backgrounds-extras-gnome
 
 %end
