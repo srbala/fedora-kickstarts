@@ -30,7 +30,7 @@ wget
 # Handy for debugging
 rfkill
 # Better more popular browser
-firefox
+#firefox
 system-config-printer
 
 # save some space
