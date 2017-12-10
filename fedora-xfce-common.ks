@@ -28,7 +28,7 @@ gnome-keyring-pam
 xscreensaver-extras
 wget
 # Better more popular browser
-firefox
+#firefox
 system-config-printer
 
 # save some space
