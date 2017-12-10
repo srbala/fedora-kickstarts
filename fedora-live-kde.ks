@@ -10,9 +10,6 @@
 %include fedora-live-kde-base.ks
 %include fedora-live-minimization.ks
 
-# https://bugzilla.redhat.com/show_bug.cgi?id=1518032
--dnfdragora-gui
-
 # DVD payload
 part / --size=6144
 
