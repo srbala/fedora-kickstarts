@@ -25,6 +25,8 @@ auth --useshadow --passalgo=sha512
 selinux --enforcing
 rootpw --lock --iscrypted locked
 
+# Explicitly disable firewall since cloud providers generally provide
+# higher level firewall constructs (i.e. security groups).
 firewall --disabled
 
 # console=ttyAMA0 and console=hvc0 as kernel boot parameter to see
