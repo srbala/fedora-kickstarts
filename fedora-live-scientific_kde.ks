@@ -8,7 +8,8 @@
 # Maintainer: Amit Saha <amitksaha@fedoraproject.org>
 #             https://fedoraproject.org/wiki/User:Amitksaha
 
-%include fedora-live-kde.ks
+%include fedora-live-kde-base.ks
+%include fedora-live-minimization.ks
 
 # The recommended part size for DVDs is too close to use for the scientific spin
 part / --size 14500
