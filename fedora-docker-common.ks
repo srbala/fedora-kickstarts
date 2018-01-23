@@ -32,6 +32,13 @@ autopart --noboot --nohome --noswap --nolvm
 %packages --excludedocs --instLangs=en --nocore
 fedora-release
 bash
+coreutils-single
+glibc-minimal-langpack
+libcrypt
+rpm
+shadow-utils
+sssd-client
+util-linux
 -kernel
 -dosfstools
 -e2fsprogs
