@@ -1,3 +1,4 @@
+
 %packages
 @firefox
 @kde-apps
@@ -53,13 +54,6 @@ wqy-microhei-fonts			# a compact CJK font, to replace:
 
 -paratype-pt-sans-fonts	# Cyrillic (already supported by DejaVu), huge
 #-stix-fonts		# mathematical symbols
-
-# remove input methods to free space
--@input-methods
--scim*
--m17n*
--ibus*
--iok
 
 # admin-tools
 -gnome-disk-utility
