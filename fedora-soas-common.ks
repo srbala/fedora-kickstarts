@@ -30,7 +30,7 @@ firewall --enabled --service=mdns,presence
 -abrt-cli
 -ibus*
 -hyperv-daemons
--webkitgtk4-plugin-process-gtk2
+-webkit2gtk3-plugin-process-gtk2
 
 # Add some extra fonts
 dejavu-sans-fonts
