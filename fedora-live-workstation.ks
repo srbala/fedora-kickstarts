@@ -27,6 +27,21 @@ FOE
 mkdir ~liveuser/.config
 touch ~liveuser/.config/gnome-initial-setup-done
 
+# suppress anaconda spokes redundant with gnome-initial-setup
+cat >> /etc/sysconfig/anaconda << FOE
+[DatetimeSpoke]
+visited=1
+
+[NetworkSpoke]
+visited=1
+
+[PasswordSpoke]
+visited=1
+
+[UserSpoke]
+visited=1
+FOE
+
 # make the installer show up
 if [ -f /usr/share/applications/liveinst.desktop ]; then
   # Show harddisk install in shell dash
