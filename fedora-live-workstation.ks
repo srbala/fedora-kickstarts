@@ -29,9 +29,6 @@ touch ~liveuser/.config/gnome-initial-setup-done
 
 # suppress anaconda spokes redundant with gnome-initial-setup
 cat >> /etc/sysconfig/anaconda << FOE
-[DatetimeSpoke]
-visited=1
-
 [NetworkSpoke]
 visited=1
 
