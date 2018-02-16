@@ -45,7 +45,6 @@ util-linux
 -fuse-libs
 -gnupg2-smime
 -libss # used by e2fsprogs
--libusbx
 -pinentry
 -shared-mime-info
 -trousers
