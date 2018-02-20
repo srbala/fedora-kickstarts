@@ -2,7 +2,6 @@
 %packages
 -@input-methods
 -scim*
--m17n*
 -ibus*
 -iok
 %end
