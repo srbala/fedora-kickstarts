@@ -36,7 +36,6 @@ gnome-keyring-pam
 -acpid
 -gimp-help
 -desktop-backgrounds-basic
--realmd                     # only seems to be used in GNOME
 -PackageKit*                # we switched to dnfdragora, so we don't need this
 -aspell-*                   # dictionaries are big
 -gnumeric
