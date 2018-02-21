@@ -39,7 +39,6 @@ initial-setup
 initial-setup-gui
 -iwl*
 -ipw*
--trousers-lib
 -usb_modeswitch
 -iproute-tc
 #lets resize / on first boot
