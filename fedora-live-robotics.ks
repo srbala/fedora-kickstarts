@@ -47,7 +47,6 @@ firefox
 
 # Dictionaries are big
 -aspell-*
--hunspell-*
 -man-pages*
 -words
 
