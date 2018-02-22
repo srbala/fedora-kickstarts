@@ -31,10 +31,9 @@ gnome-todo
 powerline
 powerline-fonts
 
-
 # Extra wallpapers
-f26-backgrounds-extras-base
-f26-backgrounds-extras-gnome
+# f26-backgrounds-extras-base
+# f26-backgrounds-extras-gnome
 
 # removal of unneeded applications
 -gnome-boxes
