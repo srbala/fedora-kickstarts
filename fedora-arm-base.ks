@@ -4,8 +4,7 @@ auth --useshadow --passalgo=sha512
 selinux --enforcing
 firewall --enabled --service=mdns,ssh
 
-# configure extlinux bootloader
-bootloader extlinux
+bootloader --location=mbr
 
 part /boot/fw --size=30 --fstype vfat --asprimary
 part /boot --size=512 --fstype ext4 --asprimary
