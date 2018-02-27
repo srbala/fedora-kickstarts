@@ -35,7 +35,6 @@ python3-pillow-tk
 
 # This is no longer workstation
 -@workstation-product
--fedora-productimg-workstation
 
 # Add a web browser
 @firefox

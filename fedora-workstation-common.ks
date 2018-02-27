@@ -20,9 +20,6 @@
 @printing
 @workstation-product
 
-# Branding for the installer
-fedora-productimg-workstation
-
 # Exclude unwanted packages from @anaconda-tools group
 -gfs2-utils
 -reiserfs-utils

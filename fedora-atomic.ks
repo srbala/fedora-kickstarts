@@ -41,7 +41,8 @@ services --enabled=sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
 zerombr
 clearpart --all
 # Implement: https://pagure.io/atomic-wg/issue/281
-# The bare metal layout default is in http://pkgs.fedoraproject.org/cgit/rpms/fedora-productimg-atomic.git
+# The bare metal layout currently inherits from fedora server and is in
+# https://github.com/rhinstaller/anaconda/blob/master/pyanaconda/installclasses/fedora_atomic_host.py
 # However, the disk size is currently just 6GB for the cloud image (defined in pungi-fedora).  So the
 # "15GB, rest unallocated" model doesn't make sense.  The Vagrant box is 40GB (apparently a number of
 # Vagrant boxes come big and rely on thin provisioning).
