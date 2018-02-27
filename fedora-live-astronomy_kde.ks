@@ -14,7 +14,8 @@
 # Maintainer: Christian Dersch <lupinix@fedoraproject.org>
 #             https://fedoraproject.org/wiki/User:Lupinix
 
-%include fedora-live-kde.ks
+%include fedora-live-kde-base.ks
+%include fedora-live-minimization.ks
 
 # The recommended part size for DVDs is too close to use for the astronomy spin
 part / --size 14500
