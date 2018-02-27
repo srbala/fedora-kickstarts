@@ -2,7 +2,6 @@
 %packages
 -@input-methods
 -scim*
--ibus*
 -iok
 %end
 
