@@ -35,7 +35,8 @@ rootpw --lock --iscrypted locked
 
 firewall --disabled
 
-bootloader --timeout=1 --append="no_timer_check console=tty1 console=ttyS0,115200n8"
+# We pass net.ifnames=0 because we always want to use eth0 here on all the cloud images.
+bootloader --timeout=1 --append="no_timer_check net.ifnames=0 console=tty1 console=ttyS0,115200n8"
 
 network --bootproto=dhcp --device=link --activate --onboot=on
 services --enabled=sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
@@ -170,11 +171,6 @@ NOZEROCONF=yes
 DEVTIMEOUT=10
 EOF
 
-# For cloud images, 'eth0' _is_ the predictable device name, since
-# we don't want to be tied to specific virtual (!) hardware
-rm -f /etc/udev/rules.d/70*
-ln -s /dev/null /etc/udev/rules.d/80-net-setup-link.rules
-
 # simple eth0 config, again not hard-coded to the build hardware
 cat > /etc/sysconfig/network-scripts/ifcfg-eth0 << EOF
 DEVICE="eth0"
@@ -245,8 +241,12 @@ dd bs=1M if=/dev/zero of=/var/tmp/zeros || :
 rm -f /var/tmp/zeros
 echo "(Don't worry -- that out-of-space error was expected.)"
 
-# For trac ticket https://fedorahosted.org/cloud/ticket/128
-rm -f /etc/sysconfig/network-scripts/ifcfg-ens3
+# When we build the image with oz, dracut is used 
+# and sets up a ifcfg-en<whatever> for the device. We don't 
+# want to use this, we use eth0 so it is always the same. 
+# So we remove all these ifcfg-en<whatever> devices so 
+# The 'network' service can come up cleanly.
+rm -f /etc/sysconfig/network-scripts/ifcfg-en*
 
 # Enable network service here, as doing it in the services line
 # fails due to RHBZ #1369794
