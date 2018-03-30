@@ -11,7 +11,7 @@
 ### The KDE-Desktop
 
 ### Browser
-qupzilla
+falkon
 
 ### fixes
 
