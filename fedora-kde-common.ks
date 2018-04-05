@@ -11,7 +11,7 @@
 ### The KDE-Desktop
 
 ### Browser
-qupzilla
+falkon
 
 ### fixes
 
@@ -44,16 +44,6 @@ fuse
 mediawriter
 
 ### space issues
-
-# fonts (we make no bones about admitting we're english-only)
-wqy-microhei-fonts			# a compact CJK font, to replace:
--naver-nanum-gothic-fonts		# Korean
--vlgothic-fonts				# Japanese
--adobe-source-han-sans-cn-fonts		# simplified Chinese
--adobe-source-han-sans-tw-fonts 	# traditional Chinese
-
--paratype-pt-sans-fonts	# Cyrillic (already supported by DejaVu), huge
-#-stix-fonts		# mathematical symbols
 
 # admin-tools
 -gnome-disk-utility
