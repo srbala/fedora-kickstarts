@@ -76,6 +76,10 @@ pulseaudio-utils
 # http://bugs.sugarlabs.org/ticket/1951
 rp-pppoe
 
+# Useful for SoaS duplication from:
+# http://bugs.sugarlabs.org/ticket/74
+livecd-tools
+
 # Get the Sugar boot screen
 -plymouth-system-theme
 -plymouth-theme-charge
