@@ -4,10 +4,13 @@
 part / --size=2500 --fstype xfs
 
 %packages
-# install the default groups for the server evironment since installing the environment is not working
+# install the default groups for the server environment since installing the environment is not working
 @server-product
 @standard
 @headless-management
+@hardware-support
+@networkmanager-submodules
+
 @container-management
 @domain-client
 -initial-setup-gui
