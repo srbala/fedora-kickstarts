@@ -10,24 +10,21 @@ selinux --enforcing
 rootpw --lock --iscrypted locked
 
 # Add most common consoles console=ttyAMA0 console=ttyS0 console=ttyS1 as kernel boot parameter
-bootloader --timeout=1 --append="console=tty1 console=ttyS0,115200n8 console=ttyS1,115200n8 console=ttyAMA0 net.ifnames=0"
+bootloader --timeout=1 --append="console=tty1 console=ttyS0,115200n8 console=ttyS1,115200n8 console=ttyAMA0,115200n8 net.ifnames=0 modprobe.blacklist=vc4"
 
 network --bootproto=dhcp --device=link --activate --onboot=on
-services --enabled=NetworkManager,sshd,initial-setup
+services --enabled=NetworkManager,sshd,rngd,initial-setup
+
+# tell Initial Setup to run in the reconfig mode
+firstboot --reconfig --enable
 
 zerombr
 clearpart --all
-# Use reqpart to create hardware platform specific partitions
-# https://pagure.io/atomic-wg/issue/299
-reqpart --add-boot
-part pv.01 --grow
-volgroup fedoraiot pv.01
-# Start from 3GB as we did before, since we just need a size.
-logvol / --size=3000 --fstype="ext4" --name=root --vgname=fedoraiot
+autopart --nohome --noswap --type=plain
 
 # Equivalent of %include fedora-repo.ks
 # Pull from the ostree repo that was created during the compose
-ostreesetup --nogpg --osname=fedora-iot --remote=fedora-iot --url=https://kojipkgs.fedoraproject.org/compose/iot/repo/ --ref=fedora/29/${basearch}/updates/iot
+ostreesetup --nogpg --osname=fedora-iot --remote=fedora-iot --url=https://kojipkgs.fedoraproject.org/compose/iot/repo/ --ref=fedora/29/${basearch}/iot
 
 reboot
 
@@ -53,10 +50,10 @@ ostree admin set-origin --index 0 fedora-iot https://kojipkgs.fedoraproject.org/
 
 # Make sure the ref we're supposedly sitting on (according
 # to the updated origin) exists.
-ostree refs "fedora-iot:fedora/29/${arch}/updates/iot" --create "fedora-iot:fedora/29/${arch}/iot"
+ostree refs "fedora-iot:fedora/29/${arch}/iot" --create "fedora-iot:fedora/29/${arch}/iot"
 
 # Remove the old ref so that the commit eventually gets cleaned up.
-ostree refs "fedora-iot:fedora/29/${arch}/updates/iot" --delete
+ostree refs "fedora-iot:fedora/29/${arch}/iot" --delete
 
 # delete/add the remote with new options to enable gpg verification
 # and to point them at the cdn url
