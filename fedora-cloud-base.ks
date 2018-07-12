@@ -15,9 +15,9 @@
 # For a TDL file, I store one here:
 # https://pagure.io/fedora-atomic/raw/master/f/fedora-atomic-rawhide.tdl
 # (Koji generates one internally...what we really want is Koji to publish it statically)
-# 
+#
 # Once you have imagefactory and imagefactory-plugins installed, run:
-# 
+#
 #   curl -O https://pagure.io/fedora-atomic/raw/master/f/fedora-atomic-rawhide.tdl
 #   tempfile=$(mktemp --suffix=.ks)
 #   ksflatten -v F22 -c fedora-cloud-base.ks > ${tempfile}
@@ -241,10 +241,10 @@ dd bs=1M if=/dev/zero of=/var/tmp/zeros || :
 rm -f /var/tmp/zeros
 echo "(Don't worry -- that out-of-space error was expected.)"
 
-# When we build the image with oz, dracut is used 
-# and sets up a ifcfg-en<whatever> for the device. We don't 
-# want to use this, we use eth0 so it is always the same. 
-# So we remove all these ifcfg-en<whatever> devices so 
+# When we build the image with oz, dracut is used
+# and sets up a ifcfg-en<whatever> for the device. We don't
+# want to use this, we use eth0 so it is always the same.
+# So we remove all these ifcfg-en<whatever> devices so
 # The 'network' service can come up cleanly.
 rm -f /etc/sysconfig/network-scripts/ifcfg-en*
 
