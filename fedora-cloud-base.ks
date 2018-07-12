@@ -75,7 +75,6 @@ which
 # Need to also add back plymouth in order to mask failure of
 # systemd-vconsole-setup.service. BZ#1272684. Comment out for now
 #-plymouth
--NetworkManager
 -iprutils
 # Now that BZ#1199868 is fixed kbd really gets removed but it breaks
 # systemd-vconsole-setup.service on boot. Comment out for now
