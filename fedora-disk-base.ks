@@ -14,7 +14,7 @@ timezone US/Eastern
 auth --useshadow --passalgo=sha512
 selinux --enforcing
 firewall --enabled --service=mdns
-services --enabled=sshd,NetworkManager,chronyd
+services --enabled=sshd,NetworkManager,chronyd,zram-swap
 network --bootproto=dhcp --device=link --activate
 rootpw --lock --iscrypted locked
 shutdown
@@ -33,6 +33,7 @@ firstboot --reconfig
 @core
 @standard
 @hardware-support
+zram
 
 kernel
 # remove this in %post

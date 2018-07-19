@@ -13,7 +13,7 @@ rootpw --lock --iscrypted locked
 bootloader --timeout=1 --append="console=tty1 console=ttyS0,115200n8 console=ttyS1,115200n8 console=ttyAMA0,115200n8 net.ifnames=0 modprobe.blacklist=vc4"
 
 network --bootproto=dhcp --device=link --activate --onboot=on
-services --enabled=NetworkManager,sshd,rngd,initial-setup
+services --enabled=NetworkManager,sshd,rngd,initial-setup,zram-swap
 
 # tell Initial Setup to run in the reconfig mode
 firstboot --reconfig --enable

@@ -1,8 +1,8 @@
 %include fedora-disk-base.ks
 
-services --enabled=sshd,NetworkManager,chronyd,initial-setup
+services --enabled=sshd,NetworkManager,chronyd,initial-setup,zram-swap
 
-autopart
+autopart --noswap
 
 %packages
 # install the default groups for the server environment since installing the environment is not working

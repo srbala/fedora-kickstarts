@@ -8,13 +8,12 @@ bootloader --location=mbr
 
 part /boot/fw --size=30 --fstype vfat --asprimary
 part /boot --size=512 --fstype ext4 --asprimary
-part swap --size=512 --fstype swap --asprimary
 part / --size=2800 --fstype ext4 --asprimary
 
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
 
-services --enabled=sshd,NetworkManager,avahi-daemon,rsyslog,chronyd,initial-setup
+services --enabled=sshd,NetworkManager,avahi-daemon,chronyd,initial-setup,zram-swap
 
 %include fedora-repo.ks
 
@@ -22,6 +21,7 @@ services --enabled=sshd,NetworkManager,avahi-daemon,rsyslog,chronyd,initial-setu
 @core
 @standard
 @hardware-support
+zram
 
 kernel
 # remove this in %post
