@@ -68,7 +68,7 @@ reboot
 # This location is where the compose gets synced to after the compose
 # is done.
 ostree remote delete fedora-atomic
-ostree remote add --set=gpg-verify=true --set=gpgkeypath=/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-29-primary fedora-atomic 'https://kojipkgs.fedoraproject.org/atomic/repo/'
+ostree remote add --set=gpg-verify=true --set=gpgkeypath=/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-30-primary fedora-atomic 'https://kojipkgs.fedoraproject.org/atomic/repo/'
 
 # older versions of livecd-tools do not follow "rootpw --lock" line above
 # https://bugzilla.redhat.com/show_bug.cgi?id=964299
