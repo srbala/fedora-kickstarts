@@ -70,8 +70,9 @@ rkward
 qtoctave
 
 # julia
-julia
-julia-doc
+# Comment out till build failure is sorted
+# julia
+# julia-doc
 
 # IDEs for the IDE folks
 @eclipse
