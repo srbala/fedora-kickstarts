@@ -11,6 +11,7 @@
 @networkmanager-submodules
 @cinnamon-desktop
 @libreoffice
+parole
 
 # extra backgrounds
 f28-backgrounds-extras-gnome
