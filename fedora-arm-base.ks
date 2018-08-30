@@ -6,7 +6,7 @@ firewall --enabled --service=mdns,ssh
 
 bootloader --location=mbr
 
-part /boot/fw --size=30 --fstype vfat --asprimary
+part /boot/efi --size=80 --fstype vfat --asprimary
 part /boot --size=512 --fstype ext4 --asprimary
 part / --size=2800 --fstype ext4 --asprimary
 
@@ -51,10 +51,9 @@ glibc-all-langpacks
 %post
 
 # Setup Raspberry Pi firmware
-cp -Pr /usr/share/bcm283x-firmware/* /boot/fw/
-cp -P /usr/share/uboot/rpi_2/u-boot.bin /boot/fw/rpi2-u-boot.bin
-cp -P /usr/share/uboot/rpi_3_32b/u-boot.bin /boot/fw/rpi3-u-boot.bin
-sed -i '/vfat/ d' /etc/fstab
+cp -Pr /usr/share/bcm283x-firmware/* /boot/efi/
+cp -P /usr/share/uboot/rpi_2/u-boot.bin /boot/efi/rpi2-u-boot.bin
+cp -P /usr/share/uboot/rpi_3_32b/u-boot.bin /boot/efi/rpi3-u-boot.bin
 
 # work around for poor key import UI in PackageKit
 rm -f /var/lib/rpm/__db*
