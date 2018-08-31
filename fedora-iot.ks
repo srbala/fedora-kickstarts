@@ -34,9 +34,7 @@ arch=$(uname -m)
 
 # Setup Raspberry Pi firmware
 if [[ $arch == "aarch64" ]] || [[ $arch == "armv7l" ]]; then
-cp -Pr /usr/share/bcm283x-firmware/* /boot/efi/
 if [[ $arch == "aarch64" ]]; then
-mv -f /boot/efi/config-64.txt /boot/efi/config.txt
 cp -P /usr/share/uboot/rpi_3/u-boot.bin /boot/efi/rpi3-u-boot.bin
 else
 cp -P /usr/share/uboot/rpi_2/u-boot.bin /boot/fw/rpi2-u-boot.bin

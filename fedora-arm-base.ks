@@ -51,7 +51,6 @@ glibc-all-langpacks
 %post
 
 # Setup Raspberry Pi firmware
-cp -Pr /usr/share/bcm283x-firmware/* /boot/efi/
 cp -P /usr/share/uboot/rpi_2/u-boot.bin /boot/efi/rpi2-u-boot.bin
 cp -P /usr/share/uboot/rpi_3_32b/u-boot.bin /boot/efi/rpi3-u-boot.bin
 
