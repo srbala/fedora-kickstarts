@@ -95,11 +95,10 @@ livedir="LiveOS"
 for arg in \`cat /proc/cmdline\` ; do
   if [ "\${arg##rd.live.dir=}" != "\${arg}" ]; then
     livedir=\${arg##rd.live.dir=}
-    return
+    continue
   fi
   if [ "\${arg##live_dir=}" != "\${arg}" ]; then
     livedir=\${arg##live_dir=}
-    return
   fi
 done
 
@@ -154,7 +153,6 @@ findPersistentHome() {
   for arg in \`cat /proc/cmdline\` ; do
     if [ "\${arg##persistenthome=}" != "\${arg}" ]; then
       homedev=\${arg##persistenthome=}
-      return
     fi
   done
 }
