@@ -5,6 +5,7 @@
 #
 # Maintainer(s):
 # – Christian Dersch <lupinix@fedoraproject.org>
+# – Zamir SUN <zsun@fedoraproject.org>
 #
 
 %packages
@@ -25,6 +26,9 @@ pavucontrol-qt-l10n
 
 # MP3
 gstreamer1-plugin-mpg123
+
+# Text Editor
+enki
 
 # remove unneeded stuff to get a lightweight system
 # fonts (we make no bones about admitting we're english-only)
