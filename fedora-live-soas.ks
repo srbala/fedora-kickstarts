@@ -5,8 +5,6 @@
 #
 # Maintainers:
 # - Peter Robinson <pbrobinson AT gmail DOT com>
-# - Sebastian Dziallas <sdz AT fedoraproject DOT org>
-# - Mel Chua <mchua AT fedoraproject DOT org>
 
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks

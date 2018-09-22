@@ -92,7 +92,7 @@ sugar-logos
 # Rebuild initrd for Sugar boot screen
 KERNEL_VERSION=$(rpm -q kernel --qf '%{version}-%{release}.%{arch}\n')
 /usr/sbin/plymouth-set-default-theme sugar
-/sbin/dracut -f /boot/initramfs-$KERNEL_VERSION.img $KERNEL_VERSION
+dracut -f /boot/initramfs-$KERNEL_VERSION.img $KERNEL_VERSION
 
 # Note that running rpm recreates the rpm db files which aren't needed or wanted
 rm -f /var/lib/rpm/__db*
@@ -163,6 +163,16 @@ show-logout=false
 [org.sugarlabs.power]
 automatic=true
 EOF
-/usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas/sugar.soas.gschema.override
+/usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas
+
+# For lorax/livemedia-creator builds.
+sed -i '
+/## make boot.iso/ i\
+# Add livecd-iso-to-disk script to .iso filesystem at /LiveOS/\
+<% f = "usr/bin/livecd-iso-to-disk" %>\
+%if exists(f):\
+    install ${f} ${LIVEDIR}/${f|basename}\
+%endif\
+' /usr/share/lorax/templates.d/99-generic/live/x86.tmpl
 
 %end
