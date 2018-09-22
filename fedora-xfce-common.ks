@@ -38,6 +38,5 @@ system-config-printer
 -desktop-backgrounds-basic
 -aspell-*                   # dictionaries are big
 -xfce4-sensors-plugin
--foomatic-db-ppds
 
 %end
