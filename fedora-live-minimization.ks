@@ -5,11 +5,8 @@
 
 # save some space
 -mpage
--sox
 -hplip
--numactl
 -isdn4k-utils
--autofs
 
 # scanning takes quite a bit of space :/
 -xsane
