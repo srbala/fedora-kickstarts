@@ -3,6 +3,10 @@
 -initial-setup-gui
 -generic-release*
 -glibc-all-langpacks
+# recommended by iproute, we don't want it in minimal
+-iproute-tc
+# recommended by gnutls, we don't want it in minimal
+-trousers
 glibc-langpack-en
 iw
 NetworkManager-wifi

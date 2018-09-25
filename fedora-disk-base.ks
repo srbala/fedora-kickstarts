@@ -46,11 +46,10 @@ rng-tools
 chrony
 bcm283x-firmware
 initial-setup
+# Intel wireless firmware assumed never of use for disk images
 -iwl*
 -ipw*
--trousers-lib
 -usb_modeswitch
--iproute-tc
 -generic-release*
 
 # make sure all the locales are available for inital0-setup and anaconda to work
