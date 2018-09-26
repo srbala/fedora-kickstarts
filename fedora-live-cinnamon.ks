@@ -7,7 +7,6 @@
 # - Dan Book <grinnz@grinnz.com>
 
 %include fedora-live-base.ks
-%include fedora-live-minimization.ks
 %include fedora-cinnamon-common.ks
 
 part / --size=6144
