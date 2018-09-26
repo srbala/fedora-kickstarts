@@ -45,7 +45,8 @@ wqy-microhei-fonts          # a compact CJK font, to replace:
 -@input-methods
 -scim*
 -m17n*
--ibus*
+# Temporary include ibus to workaround RHBZ 1633225
+# -ibus*
 -iok
 
 # Fix https://bugzilla.redhat.com/show_bug.cgi?id=1429132
