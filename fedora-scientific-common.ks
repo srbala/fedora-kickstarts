@@ -78,7 +78,7 @@ qtoctave
 @eclipse
 
 # Workaround for https://pagure.io/releng/issue/7814
--eclipse-vagrant-tools
+-eclipse-linuxtools-vagrant
 
 spyder
 
