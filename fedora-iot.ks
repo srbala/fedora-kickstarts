@@ -19,7 +19,7 @@ services --enabled=NetworkManager,sshd,rngd,initial-setup,zram-swap
 firstboot --reconfig --enable
 
 zerombr
-clearpart --all
+clearpart --all --initlabel --disklabel=msdos
 autopart --nohome --noswap --type=plain
 
 # Equivalent of %include fedora-repo.ks
