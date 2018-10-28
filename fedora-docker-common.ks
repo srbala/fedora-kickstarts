@@ -49,6 +49,7 @@ util-linux
 -shared-mime-info
 -trousers
 -xkeyboard-config
+-grubby
 
 %end
 
