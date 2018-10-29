@@ -40,6 +40,10 @@ f28-backgrounds-extras-gnome
 -eog
 -rdesktop
 
+# temporarily removing conflicting application
+-LuxRender-blender
+-mypaint
+
 %end
 
 %post
