@@ -5,5 +5,4 @@
 # The Workstion based Python Classroom Lab
 
 %include fedora-live-workstation.ks
-%include fedora-live-minimization.ks
 %include fedora-python-classroom-gnome-common.ks
