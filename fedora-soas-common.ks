@@ -165,14 +165,4 @@ automatic=true
 EOF
 /usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas
 
-# For lorax/livemedia-creator builds.
-sed -i '
-/## make boot.iso/ i\
-# Add livecd-iso-to-disk script to .iso filesystem at /LiveOS/\
-<% f = "usr/bin/livecd-iso-to-disk" %>\
-%if exists(f):\
-    install ${f} ${LIVEDIR}/${f|basename}\
-%endif\
-' /usr/share/lorax/templates.d/99-generic/live/x86.tmpl
-
 %end
