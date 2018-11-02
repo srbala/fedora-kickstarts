@@ -10,7 +10,7 @@ selinux --enforcing
 rootpw --lock --iscrypted locked
 
 # Add most common consoles console=ttyAMA0 console=ttyS0 console=ttyS1 as kernel boot parameter
-bootloader --timeout=1 --append="console=tty1 console=ttyS0,115200n8 console=ttyS1,115200n8 console=ttyAMA0,115200n8 net.ifnames=0 modprobe.blacklist=vc4"
+bootloader --timeout=1 --append="net.ifnames=0 modprobe.blacklist=vc4"
 
 network --bootproto=dhcp --device=link --activate --onboot=on
 services --enabled=NetworkManager,sshd,rngd,initial-setup,zram-swap
