@@ -32,7 +32,7 @@ autopart --noboot --nohome --noswap --nolvm
 %packages --excludedocs --instLangs=en --nocore
 fedora-release
 bash
-coreutils-single
+coreutils
 glibc-minimal-langpack
 libcrypt
 rpm
