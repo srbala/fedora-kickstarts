@@ -9,7 +9,7 @@
 %include fedora-live-base.ks
 %include fedora-cinnamon-common.ks
 
-part / --size=6144
+part / --size=8192
 
 %post
 # cinnamon configuration
