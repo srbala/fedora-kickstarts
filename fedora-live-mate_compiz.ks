@@ -7,7 +7,7 @@
 %include fedora-mate-common.ks
 %include fedora-live-minimization.ks
 
-part / --size 6144
+part / --size 7168
 
 %post
 cat >> /etc/rc.d/init.d/livesys << EOF
