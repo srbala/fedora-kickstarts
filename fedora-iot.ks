@@ -58,6 +58,9 @@ ostree refs "fedora-iot:fedora/29/${arch}/iot" --delete
 ostree remote delete fedora-iot
 ostree remote add --set=gpg-verify=true --set=gpgkeypath=/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-29-primary fedora-iot 'https://dl.fedoraproject.org/iot/repo/'
 
+# We're gettin a stray console= from somewhere, work around it
+rpm-ostree kargs --delete=console=tty0
+
 # older versions of livecd-tools do not follow "rootpw --lock" line above
 # https://bugzilla.redhat.com/show_bug.cgi?id=964299
 passwd -l root
