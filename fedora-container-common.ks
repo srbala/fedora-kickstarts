@@ -30,7 +30,7 @@ clearpart --all
 autopart --noboot --nohome --noswap --nolvm
 
 %packages --excludedocs --instLangs=en --nocore
-fedora-release
+fedora-release-container
 bash
 coreutils
 glibc-minimal-langpack
