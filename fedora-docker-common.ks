@@ -1,4 +1,4 @@
-# This is the common bits between Fedora Docker base image.
+# This is the common bits between Fedora Container base image.
 #
 # To keep this image minimal it only installs English language. You need to change
 # dnf configuration in order to enable other languages.
@@ -12,8 +12,8 @@
 #
 # Then, once you have imagefactory and imagefactory-plugins installed, run:
 #
-#   ksflatten -c fedora-docker-base[-minimal].ks -o fedora-docker-base-test.ks
-#   imagefactory --debug target_image --template /path/to/fedora-atomic-rawhide.tdl --parameter offline_icicle true --file-parameter install_script $(pwd)/fedora-docker-base-test.ks docker
+#   ksflatten -c fedora-container-base[-minimal].ks -o fedora-container-base-test.ks
+#   imagefactory --debug target_image --template /path/to/fedora-atomic-rawhide.tdl --parameter offline_icicle true --file-parameter install_script $(pwd)/fedora-container-base-test.ks docker
 #
 
 text # don't use cmdline -- https://github.com/rhinstaller/anaconda/issues/931

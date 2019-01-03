@@ -1,7 +1,7 @@
-# See docker-base-common.ks for details on how to hack on docker image kickstarts
+# See fedora-container-common.ks for details on how to hack on container image kickstarts
 # This base is a standard Fedora image with python3 and dnf
 
-%include fedora-docker-common.ks
+%include fedora-container-common.ks
 
 %packages --excludedocs --instLangs=en --nocore
 rootfiles
