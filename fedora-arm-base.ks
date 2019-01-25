@@ -8,7 +8,6 @@ bootloader --location=mbr
 
 part /boot/efi --size=80 --fstype vfat --asprimary
 part /boot --size=512 --fstype ext4 --asprimary
-part / --size=2800 --fstype ext4 --asprimary
 
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
