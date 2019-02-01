@@ -50,6 +50,7 @@ memtest86+
 # The point of a live image is to install
 anaconda
 anaconda-install-env-deps
+anaconda-live
 @anaconda-tools
 
 # Need aajohan-comfortaa-fonts for the SVG rnotes images
