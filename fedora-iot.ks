@@ -56,7 +56,7 @@ ostree refs "fedora-iot:fedora/devel/${arch}/iot" --delete
 # delete/add the remote with new options to enable gpg verification
 # and to point them at the cdn url
 ostree remote delete fedora-iot
-ostree remote add --set=gpg-verify=true --set=gpgkeypath=/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-iot-2019 fedora-iot 'https://dl.fedoraproject.org/iot/repo/'
+ostree remote add --set=gpg-verify=true --set=gpgkeypath=/etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-iot-2019 --set=contenturl=mirrorlist=https://ostree.fedoraproject.org/iot/mirrorlist  fedora-iot 'https://dl.fedoraproject.org/iot/repo/'
 
 # We're gettin a stray console= from somewhere, work around it
 rpm-ostree kargs --delete=console=tty0
