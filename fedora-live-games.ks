@@ -1,7 +1,8 @@
 # fedora-livedvd-games.ks
 #
 # Maintainer(s):
-# - Bruno Wolff III <bruno@wolff.to>
+# - Darryl T. Agostinelli <dagostinelli@gmail>
+# - Formerly maintained by Bruno Wolff III <bruno@wolff.to>
 # - Formerly maintained by Rahul Sundaram
 
 %include fedora-live-xfce.ks
