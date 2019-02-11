@@ -99,7 +99,7 @@ pachi
 pioneers
 quarry
 # Ri-li cut for size
-rogue
+# rogue # abandoned. Someone pick it up so we can include it again!
 # scorchwentbonkers # Would pull in fluid-soundfont-lite-patches
 seahorse-adventures
 solarwolf
