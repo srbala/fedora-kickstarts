@@ -1,7 +1,7 @@
 # fedora-livedvd-games.ks
 #
 # Maintainer(s):
-# - Darryl T. Agostinelli <dagostinelli@gmail>
+# - Darryl T. Agostinelli <dagostinelli@gmail.com>
 # - Formerly maintained by Bruno Wolff III <bruno@wolff.to>
 # - Formerly maintained by Rahul Sundaram
 
