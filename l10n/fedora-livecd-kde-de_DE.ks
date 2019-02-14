@@ -10,7 +10,7 @@ keyboard de-latin1-nodeadkeys
 timezone Europe/Berlin
 
 %packages
-@german-support
+langpacks-de
 
 # don't install unnecessary input methods
 -scim*

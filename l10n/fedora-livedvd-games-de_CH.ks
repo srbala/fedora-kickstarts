@@ -10,7 +10,7 @@ keyboard sg-latin1
 timezone Europe/Zurich
 
 %packages
-@german-support
+langpacks-de
 # exclude input methods
 -m17n*
 -scim*

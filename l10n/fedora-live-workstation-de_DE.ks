@@ -11,7 +11,7 @@ timezone Europe/Berlin
 
 %packages
 -gnome-blog
-@german-support
+langpacks-de
 # exclude input methods
 -m17n*
 -scim*

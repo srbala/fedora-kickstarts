@@ -13,7 +13,7 @@ keyboard fr-latin9
 timezone Europe/Paris
 
 %packages
-@french-support
+langpacks-fr
 # exclude input methods:
 -m17n*
 -scim*

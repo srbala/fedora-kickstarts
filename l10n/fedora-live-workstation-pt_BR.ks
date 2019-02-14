@@ -10,7 +10,7 @@ keyboard br-abnt2
 timezone America/Sao_Paulo
 
 %packages
-@brazilian-support
+langpacks-pt_BR
 # exclude input methods
 -m17n*
 -scim*

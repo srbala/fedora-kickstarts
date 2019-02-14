@@ -13,7 +13,7 @@ keyboard sg-latin1-nodeadkeys
 timezone Europe/Zurich
 
 %packages
-@german-support
+langpacks-de
 
 # exclude input methods
 -ibus*

@@ -13,7 +13,7 @@ keyboard ja
 timezone Asia/Tokyo
 
 %packages
-@japanese-support
+langpacks-ja
 # exclude input methods except ibus:
 -m17n*
 -scim*

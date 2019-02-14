@@ -10,7 +10,7 @@ keyboard us
 timezone Europe/Amsterdam
 
 %packages
-@dutch-support
+langpacks-nl
 # exclude input methods
 -m17n*
 -scim*

@@ -13,7 +13,7 @@ keyboard ru
 timezone Europe/Moscow
 
 %packages
-@russian-support
+langpacks-ru
 hunspell-ru
 
 # exclude input methods

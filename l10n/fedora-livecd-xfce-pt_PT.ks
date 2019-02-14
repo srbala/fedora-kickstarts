@@ -10,7 +10,7 @@ keyboard pt-latin1
 timezone Europe/Lisbon
 
 %packages
-@portuguese-support
+langpacks-pt
 # exclude input methods
 -m17n*
 -scim*
