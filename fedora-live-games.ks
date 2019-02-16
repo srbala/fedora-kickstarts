@@ -46,7 +46,7 @@ extremetuxracer
 freeciv
 freecol
 freedoom
-freedroidrpg
+# freedroidrpg # Cut for size
 frozen-bubble
 gl-117
 # glob2 - currently broken
@@ -67,8 +67,8 @@ ultimatestunts
 warzone2100
 wesnoth
 # worminator # Would pull in fluid-soundfont-lite-patches
-warmux
-xmoto
+# warmux # Cut for size
+# xmoto # Cut for size
 
 # traditional (small)
 
