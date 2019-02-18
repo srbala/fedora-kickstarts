@@ -19,7 +19,7 @@ gnome-keyring
 
 
 # l10n
-lxqt-l10n
+@lxqt-l10n
 lximage-qt-l10n
 obconf-qt-l10n
 pavucontrol-qt-l10n
