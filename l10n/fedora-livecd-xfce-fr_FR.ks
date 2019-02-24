@@ -6,7 +6,7 @@
 # Maintainer(s):
 # - Matthieu Saulnier <fantom@fedoraproject.org>
 
-%include ../fedora-livecd-xfce.ks
+%include ../fedora-live-xfce.ks
 
 lang fr_FR.UTF-8
 keyboard fr-latin9
