@@ -112,12 +112,12 @@ rpm -e linux-firmware
 # Remove firewalld; was supposed to be optional in F18+, but is required to
 # be present for install/image building.
 echo "Removing firewalld."
-yum -C -y remove firewalld --setopt="clean_requirements_on_remove=1"
+dnf -C -y remove firewalld --setopt="clean_requirements_on_remove=1"
 
 # Another one needed at install time but not after that, and it pulls
 # in some unneeded deps (like, newt and slang)
 echo "Removing authconfig."
-yum -C -y remove authconfig --setopt="clean_requirements_on_remove=1"
+dnf -C -y remove authconfig --setopt="clean_requirements_on_remove=1"
 
 echo -n "Getty fixes"
 # although we want console output going to the serial console, we don't
@@ -176,10 +176,10 @@ echo "RUN_FIRSTBOOT=NO" > /etc/sysconfig/firstboot
 echo "Removing random-seed so it's not the same in every image."
 rm -f /var/lib/systemd/random-seed
 
-echo "Cleaning old yum repodata."
-yum history new
-yum clean all
-truncate -c -s 0 /var/log/yum.log
+echo "Cleaning old dnf repodata."
+dnf history new
+dnf clean all
+truncate -c -s 0 /var/log/dnf.log
 
 echo "Import RPM GPG key"
 releasever=$(rpm -q --qf '%{version}\n' fedora-release)
@@ -204,7 +204,7 @@ dd if=/usr/share/syslinux/mbr.bin of=/dev/vda
 echo "Fixing SELinux contexts."
 touch /var/log/cron
 touch /var/log/boot.log
-mkdir -p /var/cache/yum
+mkdir -p /var/cache/dnf
 /usr/sbin/fixfiles -R -a restore
 
 echo "Zeroing out empty space."

@@ -137,7 +137,7 @@ echo "Removing firewalld."
 # not work when package was installed by Anaconda instead of command line.
 # Also -- check if this is still even needed with new anaconda -- disabled
 # firewall should _not_ pull in this package.
-# yum -C -y remove "firewalld*" --setopt="clean_requirements_on_remove=1"
+# dnf -C -y remove "firewalld*" --setopt="clean_requirements_on_remove=1"
 dnf -C -y erase "firewalld*"
 
 # Another one needed at install time but not after that, and it pulls
