@@ -14,6 +14,6 @@
 parole
 
 # extra backgrounds
-f29-backgrounds-extras-gnome
+f30-backgrounds-extras-gnome
 
 %end
