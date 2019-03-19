@@ -4,6 +4,7 @@
 @input-methods
 @multimedia
 @printing
+epiphany
 %end
 
 %post
