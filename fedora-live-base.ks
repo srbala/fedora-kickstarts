@@ -65,6 +65,7 @@ glibc-all-langpacks
 
 # no longer in @core since 2018-10, but needed for livesys script
 initscripts
+chkconfig
 %end
 
 %post
