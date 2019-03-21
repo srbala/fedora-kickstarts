@@ -2,7 +2,7 @@
 %include fedora-arm-xbase.ks
 %include fedora-mate-common.ks
 
-part / --size=6100 --fstype ext4
+part / --size=7168 --fstype ext4
 
 %post
 
