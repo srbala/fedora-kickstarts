@@ -17,6 +17,8 @@ wget
 -python33
 -python34
 -python35
+-python36
+-python38
 -pypy
 
 %end
