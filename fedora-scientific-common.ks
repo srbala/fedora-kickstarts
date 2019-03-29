@@ -28,14 +28,6 @@ armadillo-devel
 ddd
 valgrind
 
-#python 2 tools/libraries not included from the groups
-python2-tools
-python-ipython
-python-ipython-console
-python-ipython-notebook
-sympy
-python-networkx
-python-pandas
 
 #python 3 and tools/libraries not included from the groups
 python3
@@ -51,8 +43,6 @@ python3-networkx
 python3-pandas
 
 # matplotlib backends
-python-matplotlib-qt4
-python-matplotlib-tk
 python3-matplotlib-qt4
 python3-matplotlib-tk
 
@@ -101,7 +91,6 @@ openmpi
 openmpi-devel
 valgrind-openmpi
 libgomp
-python-pp
 mpi4py-openmpi
 python3-mpi4py-openmpi
 
