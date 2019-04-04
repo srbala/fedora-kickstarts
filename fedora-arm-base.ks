@@ -44,8 +44,7 @@ initial-setup-gui
 # make sure all the locales are available for inital0-setup and anaconda to work
 glibc-all-langpacks
 
-# this ks uses it in %post, and imgcreate also uses it in the installed
-# system root, so it needs to be there
+# imgcreate uses chkconfig in the installed system root, so it needs to be there
 chkconfig
 
 %end
@@ -76,13 +75,8 @@ systemctl mask tmp.mount
 
 dnf -y remove dracut-config-generic
 
-# Disable network service here, as doing it in the services line
-# fails due to RHBZ #1369794
-/sbin/chkconfig network off
-
 # Remove machine-id on pre generated images
 rm -f /etc/machine-id
 touch /etc/machine-id
 
 %end
-
