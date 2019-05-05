@@ -12,7 +12,7 @@ vim-minimal
 dnf
 dnf-yum  # https://fedorahosted.org/fesco/ticket/1312#comment:29
 sssd-client
-
+sudo
 %end
 
 %post --erroronfail --log=/root/anaconda-post.log
