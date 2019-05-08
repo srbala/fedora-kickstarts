@@ -43,10 +43,6 @@ initial-setup-gui
 
 # make sure all the locales are available for inital0-setup and anaconda to work
 glibc-all-langpacks
-
-# imgcreate uses chkconfig in the installed system root, so it needs to be there
-chkconfig
-
 %end
 
 %post
