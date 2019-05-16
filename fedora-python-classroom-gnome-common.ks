@@ -7,7 +7,6 @@
 %include fedora-python-classroom-common.ks
 
 %packages
-ninja-ide
 emacs
 python3-matplotlib-tk
 python3-pillow-tk
