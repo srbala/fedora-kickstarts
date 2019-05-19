@@ -53,7 +53,7 @@ extremetuxracer
 freeciv
 freecol
 freedoom
-# freedroidrpg # Cut for size
+freedroidrpg
 frozen-bubble
 gl-117
 # glob2 - currently broken
@@ -64,18 +64,18 @@ tmw
 megaglest
 nethack-vultures
 netpanzer
-#neverball #cut for size
+neverball
 nogravity
 #pinball # Would pull in fluid-soundfont-lite-patches
 scorched3d
 # supertux # Crashing
-#supertuxkart #remove for size
+supertuxkart
 ultimatestunts
 warzone2100
 wesnoth
 # worminator # Would pull in fluid-soundfont-lite-patches
-# warmux # Cut for size
-# xmoto # Cut for size
+warmux
+xmoto
 
 # traditional (small)
 
@@ -107,7 +107,7 @@ pachi
 pioneers
 quarry
 # Ri-li cut for size
-# rogue # abandoned. Someone pick it up so we can include it again!
+# rogue # recently abandoned. Someone picked it up. Waiting for approval.
 # scorchwentbonkers # Would pull in fluid-soundfont-lite-patches
 seahorse-adventures
 solarwolf
