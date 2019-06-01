@@ -8,6 +8,7 @@
 # Make sure to sync any additions / removals done here with
 # workstation-product-environment in comps
 @base-x
+@container-management
 @core
 @firefox
 @fonts
