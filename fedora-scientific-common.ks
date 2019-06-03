@@ -56,13 +56,10 @@ gcc-gfortran
 # GUI for R
 rkward
 
-# GUI for Octave
-qtoctave
-
 # julia
-# Comment out till build failure is sorted
-# julia
-# julia-doc
+julia
+julia-doc
+julia-devel
 
 # IDEs for the IDE folks
 @eclipse
@@ -70,7 +67,9 @@ qtoctave
 # Workaround for https://pagure.io/releng/issue/7814
 -eclipse-linuxtools-vagrant
 
-spyder
+python3-spyder
+python3-spyder-kernels
+
 
 #writing & publishing
 emacs
@@ -91,8 +90,8 @@ openmpi
 openmpi-devel
 valgrind-openmpi
 libgomp
-mpi4py-openmpi
 python3-mpi4py-openmpi
+python3-mpi4py-mpich
 
 #Version control- a GUI for each as well
 
