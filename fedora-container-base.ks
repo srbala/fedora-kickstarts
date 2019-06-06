@@ -13,6 +13,7 @@ dnf
 dnf-yum  # https://fedorahosted.org/fesco/ticket/1312#comment:29
 sssd-client
 sudo
+-glibc-langpack-en
 %end
 
 %post --erroronfail --log=/root/anaconda-post.log
