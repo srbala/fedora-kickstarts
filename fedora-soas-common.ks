@@ -89,19 +89,19 @@ sugar-logos
 
 %post
 
-# Rebuild initrd for Sugar boot screen
-KERNEL_VERSION=$(rpm -q kernel --qf '%{version}-%{release}.%{arch}\n')
-/usr/sbin/plymouth-set-default-theme sugar
-dracut -f /boot/initramfs-$KERNEL_VERSION.img $KERNEL_VERSION
-
-# Note that running rpm recreates the rpm db files which aren't needed or wanted
-rm -f /var/lib/rpm/__db*
-
 # Get proper release naming in the control panel
 cat >> /boot/olpc_build << EOF
 Sugar on a Stick
 EOF
 cat /etc/fedora-release >> /boot/olpc_build
+
+# Rebuild initrd for Sugar boot screen
+KERNEL_VERSION=$(rpm -q kernel --qf '%{version}-%{release}.%{arch}\n')
+/usr/sbin/plymouth-set-default-theme sugar
+dracut -N -f /boot/initramfs-$KERNEL_VERSION.img $KERNEL_VERSION
+
+# Note that running rpm recreates the rpm db files which aren't needed or wanted
+rm -f /var/lib/rpm/__db*
 
 # Add our activities to the favorites
 cat > /usr/share/sugar/data/activities.defaults << EOF
