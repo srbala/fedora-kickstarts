@@ -47,3 +47,15 @@ systemd-tmpfiles --prefix=/run/ --prefix=/var/run/ --create --boot || true
 rm /run/nologin # https://pagure.io/atomic-wg/issue/316
 
 %end
+
+%post --nochroot --erroronfail --log=/mnt/sysimage/root/anaconda-post-nochroot.log
+set -eux
+
+# See: https://bugzilla.redhat.com/show_bug.cgi?id=1051816
+# NOTE: run this in nochroot because "find" does not exist in chroot
+KEEPLANG=en_US
+for dir in locale i18n; do
+    find /mnt/sysimage/usr/share/${dir} -mindepth  1 -maxdepth 1 -type d -not \( -name "${KEEPLANG}" -o -name POSIX \) -exec rm -rfv {} +
+done
+
+%end
