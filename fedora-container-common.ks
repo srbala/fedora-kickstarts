@@ -61,6 +61,9 @@ set -eux
 LANG="en_US"
 echo "%_install_langs $LANG" > /etc/rpm/macros.image-language-conf
 
+# https://bugzilla.redhat.com/show_bug.cgi?id=1727489
+echo 'LANG="C.UTF-8"' >  /etc/locale.conf
+
 # https://bugzilla.redhat.com/show_bug.cgi?id=1400682
 echo "Import RPM GPG key"
 releasever=$(rpm -q --qf '%{version}\n' fedora-release-container)
