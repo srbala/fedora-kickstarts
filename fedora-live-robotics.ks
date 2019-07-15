@@ -27,9 +27,12 @@ mercurial
 -@graphical-internet
 -@games
 -@sound-and-video
+-@dial-up
+-@input-methods
+-@standard
 
 # Add a web browser
-firefox
+@firefox
 
 # Remove office suite
 -libreoffice-*
@@ -41,9 +44,11 @@ firefox
 # Drop things that pull in perl
 -linux-atm
 
-# No printing
+# No printing or scanning
 -foomatic-db-ppds
 -foomatic
+-sane-backends-drivers-scanners
+-libsane-hpaio
 
 # Dictionaries are big
 -aspell-*
@@ -52,6 +57,7 @@ firefox
 
 # Help and art can be big, too
 -gnome-user-docs
+-gnome-getting-started-docs
 -evolution-help
 -desktop-backgrounds-basic
 -*backgrounds-extras
@@ -60,7 +66,6 @@ firefox
 -krb5-auth-dialog
 -krb5-workstation
 -pam_krb5
--quota
 -nano
 -dos2unix
 -finger
@@ -69,10 +74,8 @@ firefox
 -mtr
 -pinfo
 -rsh
--nfs-utils
 -ypbind
 -yp-tools
--rpcbind
 -acpid
 -ntsysv
 
