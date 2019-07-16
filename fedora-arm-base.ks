@@ -53,7 +53,7 @@ cp -P /usr/share/uboot/rpi_3_32b/u-boot.bin /boot/efi/rpi3-u-boot.bin
 
 # work around for poor key import UI in PackageKit
 rm -f /var/lib/rpm/__db*
-releasever=$(rpm -q --qf '%{version}\n' fedora-release)
+releasever=$(rpm --eval '%{fedora}')
 basearch=armhfp
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 echo "Packages within this ARM disk image"
