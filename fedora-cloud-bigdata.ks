@@ -182,7 +182,7 @@ dnf clean all
 truncate -c -s 0 /var/log/dnf.log
 
 echo "Import RPM GPG key"
-releasever=$(rpm -q --qf '%{version}\n' fedora-release)
+releasever=$(rpm --eval '%{fedora}')
 basearch=$(uname -i)
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 

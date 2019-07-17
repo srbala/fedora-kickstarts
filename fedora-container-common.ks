@@ -66,7 +66,7 @@ echo 'LANG="C.UTF-8"' >  /etc/locale.conf
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=1400682
 echo "Import RPM GPG key"
-releasever=$(rpm -q --qf '%{version}\n' fedora-release-container)
+releasever=$(rpm --eval '%{fedora}')
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-primary
 
 echo "# fstab intentionally empty for containers" > /etc/fstab
