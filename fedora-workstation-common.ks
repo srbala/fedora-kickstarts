@@ -25,4 +25,6 @@
 -gfs2-utils
 -reiserfs-utils
 
+services --enabled=zram-swap
+
 %end
