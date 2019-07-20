@@ -41,6 +41,7 @@ f30-backgrounds-extras-gnome
 
 # temporarily removing conflicting application
 -mypaint
+-sparkleshare
 
 %end
 
