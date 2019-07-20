@@ -113,7 +113,6 @@ libotf
 #root
 root
 root-gui-fitpanel
-root-python
 
 #Multiple jobs/clustering system
 # torque
