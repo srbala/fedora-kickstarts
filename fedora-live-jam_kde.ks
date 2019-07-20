@@ -101,7 +101,6 @@ ladspa-cmt-plugins
 ladspa-fil-plugins
 ladspa-mcp-plugins
 ladspa-rev-plugins
-ladspa-swh-plugins
 ladspa-tap-plugins
 ladspa-vco-plugins
 
