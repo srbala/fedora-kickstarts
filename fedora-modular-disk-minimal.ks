@@ -58,7 +58,7 @@ dhcp-client
 # Setup Raspberry Pi firmware
 cp -P /usr/share/uboot/rpi_3/u-boot.bin /boot/efi/rpi3-u-boot.bin
 
-releasever=$(rpm -q --qf '%{version}\n' fedora-modular-release)
+releasever=$(rpm --eval '%{fedora}')
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-primary
 echo "Packages within this disk image"
 rpm -qa
