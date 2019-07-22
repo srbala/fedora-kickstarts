@@ -29,7 +29,7 @@ zerombr
 clearpart --all
 autopart --noboot --nohome --noswap --nolvm
 
-%packages --excludedocs --instLangs=en --nocore
+%packages --excludedocs --instLangs=en --nocore --excludeWeakdeps
 fedora-release-container
 bash
 coreutils

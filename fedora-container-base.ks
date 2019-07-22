@@ -3,7 +3,7 @@
 
 %include fedora-container-common.ks
 
-%packages --excludedocs --instLangs=en --nocore
+%packages --excludedocs --instLangs=en --nocore --excludeWeakdeps
 rootfiles
 # https://communityblog.fedoraproject.org/modularity-dead-long-live-modularity/
 fedora-repos-modular
