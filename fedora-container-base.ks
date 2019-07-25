@@ -15,6 +15,7 @@ sssd-client
 sudo
 -glibc-langpack-en
 -cracklib-dicts
+-dejavu-sans-fonts
 %end
 
 %post --erroronfail --log=/root/anaconda-post.log
@@ -45,6 +46,18 @@ systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connec
 umount /run
 systemd-tmpfiles --prefix=/run/ --prefix=/var/run/ --create --boot || true
 rm /run/nologin # https://pagure.io/atomic-wg/issue/316
+
+# Remove some dnf info
+rm -rfv /var/lib/dnf
+
+# if you want to change the timezone, bind-mount it from the host or reinstall tzdata
+# Work around waiting for a tzdata-minimal package see https://bugzilla.redhat.com/show_bug.cgi?id=1733452
+rm -fv /etc/localtime
+mv /usr/share/zoneinfo/UTC /etc/localtime
+rm -rfv  /usr/share/zoneinfo
+
+# Final pruning
+rm -rfv /var/cache/* /var/log/* /tmp/*
 
 %end
 
