@@ -10,7 +10,7 @@
 #
 #include snippets/packagekit-cached-metadata.ks
 
-part / --size 6656
+part / --size 7680
 
 %post
 
