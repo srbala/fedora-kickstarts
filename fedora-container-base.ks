@@ -15,7 +15,7 @@ sssd-client
 sudo
 -glibc-langpack-en
 -cracklib-dicts
--langpacks-core-en
+-langpacks-en
 %end
 
 %post --erroronfail --log=/root/anaconda-post.log
