@@ -47,12 +47,6 @@ umount /run
 systemd-tmpfiles --prefix=/run/ --prefix=/var/run/ --create --boot || true
 rm /run/nologin # https://pagure.io/atomic-wg/issue/316
 
-# if you want to change the timezone, bind-mount it from the host or reinstall tzdata
-# Work around waiting for a tzdata-minimal package see https://bugzilla.redhat.com/show_bug.cgi?id=1733452
-rm -fv /etc/localtime
-mv /usr/share/zoneinfo/UTC /etc/localtime
-rm -rfv  /usr/share/zoneinfo
-
 # Final pruning
 rm -rfv /var/cache/* /var/log/* /tmp/*
 
