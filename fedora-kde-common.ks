@@ -6,6 +6,7 @@
 @kde-media
 @kde-office
 @networkmanager-submodules
+fedora-release-kde
 
 ### The KDE-Desktop
 
