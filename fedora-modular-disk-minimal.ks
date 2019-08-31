@@ -35,7 +35,6 @@ microdnf
 glibc-minimal-langpack
 grubby
 kernel
-libcrypt
 sssd-client
 dhcp-client
 -fedora-logos

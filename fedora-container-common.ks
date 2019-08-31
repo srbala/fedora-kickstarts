@@ -34,7 +34,6 @@ fedora-release-container
 bash
 coreutils
 glibc-minimal-langpack
-libcrypt
 rpm
 shadow-utils
 sssd-client
