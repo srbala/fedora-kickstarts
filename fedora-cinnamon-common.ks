@@ -15,6 +15,6 @@ parole
 exaile
 
 # extra backgrounds
-f30-backgrounds-extras-gnome
+f31-backgrounds-extras-gnome
 
 %end
