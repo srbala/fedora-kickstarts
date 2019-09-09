@@ -12,10 +12,7 @@ rootpw --lock --iscrypted locked
 bootloader --timeout=1 --append="net.ifnames=0 modprobe.blacklist=vc4"
 
 network --bootproto=dhcp --device=link --activate --onboot=on
-services --enabled=NetworkManager,sshd,rngd,initial-setup,zram-swap
-
-# tell Initial Setup to run in the reconfig mode
-firstboot --reconfig --enable
+services --enabled=NetworkManager,sshd,rngd,zram-swap
 
 zerombr
 clearpart --all --initlabel --disklabel=msdos
