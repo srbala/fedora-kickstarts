@@ -13,12 +13,14 @@ vim-enhanced
 wget
 
 # Remove Pythons possibly recommended by tox
+-python2
 -python26
+-python27
 -python33
 -python34
 -python35
 -python36
--python38
+-python37
 -pypy
 
 %end
