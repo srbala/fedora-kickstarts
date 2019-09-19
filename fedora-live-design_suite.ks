@@ -32,7 +32,7 @@ powerline
 powerline-fonts
 
 # Extra wallpapers
-f30-backgrounds-extras-gnome
+f31-backgrounds-extras-gnome
 
 # removal of unneeded applications
 -gnome-boxes
@@ -41,7 +41,6 @@ f30-backgrounds-extras-gnome
 
 # temporarily removing conflicting application
 -mypaint
--sparkleshare
 
 %end
 
