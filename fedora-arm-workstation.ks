@@ -7,6 +7,8 @@ part / --size=6200 --fstype ext4
 %packages
 -initial-setup
 -initial-setup-gui
+-libvirt*
+-gnome-boxes
 
 %end
 
