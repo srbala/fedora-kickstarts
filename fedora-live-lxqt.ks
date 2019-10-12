@@ -11,6 +11,9 @@
 %include fedora-live-minimization.ks
 %include fedora-lxqt-common.ks
 
+%packages
+dracut-config-generic
+
 %post
 # add initscript
 cat >> /etc/rc.d/init.d/livesys << EOF
@@ -40,6 +43,8 @@ FOE
 
 # no updater applet in live environment
 rm -f /etc/xdg/autostart/org.mageia.dnfdragora-updater.desktop
+
+dnf -y remove dracut-config-generic
 
 # make sure to set the right permissions and selinux contexts
 chown -R liveuser:liveuser /home/liveuser/
