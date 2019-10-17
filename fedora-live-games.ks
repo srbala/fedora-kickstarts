@@ -45,7 +45,6 @@ asc-music
 astromenace
 # beneath-a-steel-sky-cd scummvm games cut for size
 boswars
-btanks
 bzflag
 crossfire-client
 extremetuxracer
@@ -97,7 +96,6 @@ kcheckers
 knights
 lbrickbuster2
 # liquidwar # Would pull in fluid-soundfont-lite-patches
-londonlaw
 lordsawar
 # lure scummvm games cut for size
 # machineball # Would pull in fluid-soundfont-lite-patches
@@ -121,7 +119,6 @@ xblast
 auriferous
 alienblaster
 # duel3 # Would pull in fluid-soundfont-lite-patches
-lmarbles
 powermanga
 # raidem # Would pull in fluid-soundfont-lite-patches
 # raidem-music # Would pull in fluid-soundfont-lite-patches
@@ -160,7 +157,6 @@ pingus
 
 # puzzles (small)
 
-escape
 # gbrainy Removed for space - only game that pulls in mono
 magicor
 mirrormagic
@@ -179,8 +175,6 @@ PySolFC
 
 bygfoot
 celestia
-childsplay
-gcompris
 planets
 tuxpaint
 tuxpaint-stamps
