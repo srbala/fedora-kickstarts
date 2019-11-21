@@ -9,6 +9,10 @@
 # Includes numpy, scipy, jupyter, pandas, scikit, scipy, statsmodels, sympy, matplotlib
 @python-science
 
+# Add julia and R
+R
+julia
+
 #Computational neuroscience packages
 auryn-mpich
 auryn-openmpi
