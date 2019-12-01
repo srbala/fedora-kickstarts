@@ -12,7 +12,6 @@
 @cinnamon-desktop
 @libreoffice
 parole
-exaile
 
 # extra backgrounds
 f31-backgrounds-extras-gnome
