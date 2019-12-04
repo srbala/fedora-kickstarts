@@ -5,7 +5,6 @@ lang en_US.UTF-8
 keyboard us
 timezone --utc Etc/UTC
 
-auth --useshadow --passalgo=sha512
 selinux --enforcing
 rootpw --lock --iscrypted locked
 
@@ -33,8 +32,8 @@ if [[ $arch == "aarch64" ]] || [[ $arch == "armv7l" ]]; then
 if [[ $arch == "aarch64" ]]; then
 cp -P /usr/share/uboot/rpi_3/u-boot.bin /boot/efi/rpi3-u-boot.bin
 else
-cp -P /usr/share/uboot/rpi_2/u-boot.bin /boot/fw/rpi2-u-boot.bin
-cp -P /usr/share/uboot/rpi_3_32b/u-boot.bin /boot/fw/rpi3-u-boot.bin
+cp -P /usr/share/uboot/rpi_2/u-boot.bin /boot/efi/rpi2-u-boot.bin
+cp -P /usr/share/uboot/rpi_3_32b/u-boot.bin /boot/efi/rpi3-u-boot.bin
 fi
 fi
 
@@ -93,9 +92,6 @@ echo "(Don't worry -- that out-of-space error was expected.)"
 
 # For trac ticket https://pagure.io/atomic-wg/issue/128
 rm -f /etc/sysconfig/network-scripts/ifcfg-ens3
-
-echo "Adding Developer Mode GRUB2 menu item."
-/usr/libexec/atomic-devmode/bootentry add
 
 # Anaconda is writing an /etc/resolv.conf from the install environment.
 # The system should start out with an empty file, otherwise cloud-init
