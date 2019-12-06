@@ -11,7 +11,6 @@ text
 lang en_US.UTF-8
 keyboard us
 timezone US/Eastern
-auth --useshadow --passalgo=sha512
 selinux --enforcing
 firewall --enabled --service=mdns
 services --enabled=sshd,NetworkManager,chronyd,zram-swap

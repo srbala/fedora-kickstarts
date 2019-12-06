@@ -1,6 +1,5 @@
-lang en_US.UTF-8
 #keyboard us
-auth --useshadow --passalgo=sha512
+lang en_US.UTF-8
 selinux --enforcing
 firewall --enabled --service=mdns,ssh
 

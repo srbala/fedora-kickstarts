@@ -29,7 +29,6 @@ lang en_US.UTF-8
 keyboard us
 timezone --utc Etc/UTC
 
-auth --useshadow --passalgo=sha512
 selinux --enforcing
 rootpw --lock --iscrypted locked
 

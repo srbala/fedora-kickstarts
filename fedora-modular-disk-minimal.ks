@@ -2,7 +2,6 @@ text
 lang en_US.UTF-8
 keyboard us
 timezone US/Eastern
-auth --useshadow --passalgo=sha512
 selinux --enforcing
 # Disabled for modular compose (for now)
 #firewall --enabled --service=mdns
