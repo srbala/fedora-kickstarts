@@ -31,9 +31,11 @@ arch=$(uname -m)
 if [[ $arch == "aarch64" ]] || [[ $arch == "armv7l" ]]; then
 if [[ $arch == "aarch64" ]]; then
 cp -P /usr/share/uboot/rpi_3/u-boot.bin /boot/efi/rpi3-u-boot.bin
+cp -P /usr/share/uboot/rpi_4/u-boot.bin /boot/efi/rpi4-u-boot.bin
 else
 cp -P /usr/share/uboot/rpi_2/u-boot.bin /boot/efi/rpi2-u-boot.bin
 cp -P /usr/share/uboot/rpi_3_32b/u-boot.bin /boot/efi/rpi3-u-boot.bin
+cp -P /usr/share/uboot/rpi_4_32b/u-boot.bin /boot/efi/rpi4-u-boot.bin
 fi
 fi
 
