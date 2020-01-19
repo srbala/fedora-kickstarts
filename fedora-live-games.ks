@@ -107,7 +107,6 @@ quarry
 # Ri-li cut for size
 # rogue # recently abandoned. Someone picked it up. Waiting for approval.
 # scorchwentbonkers # Would pull in fluid-soundfont-lite-patches
-seahorse-adventures
 solarwolf
 sopwith
 stormbaancoureur
@@ -158,7 +157,6 @@ pingus
 # puzzles (small)
 
 # gbrainy Removed for space - only game that pulls in mono
-magicor
 mirrormagic
 pipenightdreams
 pipepanic
