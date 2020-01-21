@@ -13,6 +13,7 @@
 
 %packages
 dracut-config-generic
+%end
 
 %post
 # add initscript
