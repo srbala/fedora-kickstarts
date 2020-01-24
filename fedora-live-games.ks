@@ -134,7 +134,6 @@ KoboDeluxe
 Maelstrom
 methane
 njam
-seahorse-adventures
 shippy
 tecnoballz
 wordwarvi
