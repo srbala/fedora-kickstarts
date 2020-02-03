@@ -33,7 +33,6 @@ alsa-plugins-samplerate
 alsa-plugins-upmix
 alsa-plugins-vdownmix
 a2jmidid
-aj-snapshot
 
 #jack 
 jack-audio-connection-kit
@@ -79,19 +78,15 @@ sooperlooper
 audacity
 ardour5
 rosegarden4
-seq24
 muse
 qtractor
-non-session-manager
-non-daw
-non-sequencer
-non-mixer
 
 # audio-plugins
 calf
 dssi
-jack-rack
+carla
 ladspa
+lsp-plugins-jack
 
 #ladpsa plugins
 ladspa-amb-plugins
@@ -103,12 +98,11 @@ ladspa-mcp-plugins
 ladspa-rev-plugins
 ladspa-tap-plugins
 ladspa-vco-plugins
+lsp-plugins-ladspa
 
 #lv2 plugins
 lv2
-lv2-avw-plugins
 lv2-invada-plugins
-lv2-kn0ck0ut
 lv2-ll-plugins
 lv2-swh-plugins
 lv2-vocoder-plugins
@@ -119,13 +113,12 @@ lv2-c++-tools
 lv2-samplv1
 lv2-synthv1
 lv2-drumkv1
-lv2-triceratops
 lv2-newtonator
 lv2-x42-plugins
-lv2-fomp-plugins
 lv2-sorcer
 lv2-fabla
 lv2-artyfx-plugins
+lsp-plugins-lv2
 
 #dssi
 nekobee-dssi
@@ -133,7 +126,6 @@ whysynth-dssi
 xsynth-dssi
 hexter-dssi
 
-zynjacku 
 zita-at1
 zita-rev1
 
