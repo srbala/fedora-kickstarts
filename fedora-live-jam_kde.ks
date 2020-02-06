@@ -84,7 +84,6 @@ qtractor
 # audio-plugins
 calf
 dssi
-carla
 ladspa
 lsp-plugins-jack
 
