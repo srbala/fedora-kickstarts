@@ -7,9 +7,7 @@
 # Web: https://fedoraproject.org/wiki/Fedora_jam
 # Web: insert spinspacke when created
 
-# Maintainer: Jørn Lomax <northlomax@gmail.com>
-#             https://fedoraproject.org/wiki/User:jvlomax
-#             Brendan Jones <brendan.jones.it@gmail.com>
+# Maintainer: Erich Eickmeyer <erich@ericheickmeyer.com>
 
 %include fedora-live-kde.ks
 
@@ -86,6 +84,7 @@ calf
 dssi
 ladspa
 lsp-plugins-jack
+carla
 
 #ladpsa plugins
 ladspa-amb-plugins
