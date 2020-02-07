@@ -157,9 +157,7 @@ japa
 radium-compressor
 
 # fedora jam theming (to be customized)
-kfaenza-icon-theme
 fedora-jam-backgrounds
-fedora-jam-kde-theme
 
 #Misc. Utils
 screen
