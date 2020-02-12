@@ -84,7 +84,7 @@ calf
 dssi
 ladspa
 lsp-plugins-jack
-carla
+Carla
 
 #ladpsa plugins
 ladspa-amb-plugins
@@ -117,6 +117,7 @@ lv2-sorcer
 lv2-fabla
 lv2-artyfx-plugins
 lsp-plugins-lv2
+lv2-carla
 
 #dssi
 nekobee-dssi
