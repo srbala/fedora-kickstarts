@@ -9,6 +9,12 @@
 firewall --enabled --service=mdns,presence
 
 %packages
+
+# == Core Sugar Platform ==
+@sugar-desktop
+
+# explicitly remove a bunch of extra stuff
+-openbox
 -@fonts
 -@dial-up
 -@multimedia
@@ -30,6 +36,8 @@ firewall --enabled --service=mdns,presence
 -abrt-cli
 -ibus*
 -hyperv-daemons
+-sane-backends
+-sane-backends-drivers-scanners
 
 # Add some extra fonts
 dejavu-sans-fonts
@@ -39,37 +47,11 @@ aajohan-comfortaa-fonts
 sil-abyssinica-fonts
 vlgothic-fonts
 
-# == Core Sugar Platform ==
-@sugar-desktop
--sugar-ruler
-sugar-cp-updater
-lightdm
-lightdm-gtk
-
 # Write breaks unless we do this (we don't need it anyway)
-# enable for testing in the F17 dev cycle
 @input-methods
 
 # Needed for wifi, bluetooth and WWAN connection support
 @networkmanager-submodules
-
-# == Platform Components ==
-# from http://wiki.sugarlabs.org/go/0.94/Platform_Components
-alsa-plugins-pulseaudio
-alsa-utils
-gstreamer1-plugins-base
-gstreamer1-plugins-good
-gstreamer1-plugins-bad-free
-gstreamer-plugins-espeak
-pulseaudio
-pulseaudio-utils
-
-# explicitly remove openbox and hopefully deal with what firstboot wants
--openbox
-
-# remove deps that come from god knows where
--sane-backends
--sane-backends-drivers-scanners
 
 # Usefulness for DSL connections as per:
 # http://bugs.sugarlabs.org/ticket/1951
@@ -82,7 +64,6 @@ livecd-tools
 # Get the Sugar boot screen
 -plymouth-system-theme
 -plymouth-theme-charge
-sugar-logos
 
 %end
 
@@ -101,44 +82,6 @@ dracut -N -f /boot/initramfs-$KERNEL_VERSION.img $KERNEL_VERSION
 
 # Note that running rpm recreates the rpm db files which aren't needed or wanted
 rm -f /var/lib/rpm/__db*
-
-# Add our activities to the favorites
-cat > /usr/share/sugar/data/activities.defaults << EOF
-org.laptop.WebActivity
-org.laptop.HelpActivity
-org.laptop.Chat
-org.laptop.sugar.ReadActivity
-org.laptop.sugar.GetBooksActivity
-org.laptop.AbiWordActivity
-org.laptop.TurtleArtActivity
-org.laptop.Calculate
-org.laptop.Clock
-org.laptop.ImageViewerActivity
-org.laptop.Memorize
-org.laptop.physics
-org.laptop.Pippy
-org.laptop.RecordActivity
-org.laptop.Oficina
-org.laptop.StopWatchActivity
-org.laptop.community.Finance
-org.laptop.community.TypingTurtle
-org.laptop.sugar.Jukebox
-org.laptop.Words
-org.eq.FotoToon
-org.gnome.Labyrinth
-com.laptop.Ruler
-org.sugarlabs.AbacusActivity
-org.sugarlabs.IRC
-org.sugarlabs.InfoSlicer
-org.sugarlabs.PortfolioActivity
-org.sugarlabs.StoryActivity
-org.sugarlabs.VisualMatchActivity
-com.garycmartin.Moon
-mulawa.Countries
-tv.alterna.Clock
-vu.lux.olpc.Maze
-vu.lux.olpc.Speak
-EOF
 
 cat > /etc/sysconfig/desktop <<EOF
 PREFERRED=/usr/bin/sugar
