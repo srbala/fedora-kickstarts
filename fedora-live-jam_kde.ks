@@ -147,13 +147,12 @@ jamin
 lash
 jack_capture
 jaaa
+jackctlmmc
 jmeters
 qastools
 arpage
 realTimeConfigQuickScan
 rtirq
-#patchage
-#ladish #not packaged yet
 japa
 radium-compressor
 
