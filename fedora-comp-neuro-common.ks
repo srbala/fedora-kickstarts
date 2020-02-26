@@ -28,7 +28,7 @@ nest
 neuron
 neurord
 octave
-paraview
+# paraview
 python3
 python3-brian2
 python-brian2-doc
