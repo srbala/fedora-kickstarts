@@ -43,6 +43,9 @@ ffado
 pulseaudio-module-jack
 pavucontrol
 
+#pipewire
+pipewire
+
 #midi
 qsynth
 fluidsynth
