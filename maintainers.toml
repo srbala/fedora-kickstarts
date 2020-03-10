@@ -1,0 +1,64 @@
+[spins.lxqt.x86_64]
+fas = [ "lupinix", "zsun" ]
+maintainers = [ "Christian Dersch", "Zamir SUN" ]
+[spins.lxqt.armhfp]
+fas = [ "lupinix", "zsun" ]
+maintainers = [ "Christian Dersch", "Zamir SUN" ]
+
+[spins.xfce.x86_64]
+fas = [ "nonamedotc", "kevin", "maxamillion" ]
+maintainers = [ "Mukundan Ragavan", "Kevin Fenzi", "Adam Miller" ]
+[spins.xfce.armhfp]
+fas = [ "nonamedotc", "kevin", "maxamillion" ]
+maintainers = [ "Mukundan Ragavan", "Kevin Fenzi", "Adam Miller" ]
+
+[spins.kde.x86_64]
+fas = [ "rdieter", "svahl" ]
+maintainers = [ "Rex Dieter", "Sebastian Vahl" ]
+
+[spins.cinnamon.x86_64]
+fas = [ "grinnz" ]
+maintainers = [ "Dan Book" ]
+
+[spins.lxde.x86_64]
+fas = [ "cwickert" ]
+maintainers = [ "Christoph Wickert" ]
+[spins.lxde.armhfp]
+fas = [ "cwickert" ]
+maintainers = [ "Christoph Wickert" ]
+
+[spins.soas.x86_64]
+fas = [ "chimosky", "pbrobinson" ]
+maintainers = [ "Chihurumnaya Ibiam", "Peter Robinson" ]
+[spins.soas.armhfp]
+fas = [ "chimosky", "pbrobinson" ]
+maintainers = [ "Chihurumnaya Ibiam", "Peter Robinson" ]
+
+
+[labs.astronomy_kde.x86_64]
+fas = [ "lupinix" ]
+maintainers = [ "Christian Dersch" ]
+
+[labs.security.x86_64]
+fas = [ "fab", "jsimon" ]
+maintainers = [ "Fabian Affolter", "Joerg Simon" ]
+
+[labs.design_suite.x86_64]
+fas = [ "luya" ]
+maintainers = [ "Luya Tshimbalanga" ]
+
+[labs.games.x86_64]
+fas = [ "dagostinelli" ]
+maintainers = [ "Darryl T. Agostinelli" ]
+
+[labs.jam_kde.x86_64]
+fas = [ "eeickmeyer" ]
+maintainers = [ "Erich Eickmeyer" ]
+
+[labs.scientific_kde.x86_64]
+fas = [ "amitksaha" ]
+maintainers = [ "Amit Saha" ]
+
+[labs.scientific.x86_64]
+fas = [ "amitksaha" ]
+maintainers = [ "Amit Saha" ]
