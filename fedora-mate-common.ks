@@ -38,6 +38,7 @@ nss-mdns
 -fedora-icon-theme
 -gnome-icon-theme
 -gnome-icon-theme-symbolic
+-gnome-logs
 -gnome-software
 -gnome-user-docs
 
