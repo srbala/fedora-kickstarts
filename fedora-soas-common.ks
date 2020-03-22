@@ -11,6 +11,7 @@ firewall --enabled --service=mdns,presence
 %packages
 
 # == Core Sugar Platform ==
+fedora-release-soas
 @sugar-desktop
 
 # explicitly remove a bunch of extra stuff

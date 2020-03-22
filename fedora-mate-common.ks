@@ -1,4 +1,5 @@
 %packages
+fedora-release-matecompiz
 @mate
 compiz
 compiz-plugins-main

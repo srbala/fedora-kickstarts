@@ -4,6 +4,7 @@
 part / --size=2500 --fstype xfs
 
 %packages
+fedora-release-server
 # install the default groups for the server environment since installing the environment is not working
 @server-product
 @standard

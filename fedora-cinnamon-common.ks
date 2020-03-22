@@ -8,6 +8,7 @@
 
 %packages
 
+fedora-release-cinnamon
 @networkmanager-submodules
 @cinnamon-desktop
 @libreoffice

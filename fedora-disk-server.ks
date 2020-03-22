@@ -5,6 +5,7 @@ services --enabled=sshd,NetworkManager,chronyd,initial-setup,zram-swap
 autopart --noswap
 
 %packages
+fedora-release-server
 # install the default groups for the server environment since installing the environment is not working
 @server-product
 @standard

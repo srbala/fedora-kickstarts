@@ -12,6 +12,7 @@
 
 %packages
 
+fedora-release-xfce
 @networkmanager-submodules
 @xfce-desktop
 @xfce-apps
