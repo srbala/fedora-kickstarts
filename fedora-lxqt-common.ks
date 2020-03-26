@@ -38,7 +38,7 @@ wqy-microhei-fonts          # a compact CJK font, to replace:
 -adobe-source-han-sans-cn-fonts     # simplified Chinese
 -adobe-source-han-sans-tw-fonts     # traditional Chinese
 
--paratype-pt-sans-fonts # Cyrillic (already supported by DejaVu), huge
+-pt-sans-fonts # Cyrillic (already supported by DejaVu), huge
 #-stix-fonts        # mathematical symbols
 
 # remove input methods to free space
