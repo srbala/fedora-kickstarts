@@ -9,6 +9,8 @@ All changes should be made via the PR workflow.
 This project is packaged in Fedora as the spin-kickstarts package allowing users to see 
 and modify the kickstart files for their local needs. 
 
+Maintainers for each image are listed in the `maintainers.toml` file.
+
 ## To make a release ##
 
     git clone ssh://git@pagure.io/fedora-kickstarts.git fedora-kickstarts
