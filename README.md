@@ -1,13 +1,13 @@
 # fedora-kickstarts #
 
-This project is used to manage the Fedora kickstart files used in composing Fedora release images. 
+This project is used to manage the Fedora kickstart files used in composing Fedora release images.
 
-The master branch is used by rawhide and each release branch is used by that release. 
+The master branch is used by rawhide and each release branch is used by that release.
 
-All changes should be made via the PR workflow. 
+All changes should be made via the PR workflow.
 
-This project is packaged in Fedora as the spin-kickstarts package allowing users to see 
-and modify the kickstart files for their local needs. 
+This project is packaged in Fedora as the spin-kickstarts package allowing users to see
+and modify the kickstart files for their local needs.
 
 Maintainers for each image are listed in the `maintainers.toml` file.
 
