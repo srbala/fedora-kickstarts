@@ -48,12 +48,15 @@ kernel-tools
 firefox
 thunderbird
 
-#remove packages not need
+#remove packages not needed
 -akregator
 -kaddressbook
 -kmail
 -kontact
 -korganizer
+-non-mixer
+-non-session-manager
+-non-sequencer
 
 %end
 
