@@ -14,6 +14,7 @@ R
 julia
 
 #Computational neuroscience packages
+arbor
 auryn-mpich
 auryn-openmpi
 bionetgen
@@ -42,6 +43,7 @@ python3-neo
 # python-nineml-doc
 python3-PyLEMS
 python-PyLEMS-doc
+python3-steps
 smoldyn
 
 %end
