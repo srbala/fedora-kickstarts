@@ -26,6 +26,18 @@ Maintainers for each image are listed in the `maintainers.toml` file.
     # Clean up the generated files:
     make clean
 
+## Build logs ##
+
+To see build logs go to
+
+https://koji.fedoraproject.org/koji
+
+"Packages" tab, and filter by Fedora-Workstation-Live for example.
+
+Technical info about the officialy released images can be found at
+
+https://kojipkgs.fedoraproject.org/compose/
+
 # bug reports #
 
 Bugs should be reported to the spin-kickstarts bugzilla component:
