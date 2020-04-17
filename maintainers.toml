@@ -60,9 +60,9 @@ fas = [ "eeickmeyer" ]
 maintainers = [ "Erich Eickmeyer" ]
 
 [labs.scientific_kde.x86_64]
-fas = [ "amitksaha" ]
-maintainers = [ "Amit Saha" ]
+fas = [ "scitech" ]
+maintainers = [ "SciTech SIG" ]
 
 [labs.scientific.x86_64]
-fas = [ "amitksaha" ]
-maintainers = [ "Amit Saha" ]
+fas = [ "scitech" ]
+maintainers = [ "SciTech SIG" ]
