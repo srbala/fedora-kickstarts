@@ -15,6 +15,6 @@ fedora-release-cinnamon
 parole
 
 # extra backgrounds
-f31-backgrounds-extras-gnome
+f32-backgrounds-extras-gnome
 
 %end
