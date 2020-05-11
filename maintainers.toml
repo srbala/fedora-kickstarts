@@ -59,6 +59,10 @@ maintainers = [ "Darryl T. Agostinelli" ]
 fas = [ "eeickmeyer" ]
 maintainers = [ "Erich Eickmeyer" ]
 
+[labs.python_classroom.x86_64]
+fas = [ "churchyard", "python-sig" ]
+maintainers = [ "Miro Hrončok", "Python SIG" ]
+
 [labs.scientific_kde.x86_64]
 fas = [ "scitech" ]
 maintainers = [ "SciTech SIG" ]
