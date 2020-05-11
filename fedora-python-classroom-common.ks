@@ -22,6 +22,11 @@ wget
 -python36
 -python37
 -python39
+-python2.7
+-python3.5
+-python3.6
+-python3.7
+-python3.9
 -pypy
 
 %end
