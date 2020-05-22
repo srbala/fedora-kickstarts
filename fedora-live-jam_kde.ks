@@ -37,6 +37,7 @@ nano
 
 # fedora jam theming (to be customized)
 fedora-jam-backgrounds
+fedora-jam-kde-theme
 
 #Misc. Utils
 screen
