@@ -26,11 +26,6 @@ rm -rf /tmp/*
 # https://pagure.io/atomic-wg/issue/308
 printf "tsflags=nodocs\n" >>/etc/dnf/dnf.conf
 
-# https://bugzilla.redhat.com/show_bug.cgi?id=1576993
-systemctl disable dnf-makecache.timer
-
-#Mask mount units and getty service so that we don't get login prompt
-systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connections.mount systemd-logind.service getty.target console-getty.service
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=1343138
 # Fix /run/lock breakage since it's not tmpfs in docker
@@ -44,7 +39,6 @@ systemctl mask systemd-remount-fs.service dev-hugepages.mount sys-fs-fuse-connec
 #   [/usr/lib/tmpfiles.d/systemd.conf:26] Failed to replace specifiers: /run/log/journal/%m
 #
 umount /run
-systemd-tmpfiles --prefix=/run/ --prefix=/var/run/ --create --boot || true
 rm /run/nologin # https://pagure.io/atomic-wg/issue/316
 
 # Final pruning
