@@ -170,7 +170,6 @@ PySolFC
 
 # educational/simulation
 
-bygfoot
 celestia
 planets
 tuxpaint
