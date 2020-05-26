@@ -66,7 +66,7 @@ thunderbird
 #setup kickoff favorites
 /bin/mkdir -p /etc/skel/.config
 
-JAMFAVORITES=/usr/share/applications/firefox.desktop,/usr/share/applications/qjackctl.desktop,/usr/share/applications/ardour5.desktop,/usr/share/applications/carla.desktop,/usr/share/applications/org.kde.konsole.desktop,/usr/share/applications/org.kde.dolphin.desktop,/usr/share/applications/systemsettings.desktop,/usr/share/applications/org.kde.kontact.desktop
+JAMFAVORITES=/usr/share/applications/firefox.desktop,/usr/share/applications/studio-controls.desktop,/usr/share/applications/ardour5.desktop,/usr/share/applications/carla.desktop,/usr/share/applications/org.kde.konsole.desktop,/usr/share/applications/org.kde.dolphin.desktop,/usr/share/applications/systemsettings.desktop,/usr/share/applications/org.kde.kontact.desktop
 JAMFAVORITESLIVE=/usr/share/applications/liveinst.desktop,$JAMFAVORITES
 
 cat <<EOF  >> /etc/skel/.config/kickoffrc
