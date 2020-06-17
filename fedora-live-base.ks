@@ -302,7 +302,7 @@ releasever=$(rpm --eval '%{fedora}')
 basearch=$(uname -i)
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 echo "Packages within this LiveCD"
-rpm -qa
+rpm -qa --qf '%{size}\t%{name}-%{version}-%{release}.%{arch}\n' |sort -rn
 # Note that running rpm recreates the rpm db files which aren't needed or wanted
 rm -f /var/lib/rpm/__db*
 

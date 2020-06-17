@@ -81,7 +81,7 @@ rm -f /var/lib/systemd/random-seed
 
 echo "Packages within this iot image:"
 echo "-----------------------------------------------------------------------"
-rpm -qa
+rpm -qa --qf '%{size}\t%{name}-%{version}-%{release}.%{arch}\n' |sort -rn
 echo "-----------------------------------------------------------------------"
 # Note that running rpm recreates the rpm db files which aren't needed/wanted
 rm -f /var/lib/rpm/__db*

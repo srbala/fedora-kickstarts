@@ -65,7 +65,7 @@ cp -P /usr/share/uboot/rpi_4/u-boot.bin /boot/efi/rpi4-u-boot.bin
 releasever=$(rpm --eval '%{fedora}')
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-primary
 echo "Packages within this disk image"
-rpm -qa
+rpm -qa --qf '%{size}\t%{name}-%{version}-%{release}.%{arch}\n' |sort -rn
 # Note that running rpm recreates the rpm db files which aren't needed or wanted
 rm -f /var/lib/rpm/__db*
 

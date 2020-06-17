@@ -179,7 +179,7 @@ rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-$basearch
 
 echo "Packages within this cloud image:"
 echo "-----------------------------------------------------------------------"
-rpm -qa
+rpm -qa --qf '%{size}\t%{name}-%{version}-%{release}.%{arch}\n' |sort -rn
 echo "-----------------------------------------------------------------------"
 # Note that running rpm recreates the rpm db files which aren't needed/wanted
 rm -f /var/lib/rpm/__db*
