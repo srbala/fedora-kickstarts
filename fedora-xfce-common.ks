@@ -28,8 +28,6 @@ gnome-keyring-pam
 # Note that blank is still default.
 xscreensaver-extras
 wget
-# Better more popular browser
-#firefox
 system-config-printer
 
 # save some space
