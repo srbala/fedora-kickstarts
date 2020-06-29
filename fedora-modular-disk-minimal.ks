@@ -6,7 +6,8 @@ selinux --enforcing
 # Disabled for modular compose (for now)
 #firewall --enabled --service=mdns
 # Disabled for modular compose (for now)
-#services --enabled=sshd,NetworkManager,chronyd,initial-setup
+#services --enabled=sshd,chronyd,initial-setup
+services --enabled=NetworkManager
 network --bootproto=dhcp --device=link --activate
 rootpw --lock --iscrypted locked
 shutdown
@@ -35,7 +36,7 @@ glibc-minimal-langpack
 grubby
 kernel
 sssd-client
-dhcp-client
+@networkmanager-submodules
 -fedora-logos
 -coreutils
 -dosfstools
