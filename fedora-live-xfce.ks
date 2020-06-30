@@ -13,6 +13,9 @@
 %include fedora-live-minimization.ks
 %include fedora-xfce-common.ks
 
+# need a bigger /
+part / --size 6144
+
 %post
 # xfce configuration
 
