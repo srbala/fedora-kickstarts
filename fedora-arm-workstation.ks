@@ -2,7 +2,10 @@
 %include fedora-arm-xbase.ks
 %include fedora-workstation-common.ks
 
-part / --size=6200 --fstype ext4
+part btrfs.007 --fstype="btrfs" --size=6200
+btrfs none --label=fedora btrfs.007
+btrfs /home --subvol --name=home LABEL=fedora
+btrfs / --subvol --name=root LABEL=fedora
 
 %packages
 -initial-setup

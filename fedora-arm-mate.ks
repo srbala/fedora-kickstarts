@@ -2,7 +2,10 @@
 %include fedora-arm-xbase.ks
 %include fedora-mate-common.ks
 
-part / --size=7168 --fstype ext4
+part btrfs.007 --fstype="btrfs" --size=7168
+btrfs none --label=fedora btrfs.007
+btrfs /home --subvol --name=home LABEL=fedora
+btrfs / --subvol --name=root LABEL=fedora
 
 %post
 
