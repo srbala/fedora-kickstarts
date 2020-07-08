@@ -9,4 +9,4 @@
 %include fedora-comp-neuro-common.ks
 %include fedora-neuro-gnome-common.ks
 
-part / --size 9656
+part / --size 10240
