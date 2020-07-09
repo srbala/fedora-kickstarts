@@ -83,6 +83,8 @@ which
 # No need for plymouth. Also means anaconda won't put rhgb/quiet
 # on kernel command line
 -plymouth
+# noswap on Cloud for now
+-zram-generator-defaults
 
 %end
 
