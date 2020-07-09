@@ -11,7 +11,7 @@ part /boot --size=512 --fstype ext4 --asprimary
 # make sure that initial-setup runs and lets us do all the configuration bits
 firstboot --reconfig
 
-services --enabled=sshd,NetworkManager,avahi-daemon,chronyd,initial-setup,zram-swap
+services --enabled=sshd,NetworkManager,avahi-daemon,chronyd,initial-setup
 
 %include fedora-repo.ks
 
@@ -19,7 +19,6 @@ services --enabled=sshd,NetworkManager,avahi-daemon,chronyd,initial-setup,zram-s
 @core
 @standard
 @hardware-support
-zram
 
 kernel
 # remove this in %post

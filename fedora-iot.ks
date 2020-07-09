@@ -11,7 +11,7 @@ rootpw --lock --iscrypted locked
 bootloader --timeout=1 --append="net.ifnames=0 modprobe.blacklist=vc4"
 
 network --bootproto=dhcp --device=link --activate --onboot=on
-services --enabled=NetworkManager,sshd,rngd,zram-swap
+services --enabled=NetworkManager,sshd,rngd
 
 zerombr
 clearpart --all --initlabel --disklabel=msdos

@@ -4,7 +4,7 @@
 
 bootloader --append="cma=192MB"
 
-services --enabled=sshd,NetworkManager,chronyd,zram-swap
+services --enabled=sshd,NetworkManager,chronyd
 
 autopart --type=btrfs --noswap
 

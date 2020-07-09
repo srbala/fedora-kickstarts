@@ -1,6 +1,6 @@
 %include fedora-disk-base.ks
 
-services --enabled=sshd,NetworkManager,chronyd,initial-setup,zram-swap
+services --enabled=sshd,NetworkManager,chronyd,initial-setup
 
 autopart --noswap
 

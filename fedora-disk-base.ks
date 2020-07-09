@@ -13,7 +13,7 @@ keyboard us
 timezone US/Eastern
 selinux --enforcing
 firewall --enabled --service=mdns
-services --enabled=sshd,NetworkManager,chronyd,zram-swap
+services --enabled=sshd,NetworkManager,chronyd
 network --bootproto=dhcp --device=link --activate
 rootpw --lock --iscrypted locked
 shutdown
@@ -32,7 +32,6 @@ firstboot --reconfig
 @core
 @standard
 @hardware-support
-zram
 
 kernel
 # remove this in %post
