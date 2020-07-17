@@ -34,9 +34,7 @@ astrometry
 astrometry-tycho2
 cdsclient
 fpack
-gcx
 psfex
-saoimage
 scamp
 sextractor
 siril
