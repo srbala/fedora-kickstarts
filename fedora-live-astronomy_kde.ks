@@ -105,6 +105,10 @@ python3-matplotlib-tk
 # Python IDE very useful for scientific use
 python3-spyder
 
+# BOINC for distributed computing
+boinc-client
+boinc-manager
+
 #Version control- a GUI for each as well
 
 # Installing rapidsvn will also install subversion package
