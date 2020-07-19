@@ -52,7 +52,7 @@ indistarter
 kstars
 
 # misc. astronomy
-celestia
+#celestia
 stellarium
 virtualplanet
 
