@@ -4,9 +4,9 @@
 @engineering-and-scientific
 
 # scilab
-scilab
-scilab-devel
-scilab-doc
+## scilab
+## scilab-devel
+## scilab-doc
 
 # Remove sagemath explicitly?
 -sagemath
@@ -128,8 +128,8 @@ dia
 inkscape
 xzgv
 gimp
-ggobi
-ggobi-devel
+## ggobi
+## ggobi-devel
 #g3data
 #Mayavi
 
