@@ -8,4 +8,4 @@
 %include fedora-python-classroom-gnome-common.ks
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=1695796
-part / --size 7168
+part / --size 8192
