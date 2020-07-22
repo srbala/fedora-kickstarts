@@ -140,7 +140,7 @@ wordwarvi
 xgalaxy
 # zasx # Would pull in fluid-soundfont-lite-patches
 
-# falling blocks games (small) 
+# falling blocks games (small)
 
 amoebax
 crack-attack
@@ -165,12 +165,11 @@ vodovod
 
 # card games
 
-#poker2d - dropped from F14 for being orphaned
 PySolFC
 
 # educational/simulation
 
-celestia
+#celestia - not currently building
 planets
 tuxpaint
 tuxpaint-stamps
