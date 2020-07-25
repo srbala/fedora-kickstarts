@@ -53,6 +53,12 @@ EOKEYS
 chmod 600 ~vagrant/.ssh/authorized_keys
 chown -R vagrant:vagrant ~vagrant/.ssh/
 
+cat > /etc/ssh/sshd_config.d/10-vagrant-insecure-rsa-key.conf <<EOF
+# For now the vagrant insecure key is an rsa key
+# https://github.com/hashicorp/vagrant/issues/11783
+PubkeyAcceptedKeyTypes=+ssh-rsa
+EOF
+
 # Further suggestion from @purpleidea (James Shubin) - extend key to root users as well
 mkdir -m 0700 -p /root/.ssh
 cp /home/vagrant/.ssh/authorized_keys /root/.ssh/authorized_keys
