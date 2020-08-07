@@ -3,7 +3,7 @@ lang en_US.UTF-8
 selinux --enforcing
 firewall --enabled --service=mdns,ssh
 
-bootloader --location=mbr
+bootloader --extlinux --location=mbr
 
 part /boot/efi --size=80 --fstype vfat --asprimary
 part /boot --size=512 --fstype ext4 --asprimary
