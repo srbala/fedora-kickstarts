@@ -27,7 +27,6 @@ gnuplot
 moose
 nest
 neuron
-neurord
 octave
 # paraview
 python3
