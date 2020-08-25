@@ -16,10 +16,6 @@ emerald
 fusion-icon
 @networkmanager-submodules
 
-# some apps from mate-applications
-caja-actions
-mate-disk-usage-analyzer
-
 # blacklist applications which breaks mate-desktop
 -audacious
 
@@ -44,7 +40,6 @@ nss-mdns
 -gnome-user-docs
 
 -@mate-applications
--mate-icon-theme-faenza
 
 # Help and art can be big, too
 -gnome-user-docs
