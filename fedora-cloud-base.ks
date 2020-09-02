@@ -76,16 +76,20 @@ kernel-core
 ##### end package list ###############################################
 
 
-
+##### begin kickstart post ###########################################
 %post --erroronfail
 
-
-# this is installed by default but we don't need it in virt
-# Commenting out the following for #1234504
-# rpm works just fine for removing this, no idea why dnf can't cope
+# linux-firmware is installed by default and is quite large. As of mid 2020:
+#   Total download size: 97 M
+#   Installed size: 268 M
+# So far we've been fine shipping without it so let's continue.
+# More discussion about this in #1234504.
 echo "Removing linux-firmware package."
 rpm -e linux-firmware
 
+# See the systemd-random-seed.service man page that says:
+#   " It is recommended to remove the random seed from OS images intended
+#     for replication on multiple systems"
 echo "Removing random-seed so it's not the same in every image."
 rm -f /var/lib/systemd/random-seed
 
@@ -105,10 +109,8 @@ echo "(Don't worry -- that out-of-space error was expected.)"
 echo "Cleanup leftover networking configuration"
 rm -f /etc/NetworkManager/system-connections/*.nmconnection
 
-# Remove machine-id on pre generated images
-rm -f /etc/machine-id
-touch /etc/machine-id
-
+# Clear machine-id on pre generated images
+truncate -s 0 /etc/machine-id
 
 %end
-
+##### end kickstart post ############################################
