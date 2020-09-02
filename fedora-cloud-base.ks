@@ -72,6 +72,11 @@ kernel-core
 
 # noswap on Cloud for now
 -zram-generator-defaults
+
+# Don't include the geolite2 databases, which end up with 66MiB
+# in /usr/share/GeoIP
+-geolite2-country
+-geolite2-city
 %end
 ##### end package list ###############################################
 
