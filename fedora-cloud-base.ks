@@ -45,14 +45,7 @@ autopart --noboot --nohome --noswap --nolvm
 reboot
 
 # Package list.
-# FIXME: instLangs does not work, so there's a hack below
-# (see https://bugzilla.redhat.com/show_bug.cgi?id=1051816)
-# FIXME: instLangs bug has been fixed but now having instLangs
-# with an arg causes no langs to get installed because of BZ1262040
-# which yields the errors in BZ1261249. For now fix by not using
-# --instLangs at all
-#%packages --instLangs=en
-%packages
+%packages --instLangs=en
 
 kernel-core
 @^cloud-server-environment
@@ -104,17 +97,6 @@ echo "Removing firewalld."
 # firewall should _not_ pull in this package.
 # dnf -C -y remove "firewalld*" --setopt="clean_requirements_on_remove=1"
 dnf -C -y erase "firewalld*"
-
-# instlang hack. (Note! See bug referenced above package list)
-find /usr/share/locale -mindepth  1 -maxdepth 1 -type d -not -name en_US -exec rm -rf {} +
-localedef --list-archive | grep -v ^en_US | xargs localedef --delete-from-archive
-# this will kill a live system (since it's memory mapped) but should be safe offline
-mv -f /usr/lib/locale/locale-archive /usr/lib/locale/locale-archive.tmpl
-build-locale-archive
-echo '%_install_langs C:en:en_US:en_US.UTF-8' >> /etc/rpm/macros.image-language-conf
-
-
-
 
 echo "Removing random-seed so it's not the same in every image."
 rm -f /var/lib/systemd/random-seed
