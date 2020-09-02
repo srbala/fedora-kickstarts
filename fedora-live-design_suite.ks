@@ -17,8 +17,8 @@ part / --size 14336
 @design-suite
 
 # Provides backup application
-deja-dup
-deja-dup-nautilus
+#deja-dup
+#deja-dup-nautilus
 
 # Add extra gnome applications
 gnome-books
@@ -43,7 +43,6 @@ f31-backgrounds-extras-gnome
 -mypaint
 -sparkleshare
 -blender-luxcorerender
--deja-dup
 -shutter
 
 %end
