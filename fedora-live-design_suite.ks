@@ -43,8 +43,8 @@ f31-backgrounds-extras-gnome
 -mypaint
 -sparkleshare
 -blender-luxcorerender
--duplicity
--nautilus-sendto
+-deja-dup
+-shutter
 
 %end
 
