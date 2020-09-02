@@ -34,7 +34,6 @@ firewall --disabled
 # We pass net.ifnames=0 because we always want to use eth0 here on all the cloud images.
 bootloader --timeout=1 --append="no_timer_check net.ifnames=0 console=tty1 console=ttyS0,115200n8"
 
-network --bootproto=dhcp --device=link --activate --onboot=on
 services --enabled=sshd,cloud-init,cloud-init-local,cloud-config,cloud-final
 
 zerombr
@@ -116,32 +115,6 @@ echo '%_install_langs C:en:en_US:en_US.UTF-8' >> /etc/rpm/macros.image-language-
 
 
 
-echo -n "Network fixes"
-# initscripts don't like this file to be missing.
-# and https://bugzilla.redhat.com/show_bug.cgi?id=1204612
-cat > /etc/sysconfig/network << EOF
-NETWORKING=yes
-NOZEROCONF=yes
-DEVTIMEOUT=10
-EOF
-
-# simple eth0 config, again not hard-coded to the build hardware
-cat > /etc/sysconfig/network-scripts/ifcfg-eth0 << EOF
-DEVICE="eth0"
-BOOTPROTO="dhcp"
-ONBOOT="yes"
-TYPE="Ethernet"
-PERSISTENT_DHCLIENT="yes"
-EOF
-
-# generic localhost names
-cat > /etc/hosts << EOF
-127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
-::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
-
-EOF
-echo .
-
 
 echo "Removing random-seed so it's not the same in every image."
 rm -f /var/lib/systemd/random-seed
@@ -157,12 +130,10 @@ dd bs=1M if=/dev/zero of=/var/tmp/zeros || :
 rm -f /var/tmp/zeros
 echo "(Don't worry -- that out-of-space error was expected.)"
 
-# When we build the image with oz, dracut is used
-# and sets up a ifcfg-en<whatever> for the device. We don't
-# want to use this, we use eth0 so it is always the same.
-# So we remove all these ifcfg-en<whatever> devices so
-# The 'network' service can come up cleanly.
-rm -f /etc/sysconfig/network-scripts/ifcfg-en*
+# When we build the image a networking config file gets left behind.
+# Let's clean it up.
+echo "Cleanup leftover networking configuration"
+rm -f /etc/NetworkManager/system-connections/*.nmconnection
 
 # Remove machine-id on pre generated images
 rm -f /etc/machine-id
