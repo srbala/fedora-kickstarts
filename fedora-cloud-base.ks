@@ -44,38 +44,33 @@ autopart --noboot --nohome --noswap --nolvm
 
 reboot
 
-# Package list.
+##### begin package list #############################################
 %packages --instLangs=en
 
-kernel-core
+# Include packages for the cloud-server-environment group
 @^cloud-server-environment
-# Need to pull in the udev subpackage
-systemd-udev
 
-# after move away from grub2 - let's add 'which' back
-which
+# Don't include the kernel toplevel package since it pulls in
+# kernel-modules. We're happy for now with kernel-core.
+-kernel
+kernel-core
 
-# rescue mode generally isn't useful in the cloud context
+# Don't include dracut-config-rescue. It will have dracut generate a
+# "rescue" entry in the grub menu, but that also means there is a
+# rescue kernel and initramfs that get created, which (currently) add
+# about another 40MiB to the /boot/ partition. Also the "rescue" mode
+# is generally not useful in the cloud.
 -dracut-config-rescue
 
-# Some things from @core we can do without in a minimal install
--biosdevname
-# Need to also add back plymouth in order to mask failure of
-# systemd-vconsole-setup.service. BZ#1272684. Comment out for now
-#-plymouth
--iprutils
-# Now that BZ#1199868 is fixed kbd really gets removed but it breaks
-# systemd-vconsole-setup.service on boot. Comment out for now
-#-kbd
--uboot-tools
--kernel
-# No need for plymouth. Also means anaconda won't put rhgb/quiet
-# on kernel command line
+# Plymouth provides a graphical boot animation. In the cloud we don't
+# need a graphical boot animation. This also means anaconda won't put
+# rhgb/quiet on kernel command line
 -plymouth
+
 # noswap on Cloud for now
 -zram-generator-defaults
-
 %end
+##### end package list ###############################################
 
 
 
