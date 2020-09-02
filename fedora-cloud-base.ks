@@ -67,6 +67,9 @@ kernel-core
 # rhgb/quiet on kernel command line
 -plymouth
 
+# No need for firewalld for now. We don't have a firewall on by default.
+-firewalld
+
 # noswap on Cloud for now
 -zram-generator-defaults
 %end
@@ -82,16 +85,6 @@ kernel-core
 # rpm works just fine for removing this, no idea why dnf can't cope
 echo "Removing linux-firmware package."
 rpm -e linux-firmware
-
-# Remove firewalld; was supposed to be optional in F18+, but is pulled in
-# in install/image building.
-echo "Removing firewalld."
-# FIXME! clean_requirements_on_remove is the default with DNF, but may
-# not work when package was installed by Anaconda instead of command line.
-# Also -- check if this is still even needed with new anaconda -- disabled
-# firewall should _not_ pull in this package.
-# dnf -C -y remove "firewalld*" --setopt="clean_requirements_on_remove=1"
-dnf -C -y erase "firewalld*"
 
 echo "Removing random-seed so it's not the same in every image."
 rm -f /var/lib/systemd/random-seed
