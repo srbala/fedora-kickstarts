@@ -29,4 +29,7 @@ wget
 -python3.8
 -pypy
 
+# Remove LaTeX, see https://bugzilla.redhat.com/show_bug.cgi?id=1862450
+-texlive-latex
+
 %end
