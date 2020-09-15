@@ -32,18 +32,19 @@ powerline
 powerline-fonts
 
 # Extra wallpapers
-f31-backgrounds-extras-gnome
+f33-backgrounds-extras-gnome
 
 # removal of unneeded applications
 -gnome-boxes
 -eog
 -rdesktop
 
-# temporarily removing conflicting application
--mypaint
--sparkleshare
+# temporarily removing conflicting applications
 -blender-luxcorerender
+-mypaint
+-pitivi
 -shutter
+-sparkleshare
 
 %end
 
