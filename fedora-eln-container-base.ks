@@ -1,32 +1,18 @@
 # See fedora-container-common.ks for details on how to hack on container image kickstarts
 # This base is a standard Fedora-ELN image with python3 and dnf
 
-text
-lang en_US.UTF-8
+text # don't use cmdline -- https://github.com/rhinstaller/anaconda/issues/931
+bootloader --disabled
+timezone --isUtc --nontp Etc/UTC
+rootpw --lock --iscrypted locked
 keyboard us
-timezone --utc America/New_York
-# add console and reorder in %post
-bootloader --timeout=1 --location=mbr --append="console=ttyS0,115200n8 no_timer_check crashkernel=auto net.ifnames=0"
-auth --enableshadow --passalgo=sha512
-selinux --enforcing
-firewall --enabled --service=ssh
 network --bootproto=dhcp --device=link --activate --onboot=on
-#services --enabled=sshd,ovirt-guest-agent --disabled kdump,rhsmcertd
-services --enabled=sshd,NetworkManager,cloud-init,cloud-init-local,cloud-config,cloud-final,rngd --disabled kdump,rhsmcertd
-rootpw --iscrypted nope
-
-#
-# Partition Information. Change this as necessary
-# This information is used by appliance-tools but
-# not by the livecd tools.
-#
-zerombr
-clearpart --all --initlabel
-# autopart --type=plain --nohome # --nohome doesn't work because of rhbz#1509350
-# autopart is problematic in that it creates /boot and swap partitions rhbz#1542510 rhbz#1673094
-reqpart
-part / --fstype="xfs" --ondisk=vda --size=8000
 reboot
+
+# boot partitions are irrelevant as the final docker image is a tarball
+zerombr
+clearpart --all
+autopart --noboot --nohome --noswap --nolvm
 
 %packages --excludedocs --instLangs=en --nocore --excludeWeakdeps
 fedora-release-container
