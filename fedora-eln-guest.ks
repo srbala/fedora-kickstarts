@@ -120,6 +120,11 @@ subscription-manager-cockpit
 # Exclude all langpacks for now
 -langpacks-*
 
+# The langpacks-en package is pulled in by Anaconda and it seems filtering
+# it out using langpacks-* is not sufficient. It needs to be filtered
+# directly.
+-langpacks-en
+
 # We are building Fedora-ELN
 fedora-release
 fedora-repos
