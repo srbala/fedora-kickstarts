@@ -14,7 +14,7 @@ selinux --enforcing
 firewall --enabled --service=ssh
 network --bootproto=dhcp --device=link --activate --onboot=on
 #services --enabled=sshd,ovirt-guest-agent --disabled kdump,rhsmcertd
-services --enabled=sshd,NetworkManager,cloud-init,cloud-init-local,cloud-config,cloud-final,rngd --disabled kdump,rhsmcertd
+services --enabled=sshd,NetworkManager,cloud-init,cloud-init-local,cloud-config,cloud-final --disabled kdump,rhsmcertd
 rootpw --iscrypted nope
 
 #
@@ -86,7 +86,13 @@ qemu-guest-agent
 cloud-utils-growpart
 # We need this image to be portable; also, rescue mode isn't useful here.
 dracut-config-generic
-dracut-norescue
+
+# Don't include dracut-config-rescue. It will have dracut generate a
+# "rescue" entry in the grub menu, but that also means there is a
+# rescue kernel and initramfs that get created, which (currently) add
+# about another 40MiB to the /boot/ partition. Also the "rescue" mode
+# is generally not useful in the cloud.
+-dracut-config-rescue
 
 # Needed initially, but removed below.
 firewalld
@@ -119,10 +125,8 @@ fedora-release
 fedora-repos
 
 # Add rng-tools as source of entropy
-rng-tools
-
-# RH Insights client, for public cloud providers
-insights-client
+# TODO: Not available in Fedora-ELN yet.
+# rng-tools
 
 %end
 
