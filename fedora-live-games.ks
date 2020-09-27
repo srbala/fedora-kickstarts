@@ -91,7 +91,7 @@ glaxium
 gnubg
 gnugo
 haxima
-hedgewars
+#hedgewars -- broken
 kcheckers
 knights
 lbrickbuster2
