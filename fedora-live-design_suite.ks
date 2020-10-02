@@ -42,7 +42,6 @@ f33-backgrounds-extras-gnome
 # temporarily removing conflicting applications
 -blender-luxcorerender
 -mypaint
--pitivi
 -shutter
 -sparkleshare
 
