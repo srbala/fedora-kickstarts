@@ -2,7 +2,7 @@
 %include fedora-arm-xbase.ks
 %include fedora-soas-common.ks
 
-part btrfs.007 --fstype="btrfs" --size=3300
+part btrfs.007 --fstype="btrfs" --size=3400
 btrfs none --label=fedora btrfs.007
 btrfs /home --subvol --name=home LABEL=fedora
 btrfs / --subvol --name=root LABEL=fedora
