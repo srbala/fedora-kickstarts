@@ -39,7 +39,6 @@ dracut-config-generic
 -dracut-config-rescue
 # install tools needed to manage and boot arm systems
 @arm-tools
--uboot-images-armv7
 rng-tools
 chrony
 bcm283x-firmware
@@ -50,7 +49,7 @@ initial-setup
 -usb_modeswitch
 -generic-release*
 
-# make sure all the locales are available for inital0-setup and anaconda to work
+# make sure all the locales are available for inital-setup and anaconda to work
 glibc-all-langpacks
 
 %end
