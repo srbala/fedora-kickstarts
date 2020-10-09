@@ -16,6 +16,8 @@ autopart --noboot --nohome --noswap --nolvm
 
 %packages --excludedocs --instLangs=en --nocore --excludeWeakdeps
 fedora-release-container
+dnf-plugins-core
+fedora-repos-eln
 bash
 coreutils
 glibc-minimal-langpack
@@ -90,7 +92,10 @@ echo 'LANG="C.UTF-8"' >  /etc/locale.conf
 
 # https://bugzilla.redhat.com/show_bug.cgi?id=1400682
 echo "Import RPM GPG key"
-rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-34-primary
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-33-primary /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-34-primary
+
+# Disable conflicting repositories.
+dnf config-manager --disable eln-modular "*rawhide*" "*cisco*"
 
 echo "# fstab intentionally empty for containers" > /etc/fstab
 
