@@ -70,3 +70,7 @@ maintainers = [ "SciTech SIG" ]
 [labs.scientific.x86_64]
 fas = [ "scitech" ]
 maintainers = [ "SciTech SIG" ]
+
+[labs.robotics.x86_64]
+fas = [ "rmattes", "robotics-sig" ]
+maintainers = [ "Rich Mattes", "Robotics SIG" ]
