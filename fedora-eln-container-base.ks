@@ -95,7 +95,6 @@ printf "tsflags=nodocs\n" >>/etc/dnf/dnf.conf
 #   [/usr/lib/tmpfiles.d/systemd.conf:26] Failed to replace specifiers: /run/log/journal/%m
 #
 umount /run
-rm /run/nologin # https://pagure.io/atomic-wg/issue/316
 
 # Final pruning
 rm -rfv /var/cache/* /var/log/* /tmp/*
