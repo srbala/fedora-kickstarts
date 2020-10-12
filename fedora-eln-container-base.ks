@@ -15,7 +15,7 @@ clearpart --all
 autopart --noboot --nohome --noswap --nolvm
 
 %packages --excludedocs --instLangs=en --nocore --excludeWeakdeps
-fedora-release-container
+fedora-release-eln
 dnf-plugins-core
 fedora-repos-eln
 bash
