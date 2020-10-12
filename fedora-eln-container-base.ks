@@ -52,6 +52,29 @@ sudo
 %end
 
 %post --erroronfail --log=/root/anaconda-post.log
+set -eux
+
+# Set install langs macro so that new rpms that get installed will
+# only install langs that we limit it to.
+LANG="en_US"
+echo "%_install_langs $LANG" > /etc/rpm/macros.image-language-conf
+
+# https://bugzilla.redhat.com/show_bug.cgi?id=1727489
+echo 'LANG="C.UTF-8"' >  /etc/locale.conf
+
+# https://bugzilla.redhat.com/show_bug.cgi?id=1400682
+echo "Import RPM GPG key"
+rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-33-primary /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-34-primary
+
+# Disable conflicting repositories.
+dnf config-manager --disable eln-modular "*rawhide*" "*cisco*"
+
+echo "# fstab intentionally empty for containers" > /etc/fstab
+
+# Remove machine-id on pre generated images
+rm -f /etc/machine-id
+touch /etc/machine-id
+
 # remove some extraneous files
 rm -rf /var/cache/dnf/*
 rm -rf /tmp/*
@@ -81,27 +104,6 @@ rm -rfv /var/cache/* /var/log/* /tmp/*
 
 %post --nochroot --erroronfail --log=/mnt/sysimage/root/anaconda-post-nochroot.log
 set -eux
-
-# Set install langs macro so that new rpms that get installed will
-# only install langs that we limit it to.
-LANG="en_US"
-echo "%_install_langs $LANG" > /etc/rpm/macros.image-language-conf
-
-# https://bugzilla.redhat.com/show_bug.cgi?id=1727489
-echo 'LANG="C.UTF-8"' >  /etc/locale.conf
-
-# https://bugzilla.redhat.com/show_bug.cgi?id=1400682
-echo "Import RPM GPG key"
-rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-33-primary /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-34-primary
-
-# Disable conflicting repositories.
-dnf config-manager --disable eln-modular "*rawhide*" "*cisco*"
-
-echo "# fstab intentionally empty for containers" > /etc/fstab
-
-# Remove machine-id on pre generated images
-rm -f /etc/machine-id
-touch /etc/machine-id
 
 # See: https://bugzilla.redhat.com/show_bug.cgi?id=1051816
 # NOTE: run this in nochroot because "find" does not exist in chroot
