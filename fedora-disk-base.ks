@@ -56,6 +56,9 @@ glibc-all-langpacks
 
 %post
 
+# Find the architecture we are on
+arch=$(uname -m)
+
 # Setup Raspberry Pi firmware
 if [[ $arch == "aarch64" ]] || [[ $arch == "armv7l" ]]; then
 if [[ $arch == "aarch64" ]]; then
