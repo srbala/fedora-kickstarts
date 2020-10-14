@@ -39,7 +39,6 @@ dracut-config-generic
 -dracut-config-rescue
 # install tools needed to manage and boot arm systems
 @arm-tools
-rng-tools
 chrony
 bcm283x-firmware
 initial-setup

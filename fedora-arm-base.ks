@@ -27,7 +27,6 @@ dracut-config-generic
 # install tools needed to manage and boot arm systems
 @arm-tools
 -uboot-images-armv8
-rng-tools
 chrony
 extlinux-bootloader
 bcm283x-firmware
