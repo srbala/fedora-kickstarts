@@ -67,7 +67,7 @@ echo "Import RPM GPG key"
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-33-primary /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-34-primary
 
 # Disable conflicting repositories.
-dnf config-manager --disable eln-modular "*rawhide*" "*cisco*"
+dnf config-manager --disable "*rawhide*" "*cisco*"
 
 echo "# fstab intentionally empty for containers" > /etc/fstab
 
