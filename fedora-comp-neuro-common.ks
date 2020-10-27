@@ -5,7 +5,7 @@
 # mailto:neuro-sig@lists.fedoraproject.org
 
 %packages
-
+fedora-release-compneuro
 # Includes numpy, scipy, jupyter, pandas, scikit, scipy, statsmodels, sympy, matplotlib
 @python-science
 
