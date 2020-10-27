@@ -26,9 +26,12 @@ reboot
 %post --erroronfail
 # Find the architecture we are on
 arch=$(uname -m)
+if [[ $arch == "armv7l" ]]; then
+	arch="armhfp"
+fi
 
 # Setup Raspberry Pi firmware
-if [[ $arch == "aarch64" ]] || [[ $arch == "armv7l" ]]; then
+if [[ $arch == "aarch64" ]] || [[ $arch == "armhfp" ]]; then
 if [[ $arch == "aarch64" ]]; then
 cp -P /usr/share/uboot/rpi_3/u-boot.bin /boot/efi/rpi3-u-boot.bin
 cp -P /usr/share/uboot/rpi_4/u-boot.bin /boot/efi/rpi4-u-boot.bin
@@ -41,14 +44,14 @@ fi
 
 # Set the origin to the "main ref", distinct from /updates/ which is where bodhi writes.
 # We want consumers of this image to track the two week releases.
-ostree admin set-origin --index 0 fedora-iot https://dl.fedoraproject.org/iot/repo/ "fedora/rawhide/${basearch}/iot"
+ostree admin set-origin --index 0 fedora-iot https://dl.fedoraproject.org/iot/repo/ "fedora/rawhide/${arch}/iot"
 
 # Make sure the ref we're supposedly sitting on (according
 # to the updated origin) exists.
-ostree refs "fedora-iot:fedora/rawhide/${basearch}/iot" --create "fedora-iot:fedora/rawhide/$basearch}/iot"
+ostree refs "fedora-iot:fedora/rawhide/${arch}/iot" --create "fedora-iot:fedora/rawhide/${arch}/iot"
 
 # Remove the old ref so that the commit eventually gets cleaned up.
-ostree refs "fedora-iot:fedora/rawhide/${basearch}/iot" --delete
+ostree refs "fedora-iot:fedora/rawhide/${arch}/iot" --delete
 
 # delete/add the remote with new options to enable gpg verification
 # and to point them at the cdn url
