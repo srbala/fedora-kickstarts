@@ -13,15 +13,14 @@
 %packages
 
 fedora-release-xfce
-@networkmanager-submodules
-@xfce-desktop
+# install env-group to resolve RhBug:1891500
+@^xfce-desktop-environment
+
 @xfce-apps
 @xfce-extra-plugins
 @xfce-media
 @xfce-office
 
-# Admin tools are handy to have
-@admin-tools
 # Add some screensavers, people seem to like them
 # Note that blank is still default.
 xscreensaver-extras
