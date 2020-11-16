@@ -9,10 +9,11 @@
 firewall --enabled --service=mdns,presence
 
 %packages
+# install env-group to resolve RhBug:1891500
+@^sugar-desktop-environment
 
 # == Core Sugar Platform ==
 fedora-release-soas
-@sugar-desktop
 
 # explicitly remove a bunch of extra stuff
 -openbox
@@ -51,12 +52,6 @@ madan-fonts
 aajohan-comfortaa-fonts
 sil-abyssinica-fonts
 vlgothic-fonts
-
-# Write breaks unless we do this (we don't need it anyway)
-@input-methods
-
-# Needed for wifi, bluetooth and WWAN connection support
-@networkmanager-submodules
 
 # Usefulness for DSL connections as per:
 # http://bugs.sugarlabs.org/ticket/1951
