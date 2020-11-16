@@ -1,12 +1,16 @@
 
 %packages
+# install env-group to resolve RhBug:1891500
+@^kde-desktop-environment
+
 @firefox
 @kde-apps
-@kde-desktop
 @kde-media
 @kde-office
-@networkmanager-submodules
+
 fedora-release-kde
+
+-@admin-tools
 
 ### The KDE-Desktop
 

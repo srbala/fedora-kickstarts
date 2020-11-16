@@ -21,7 +21,9 @@
 part / --size 10240
 
 %packages
-@xfce-desktop
+# install env-group to resolve RhBug:1891500
+@^xfce-desktop-environment
+
 @xfce-apps
 
 # Security tools

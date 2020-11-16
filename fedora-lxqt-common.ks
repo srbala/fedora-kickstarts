@@ -9,10 +9,11 @@
 #
 
 %packages
-@lxqt
+# install env-group to resolve RhBug:1891500
+@^lxqt-desktop-environment
+
 @lxqt-apps
 @lxqt-media
-@networkmanager-submodules
 
 # for nm applet
 gnome-keyring
@@ -43,6 +44,7 @@ wqy-microhei-fonts          # a compact CJK font, to replace:
 
 # remove input methods to free space
 -@input-methods
+-@admin-tools
 -scim*
 -m17n*
 # Temporary include ibus to workaround RHBZ 1633225

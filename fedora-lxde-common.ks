@@ -8,11 +8,12 @@
 
 %packages
 ### LXDE desktop
-@lxde-desktop
+# install env-group to resolve RhBug:1891500
+@^lxde-desktop-environment
+
 @lxde-apps
 @lxde-media
 @lxde-office
-@networkmanager-submodules
 
 # FIXME: can be omitted once comps is updated
 midori
@@ -39,6 +40,7 @@ metacity
 #-words
 
 # save some space
+-@admin-tools
 -autofs
 -acpid
 -gimp-help

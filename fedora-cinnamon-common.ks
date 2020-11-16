@@ -9,8 +9,10 @@
 %packages
 
 fedora-release-cinnamon
-@networkmanager-submodules
-@cinnamon-desktop
+
+# install env-group to resolve RhBug:1891500
+@^cinnamon-desktop-environment
+
 @libreoffice
 parole
 rhythmbox

@@ -1,6 +1,8 @@
 %packages
+# install env-group to resolve RhBug:1891500
+@^mate-desktop-environment
+
 fedora-release-matecompiz
-@mate
 compiz
 compiz-plugins-main
 compiz-plugins-extra
@@ -14,7 +16,6 @@ simple-ccsm
 emerald-themes
 emerald
 fusion-icon
-@networkmanager-submodules
 
 # blacklist applications which breaks mate-desktop
 -audacious
@@ -31,6 +32,7 @@ nss-mdns
 
 # Drop things for size
 -@3d-printing
+-@admin-tools
 -brasero
 -fedora-icon-theme
 -gnome-icon-theme

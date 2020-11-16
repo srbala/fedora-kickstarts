@@ -10,7 +10,8 @@ part / --size 10752
 
 %packages
 # Start with GNOME
-@gnome-desktop
+# Install workstation-product-environment to resolve RhBug:1891500
+@^workstation-product-environment
 
 # Add robotics development packages
 @robotics-suite
@@ -30,9 +31,10 @@ mercurial
 -@dial-up
 -@input-methods
 -@standard
-
-# Add a web browser
-@firefox
+-@container-management
+-@libreoffice
+-@networkmanager-submodules
+-@workstation-product
 
 # Remove office suite
 -libreoffice-*
