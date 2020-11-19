@@ -107,9 +107,6 @@ rsync
 -plymouth
 -iprutils
 
-# Because we need networking
-dhcp-client
-
 # Minimal Cockpit web console
 cockpit-ws
 cockpit-system
