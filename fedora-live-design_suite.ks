@@ -1,11 +1,9 @@
 # fedora-design-suite.ks
 # Based on Live Workstation
-# Description:
-# - A collection of applications targeted towards professional visual designers
-# Website: http://fedoraproject.org/wiki/Design_Suite
-# Maintainer:
-# - Luya Tshimbalanga <luya AT fedoraproject DOT org>
-# - Credit to Sebastian Dziallas for initiating the project
+# A collection of applications targeted towards professional visual designers
+# http://fedoraproject.org/wiki/Design_Suite
+# Maintained by Luya Tshimbalanga <luya AT fedoraproject DOT org>
+# Credit to Sebastian Dziallas for initiating the project
 
 %include fedora-live-workstation.ks
 
@@ -15,6 +13,11 @@ part / --size 14336
 %packages
 # Switch to groups for design suite
 @design-suite
+
+# Identify as Fedora Design Suite
+fedora-release-designsuite
+fedora-release-identity-designsuite
+-fedora-release-workstation
 
 # Provides backup application
 deja-dup
@@ -27,17 +30,16 @@ gnome-photos
 gnome-shell-extension-pomodoro
 gnome-todo
 
-# Add cosmetic for gnome-terminal
+# Add cosmetic for terminal
 powerline
 powerline-fonts
 
 # Extra wallpapers
-f31-backgrounds-extras-gnome
+# f31-backgrounds-extras-gnome
 
 # removal of unneeded applications
 -gnome-boxes
 -eog
--rdesktop
 
 # temporarily removing conflicting application
 -mypaint
@@ -48,10 +50,7 @@ f31-backgrounds-extras-gnome
 
 %post
 #Override the favorite desktop application in Dash
-cat >> /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override << FOE
-[org.gnome.shell]
-favorite-apps=['firefox.desktop', 'shotwell.desktop', 'gimp.desktop', 'darktable.desktop','krita.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'pitivi.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop', 'list-design-tutorials.desktop']
-FOE
+sed -i "s/favorite-apps=."'*'"/favorite-apps=['firefox.desktop', 'shotwell.desktop', 'gimp.desktop', 'darktable.desktop','krita.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'pitivi.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop', 'list-design-tutorials.desktop']/" /etc/rc.d/init.d/livesys
 
 # Add link to lists of tutorials
 cat >> /usr/share/applications/list-design-tutorials.desktop << FOE
@@ -94,5 +93,16 @@ chmod a+x /usr/share/applications/fedora-design-team.desktop
 
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
+
+# Use Powerline in bash
+cat >>  $HOME/.bashrc << FOE
+# Enable powerline daemon
+if [ -f `which powerline-daemon` ]; then
+  powerline-daemon -q
+  POWERLINE_BASH_CONTINUATION=1
+  POWERLINE_BASH_SELECT=1
+  . /usr/share/powerline/bash/powerline.sh
+fi
+FOE
 
 %end
