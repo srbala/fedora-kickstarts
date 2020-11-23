@@ -1,8 +1,10 @@
 %packages
+microdnf
 -@standard
 -initial-setup-gui
 -generic-release*
 -glibc-all-langpacks
+-xkeyboard-config
 # recommended by iproute, we don't want it in minimal
 -iproute-tc
 # recommended by gnutls, we don't want it in minimal

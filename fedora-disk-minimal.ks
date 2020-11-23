@@ -4,7 +4,3 @@
 services --enabled=sshd,NetworkManager,chronyd,initial-setup
 
 autopart --type=plain --noswap
-
-%packages
--xkeyboard-config
-%end
