@@ -34,6 +34,7 @@ python3-brian2
 python-brian2-doc
 python3-ipython
 python3-nest
+python3-netpyne
 python3-neuron
 python3-libNeuroML
 python3-neo
