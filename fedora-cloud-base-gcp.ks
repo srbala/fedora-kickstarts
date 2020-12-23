@@ -11,11 +11,11 @@
 # https://cloud.google.com/compute/docs/import/import-existing-image
 bootloader --timeout=0 --append="no_timer_check net.ifnames=0 console=ttyS0,38400n8d"
 
-#%packages
+%packages
 # Fedora Cloud Base includes the qemu guest agent. GCP prefers
 # that it not be installed  https://pagure.io/cloud-sig/issue/319
 -qemu-guest-agent
-#%end
+%end
 
 %post --erroronfail
 cat <<EOF > /etc/NetworkManager/conf.d/gcp-mtu.conf
