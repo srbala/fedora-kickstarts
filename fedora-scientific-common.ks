@@ -138,7 +138,6 @@ screen
 tmux
 rlwrap
 hexchat
-shutter
 fig2ps
 bibtex2html
 hevea
