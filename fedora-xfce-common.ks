@@ -4,11 +4,9 @@
 # - Fedora Live Spin with the light-weight XFCE Desktop Environment
 #
 # Maintainer(s):
-# - Rahul Sundaram    <sundaram@fedoraproject.org>
-# - Christoph Wickert <cwickert@fedoraproject.org>
 # - Kevin Fenzi       <kevin@tummy.com>
 # - Adam Miller       <maxamillion@fedoraproject.org>
-
+# - Mukundan Ragavan  <nonamedotc@fedoraproject.org>
 
 %packages
 
@@ -21,9 +19,6 @@ fedora-release-xfce
 @xfce-media
 @xfce-office
 
-# Add some screensavers, people seem to like them
-# Note that blank is still default.
-xscreensaver-extras
 wget
 system-config-printer
 
@@ -34,5 +29,6 @@ system-config-printer
 -desktop-backgrounds-basic
 -aspell-*                   # dictionaries are big
 -xfce4-sensors-plugin
+-xfce4-eyes-plugin
 
 %end
