@@ -30,6 +30,8 @@ wget
 -pypy
 
 # Remove LaTeX, see https://bugzilla.redhat.com/show_bug.cgi?id=1862450
+#               and https://bugzilla.redhat.com/show_bug.cgi?id=1902354
+-texlive-base
 -texlive-latex
 
 %end
