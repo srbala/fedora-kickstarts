@@ -1,49 +1,15 @@
 # fedora-design-suite.ks
 # Based on Live Workstation
-# A collection of applications targeted towards professional visual designers
+# A collection of applications for professional visual designers
 # http://fedoraproject.org/wiki/Design_Suite
 # Maintained by Luya Tshimbalanga <luya AT fedoraproject DOT org>
 # Credit to Sebastian Dziallas for initiating the project
 
 %include fedora-live-workstation.ks
+%include fedora-design-suite-common.ks
 
 # Size partition
 part / --size 14336
-
-%packages
-# Switch to groups for design suite
-@design-suite
-
-# Identify as Fedora Design Suite
-fedora-release-designsuite
-fedora-release-identity-designsuite
--fedora-release-workstation
-
-# Provides backup application
-deja-dup
-deja-dup-nautilus
-
-# Add extra gnome applications
-gnome-books
-gnome-calendar
-gnome-photos
-gnome-shell-extension-pomodoro
-gnome-todo
-
-# Add cosmetic for terminal
-powerline
-powerline-fonts
-
-# removal of unneeded applications
--gnome-boxes
--eog
-
-# temporarily removing conflicting application
--mypaint
--sparkleshare
--blender-luxcorerender
-
-%end
 
 %post
 #Override the favorite desktop application in Dash
@@ -88,9 +54,6 @@ Categories=Documentation;
 FOE
 chmod a+x /usr/share/applications/fedora-design-team.desktop
 
-# rebuild schema cache with any overrides we installed
-glib-compile-schemas /usr/share/glib-2.0/schemas
-
 # Use Powerline in bash
 cat >>  $HOME/.bashrc << FOE
 # Enable powerline daemon
@@ -101,5 +64,8 @@ if [ -f `which powerline-daemon` ]; then
   . /usr/share/powerline/bash/powerline.sh
 fi
 FOE
+
+# rebuild schema cache with any overrides we installed
+glib-compile-schemas /usr/share/glib-2.0/schemas
 
 %end
