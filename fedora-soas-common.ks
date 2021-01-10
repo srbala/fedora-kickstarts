@@ -40,7 +40,6 @@ fedora-release-soas
 -hyperv-daemons
 -sane-backends
 -sane-backends-drivers-scanners
--chkconfig
 -dhcp-client
 -gcc-gdb-plugin
 -gcc
