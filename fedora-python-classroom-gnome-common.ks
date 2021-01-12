@@ -91,6 +91,9 @@ python3-pillow-tk
 -system-config-services
 -policycoreutils-gui
 
+# Inkscape is too big to be included
+-inkscape
+
 %end
 
 
