@@ -150,7 +150,7 @@ gweled
 
 # puzzles (big)
 enigma
-fillets-ng
+# fillets-ng # broken in f34
 pingus
 
 # puzzles (small)
