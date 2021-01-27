@@ -67,6 +67,12 @@ kernel-core
 # rhgb/quiet on kernel command line
 -plymouth
 
+# Install qemu-guest-agent https://pagure.io/cloud-sig/issue/319 To
+# improve the integration with OpenStack and other VM management
+# systems (oVirt, KubeVirt).
+qemu-guest-agent
+
+
 # No need for firewalld for now. We don't have a firewall on by default.
 -firewalld
 
