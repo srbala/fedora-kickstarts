@@ -28,12 +28,11 @@ fas = [ "cwickert", "mtasaka" ]
 maintainers = [ "Christoph Wickert", "Mamoru TASAKA" ]
 
 [spins.soas.x86_64]
-fas = [ "chimosky", "pbrobinson" ]
-maintainers = [ "Chihurumnaya Ibiam", "Peter Robinson" ]
+fas = [ "chimosky", "aperezbios", "pbrobinson" ]
+maintainers = [ "Chihurumnaya Ibiam", "Alex Perez", "Peter Robinson" ]
 [spins.soas.armhfp]
-fas = [ "chimosky", "pbrobinson" ]
-maintainers = [ "Chihurumnaya Ibiam", "Peter Robinson" ]
-
+fas = [ "chimosky", "aperezbios", "pbrobinson" ]
+maintainers = [ "Chihurumnaya Ibiam", "Alex Perez", "Peter Robinson" ]
 
 [labs.astronomy_kde.x86_64]
 fas = [ "lupinix" ]
