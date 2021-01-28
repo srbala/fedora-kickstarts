@@ -34,4 +34,10 @@ wget
 -texlive-base
 -texlive-latex
 
+# Remove gdal recommended by networkx, brings in close to 600M of proj data
+# Also explicitly list proj to make sure both packages are gone
+# https://lists.fedoraproject.org/archives/list/python-devel@lists.fedoraproject.org/thread/LGC5IMMHZ4DM7GQNPAFC6GU362PPTN7O/
+-python3-gdal
+-proj
+
 %end
