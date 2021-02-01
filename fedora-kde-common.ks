@@ -6,7 +6,7 @@
 @firefox
 @kde-apps
 @kde-media
-@kde-office
+@libreoffice
 
 fedora-release-kde
 
