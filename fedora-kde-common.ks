@@ -14,9 +14,6 @@ fedora-release-kde
 
 ### The KDE-Desktop
 
-### Browser
-falkon
-
 ### fixes
 
 # use kde-print-manager instead of system-config-printer
