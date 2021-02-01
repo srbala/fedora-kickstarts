@@ -31,14 +31,15 @@ kde-l10n
 # don't include these for now to fit on a cd
 -desktop-backgrounds-basic
 -kdeaccessibility*
-#-ktorrent			# kget has also basic torrent features (~3 megs)
+-ktorrent			# kget has also basic torrent features (~3 megs)
 -digikam			# digikam has duplicate functionality with gwenview (~28 megs)
 -kipi-plugins			# ~8 megs + drags in Marble
+-krusader			# ~4 megs
+-k3b				# ~15 megs
+
 #-kdeplasma-addons		# ~16 megs
-#-krusader			# ~4 megs
 
 # Additional packages that are not default in kde-* groups, but useful
-k3b				# ~15 megs
 #kdeartwork			# only include some parts of kdeartwork
 fuse
 mediawriter
