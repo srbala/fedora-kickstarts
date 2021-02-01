@@ -33,7 +33,6 @@ kde-l10n
 -kdeaccessibility*
 #-ktorrent			# kget has also basic torrent features (~3 megs)
 -digikam			# digikam has duplicate functionality with gwenview (~28 megs)
-#-amarok 			# ~23 megs (mysql-embedded etc.)
 -kipi-plugins			# ~8 megs + drags in Marble
 #-kdeplasma-addons		# ~16 megs
 #-krusader			# ~4 megs
