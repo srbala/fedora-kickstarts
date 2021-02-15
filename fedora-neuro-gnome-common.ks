@@ -1,7 +1,7 @@
 # Description: Common gnome based configuration for NeuroFedora spin images.
 #
 # Maintained by the NeuroFedora SIG:
-# https://fedoraproject.org/wiki/SIGs/NeuroFedora
+# https://neuro.fedoraproject.org
 # mailto:neuro-sig@lists.fedoraproject.org
 
 # Please specify the individual package sets in their own ks files:

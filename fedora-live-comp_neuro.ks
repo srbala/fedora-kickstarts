@@ -2,7 +2,7 @@
 # https://fedoraproject.org/wiki/Changes/Comp_Neuro_Lab
 #
 # Maintained by the NeuroFedora SIG:
-# https://fedoraproject.org/wiki/SIGs/NeuroFedora
+# https://neuro.fedoraproject.org
 # mailto:neuro-sig@lists.fedoraproject.org
 
 %include fedora-live-workstation.ks
