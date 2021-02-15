@@ -9,7 +9,7 @@
 # - Dan Cermak       <defolos@tummy.com>
 # - Justin W. Flory  <jwf@fedoraproject.org>
 
-%include fedora-live-base-not-rawhide.ks
+%include fedora-live-base.ks
 %include fedora-live-minimization.ks
 %include fedora-i3-common.ks
 
