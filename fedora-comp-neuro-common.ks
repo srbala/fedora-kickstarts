@@ -32,6 +32,7 @@ python3-ipython
 python3-nest
 python3-netpyne
 python3-neuron
+python3-niapy
 python3-libNeuroML
 python3-neo
 python3-PyLEMS
