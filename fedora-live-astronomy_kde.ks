@@ -94,10 +94,8 @@ python3-photutils
 python3-pyvo
 python3-reproject
 python3-sep
-python3-wcsaxes
 
 # matplotlib backends
-python3-matplotlib-qt4
 python3-matplotlib-qt5
 python3-matplotlib-tk
 
@@ -110,9 +108,6 @@ boinc-client
 boinc-manager
 
 #Version control- a GUI for each as well
-
-# Installing rapidsvn will also install subversion package
-rapidsvn 
 git
 git-gui
 
@@ -125,14 +120,14 @@ kst-fits
 LabPlot
 
 #Misc. Utils
-# icedtea-web to have webstart useful for VO tools
-icedtea-web
 ImageMagick
 kate
 kate-plugins
 rlwrap
 screen
-plasma-applet-redshift-control
+
+# Java JRE for VO tools
+java
 
 # Omit KDE 4 translations for now: https://bugzilla.redhat.com/show_bug.cgi?id=1197940
 -kde-l10n-*
