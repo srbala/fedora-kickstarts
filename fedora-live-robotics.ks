@@ -59,7 +59,6 @@ mercurial
 
 # Help and art can be big, too
 -gnome-user-docs
--gnome-getting-started-docs
 -evolution-help
 -desktop-backgrounds-basic
 -*backgrounds-extras
