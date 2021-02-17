@@ -58,7 +58,6 @@ python3-pillow-tk
 
 # Help and art can be big, too
 -gnome-user-docs
--gnome-getting-started-docs
 -desktop-backgrounds-basic
 -*backgrounds-extras
 
