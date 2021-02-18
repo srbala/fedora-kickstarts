@@ -74,8 +74,6 @@ releasever=$(rpm --eval '%{fedora}')
 rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-fedora-$releasever-primary
 echo "Packages within this disk image"
 rpm -qa --qf '%{size}\t%{name}-%{version}-%{release}.%{arch}\n' |sort -rn
-# Note that running rpm recreates the rpm db files which aren't needed or wanted
-rm -f /var/lib/rpm/__db*
 
 # remove random seed, the newly installed instance should make it's own
 rm -f /var/lib/systemd/random-seed
@@ -85,12 +83,11 @@ rm -f /etc/sysconfig/network-scripts/ifcfg-enp1s0
 
 dnf -y remove dracut-config-generic
 
-# Disable network service here, as doing it in the services line
-# fails due to RHBZ #1369794
-/sbin/chkconfig network off
-
 # Remove machine-id on pre generated images
 rm -f /etc/machine-id
 touch /etc/machine-id
+
+# Note that running rpm recreates the rpm db files which aren't needed or wanted
+rm -f /var/lib/rpm/__db*
 
 %end

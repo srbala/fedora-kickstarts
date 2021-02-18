@@ -4,7 +4,8 @@
 # - A Sugar environment that you can carry in your pocket
 #
 # Maintainers:
-# - Peter Robinson <pbrobinson AT gmail DOT com>
+# - Chihurumnaya Ibiam <ibiamchihurumnaya AT gmail DOT com>
+# - Alex Perez <aperez AT alexperez DOT com>
 
 firewall --enabled --service=mdns,presence
 
@@ -104,6 +105,7 @@ show-logout=false
 [org.sugarlabs.power]
 automatic=true
 EOF
+
 /usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas
 
 %end
