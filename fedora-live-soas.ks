@@ -4,7 +4,8 @@
 # - A Sugar environment that you can carry in your pocket
 #
 # Maintainers:
-# - Peter Robinson <pbrobinson AT gmail DOT com>
+# - Chihurumnaya Ibiam <ibiamchihurumnaya AT gmail DOT com>
+# - Alex Perez <aperez AT alexperez DOT com>
 
 %include fedora-live-base.ks
 %include fedora-live-minimization.ks
