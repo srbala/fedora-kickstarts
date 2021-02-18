@@ -18,6 +18,6 @@ parole
 rhythmbox
 
 # extra backgrounds
-f33-backgrounds-extras-gnome
+f34-backgrounds-extras-gnome
 
 %end
