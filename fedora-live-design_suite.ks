@@ -12,9 +12,6 @@
 part / --size 14336
 
 %post
-#Override the favorite desktop application in Dash
-sed -i "s/favorite-apps=."'*'"/favorite-apps=['firefox.desktop', 'shotwell.desktop', 'gimp.desktop', 'darktable.desktop','krita.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'pitivi.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop', 'list-design-tutorials.desktop']/" /etc/rc.d/init.d/livesys
-
 # Add link to lists of tutorials
 cat >> /usr/share/applications/list-design-tutorials.desktop << FOE
 [Desktop Entry]
@@ -67,5 +64,8 @@ FOE
 
 # rebuild schema cache with any overrides we installed
 glib-compile-schemas /usr/share/glib-2.0/schemas
+
+#Override the favorite desktop application in Dash
+sed -i "s/favorite-apps=."'*'"/favorite-apps=['firefox.desktop', 'shotwell.desktop', 'gimp.desktop', 'darktable.desktop','krita.desktop', 'inkscape.desktop', 'blender.desktop', 'libreoffice-writer.desktop', 'scribus.desktop', 'pitivi.desktop', 'nautilus.desktop', 'bijiben.desktop', 'anaconda.desktop', 'list-design-tutorials.desktop']/" /etc/rc.d/init.d/livesys
 
 %end
