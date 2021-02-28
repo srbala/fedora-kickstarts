@@ -13,6 +13,7 @@
 %packages
 
 @networkmanager-submodules
+@base-x
 i3
 dunst
 azote
@@ -25,7 +26,7 @@ network-manager-applet
 pavucontrol
 volumeicon
 thunar
-lightdm-gtk
+lightdm
 
 
 # unlock default keyring. FIXME: Should probably be done in comps

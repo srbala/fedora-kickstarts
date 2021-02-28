@@ -73,3 +73,7 @@ maintainers = [ "SciTech SIG" ]
 [labs.robotics.x86_64]
 fas = [ "rmattes", "robotics-sig" ]
 maintainers = [ "Rich Mattes", "Robotics SIG" ]
+
+[spins.i3.x86_64]
+fas = [ "jflory7", "defolos", "nasirhm", "odilhao", "x3mboy" ]
+maintainers = [ "Justin Flory"", "Dan Čermák", "Nasir Hussain", "Odilon Junior", "Eduard Lucena" ]
