@@ -14,6 +14,7 @@
 
 @networkmanager-submodules
 @base-x
+@hardware-support
 i3
 dunst
 azote
