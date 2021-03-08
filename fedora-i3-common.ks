@@ -11,23 +11,11 @@
 
 
 %packages
-
-@networkmanager-submodules
-@base-x
-@hardware-support
-i3
-dunst
-azote
-lightdm-gtk
+@i3-desktop-environment
 brightlight
 feh
-mousepad
 dex-autostart
-network-manager-applet
-pavucontrol
-volumeicon
 thunar
-lightdm
 
 
 # unlock default keyring. FIXME: Should probably be done in comps
@@ -36,7 +24,6 @@ gnome-keyring-pam
 @admin-tools
 wget
 # Better more popular browser
-firefox
 system-config-printer
 
 # save some space
