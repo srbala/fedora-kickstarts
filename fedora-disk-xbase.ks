@@ -5,6 +5,7 @@
 @multimedia
 @printing
 -@guest-desktop-agents
+initial-setup-gui
 
 # Need aajohan-comfortaa-fonts for the SVG rnotes images
 aajohan-comfortaa-fonts
