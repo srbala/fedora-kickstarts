@@ -11,7 +11,7 @@
 
 
 %packages
-@i3-desktop-environment
+@^i3-desktop-environment
 brightlight
 feh
 dex-autostart
