@@ -46,10 +46,6 @@ python3-pandas
 python3-matplotlib-qt4
 python3-matplotlib-tk
 
-# Include Java development tools
-@java-development
-apache-commons-math
-
 #fortran compiler
 gcc-gfortran
 
@@ -61,22 +57,13 @@ julia
 julia-doc
 julia-devel
 
-# IDEs for the IDE folks
-@eclipse
-
-# Workaround for https://pagure.io/releng/issue/7814
--eclipse-linuxtools-vagrant
-
 python3-spyder
 python3-spyder-kernels
-
 
 #writing & publishing
 emacs
 emacs-color-theme
 vim
-scribus
-#scite
 lyx
 kile
 
@@ -124,10 +111,8 @@ root-gui-fitpanel
 # python-pbs
 
 #Drawing, Picture viewing tools, Visualization tools
-dia
 inkscape
 xzgv
-gimp
 ## ggobi
 ## ggobi-devel
 #g3data
