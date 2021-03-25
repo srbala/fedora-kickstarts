@@ -79,7 +79,7 @@ rpm -qa --qf '%{size}\t%{name}-%{version}-%{release}.%{arch}\n' |sort -rn
 rm -f /var/lib/systemd/random-seed
 
 # The enp1s0 interface is a left over from the imagefactory install, clean this up
-rm -f /etc/sysconfig/network-scripts/ifcfg-enp1s0
+rm -f /etc/NetworkManager/system-connections/*.nmconnection
 
 dnf -y remove dracut-config-generic
 
