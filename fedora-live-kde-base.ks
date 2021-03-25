@@ -55,9 +55,10 @@ cat > /home/liveuser/.config/akonadi/akonadiserverrc << AKONADI_EOF
 Driver=QSQLITE3
 AKONADI_EOF
 
-# Disable plasma-pk-updates (bz #1436873 and 1206760)
-echo "Removing plasma-pk-updates package."
-rpm -e plasma-pk-updates
+# "Disable plasma-discover-notifier"
+mkdir -p /home/liveuser/.config/autostart
+cp -a /etc/xdg/autostart/org.kde.discover.notifier.desktop /home/liveuser/.config/autostart/
+echo 'Hidden=true' >> /home/liveuser/.config/autostart/org.kde.discover.notifier.desktop
 
 # Disable baloo
 cat > /home/liveuser/.config/baloofilerc << BALOO_EOF
