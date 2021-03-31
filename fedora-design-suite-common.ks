@@ -4,8 +4,6 @@
 
 # Identify as Fedora Design Suite
 fedora-release-designsuite
-fedora-release-identity-designsuite
--fedora-release-workstation
 
 # Provides backup application
 deja-dup
