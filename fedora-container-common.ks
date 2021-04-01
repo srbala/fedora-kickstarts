@@ -18,7 +18,8 @@
 
 text # don't use cmdline -- https://github.com/rhinstaller/anaconda/issues/931
 bootloader --disabled
-timezone --isUtc --nontp Etc/UTC
+timezone --isUtc Etc/UTC
+timesource --ntp-disable
 rootpw --lock --iscrypted locked
 keyboard us
 network --bootproto=dhcp --device=link --activate --onboot=on
