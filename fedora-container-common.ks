@@ -50,6 +50,7 @@ util-linux
 -trousers
 -xkeyboard-config
 -grubby
+-langpacks-en_GB
 
 %end
 
