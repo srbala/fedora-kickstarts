@@ -14,7 +14,6 @@ dnf-yum  # https://fedorahosted.org/fesco/ticket/1312#comment:29
 sssd-client
 sudo
 -glibc-langpack-en
--cracklib-dicts
 -langpacks-en
 %end
 
