@@ -35,7 +35,7 @@ firstboot --reconfig
 
 kernel
 # on 32bit arm make sure we only install one kernel
--kernel-lpae*
+-kernel-lpae
 # remove this in %post
 dracut-config-generic
 -dracut-config-rescue
