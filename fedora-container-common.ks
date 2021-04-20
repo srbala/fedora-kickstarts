@@ -36,8 +36,6 @@ bash
 coreutils
 glibc-minimal-langpack
 rpm
-shadow-utils
-sssd-client
 util-linux
 -kernel
 -dosfstools
@@ -51,6 +49,9 @@ util-linux
 -xkeyboard-config
 -grubby
 -langpacks-en_GB
+# https://bugzilla.redhat.com/show_bug.cgi?id=1951111
+-shadow-utils
+-sssd-client
 
 %end
 
