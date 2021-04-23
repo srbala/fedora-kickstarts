@@ -22,15 +22,22 @@ EOF
 # add initscript
 cat >> /etc/rc.d/init.d/livesys << EOF
 
+# are we *not* able to use wayland sessions?
+if strstr "\`cat /proc/cmdline\`" nomodeset ; then
+PLASMA_SESSION_FILE="plasmax11.desktop"
+else
+PLASMA_SESSION_FILE="plasma.desktop"
+fi
+
 # set up autologin for user liveuser
 if [ -f /etc/sddm.conf ]; then
 sed -i 's/^#User=.*/User=liveuser/' /etc/sddm.conf
-sed -i 's/^#Session=.*/Session=plasma.desktop/' /etc/sddm.conf
+sed -i "s/^#Session=.*/Session=\${PLASMA_SESSION_FILE}/" /etc/sddm.conf
 else
 cat > /etc/sddm.conf << SDDM_EOF
 [Autologin]
 User=liveuser
-Session=plasma.desktop
+Session=\${PLASMA_SESSION_FILE}
 SDDM_EOF
 fi
 
