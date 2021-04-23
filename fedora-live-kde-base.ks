@@ -32,12 +32,12 @@ fi
 # set up autologin for user liveuser
 if [ -f /etc/sddm.conf ]; then
 sed -i 's/^#User=.*/User=liveuser/' /etc/sddm.conf
-sed -i "s/^#Session=.*/Session=${PLASMA_SESSION_FILE}/" /etc/sddm.conf
+sed -i "s/^#Session=.*/Session=\${PLASMA_SESSION_FILE}/" /etc/sddm.conf
 else
 cat > /etc/sddm.conf << SDDM_EOF
 [Autologin]
 User=liveuser
-Session=${PLASMA_SESSION_FILE}
+Session=\${PLASMA_SESSION_FILE}
 SDDM_EOF
 fi
 
