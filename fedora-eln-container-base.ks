@@ -45,7 +45,6 @@ yum  # DNF compatibility with yum
 sssd-client
 sudo
 -glibc-langpack-en
--cracklib-dicts
 -langpacks-en
 %end
 
