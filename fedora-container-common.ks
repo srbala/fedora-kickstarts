@@ -50,7 +50,7 @@ util-linux
 -grubby
 -langpacks-en_GB
 # https://bugzilla.redhat.com/show_bug.cgi?id=1951111
--shadow-utils
+-util-linux
 -sssd-client
 
 %end
