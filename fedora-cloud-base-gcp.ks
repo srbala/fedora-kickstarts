@@ -11,7 +11,14 @@
 # https://cloud.google.com/compute/docs/import/import-existing-image
 bootloader --timeout=0 --append="no_timer_check net.ifnames=0 console=ttyS0,38400n8d"
 
+# redefine `services` here to drop cloud-init systemd unit enablements from
+# fedora-cloud-base.ks since we don't use them.
+services --enabled=sshd
+
 %packages
+# GCP provides its own guest environment.
++google-compute-engine-guest-configs
+-cloud-init
 # Fedora Cloud Base includes the qemu guest agent. GCP prefers
 # that it not be installed  https://pagure.io/cloud-sig/issue/319
 -qemu-guest-agent
