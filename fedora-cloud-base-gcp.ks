@@ -17,7 +17,7 @@ services --enabled=sshd
 
 %packages
 # GCP provides its own guest environment.
-+google-compute-engine-guest-configs
+google-compute-engine-guest-configs
 -cloud-init
 # Fedora Cloud Base includes the qemu guest agent. GCP prefers
 # that it not be installed  https://pagure.io/cloud-sig/issue/319
