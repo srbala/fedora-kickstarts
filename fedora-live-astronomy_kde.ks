@@ -54,7 +54,7 @@ kstars
 # misc. astronomy
 #celestia
 stellarium
-virtualplanet
+#virtualplanet
 
 # Some astro environment stuff
 astronomy-menus
