@@ -27,6 +27,7 @@ wget
 -python3.6
 -python3.7
 -python3.8
+-python3.9
 -pypy
 
 # Remove LaTeX, see https://bugzilla.redhat.com/show_bug.cgi?id=1862450
